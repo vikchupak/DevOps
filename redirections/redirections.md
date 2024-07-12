@@ -1,6 +1,3 @@
-\>& vs &\>\
-https://www.gnu.org/software/bash/manual/bash.html#Redirections
-
 File descriptors:\
 https://en.wikipedia.org/wiki/File_descriptor
 
@@ -22,7 +19,10 @@ Redirections:
   https://linuxhandbook.com/here-input-redirections/
 - \>&__descriptor__ (Redirect to file descriptor)\
   https://stackoverflow.com/questions/818255/what-does-21-mean
-- \>& or &\> (Merge redirect, descriptor 1 and 2 are merged)
+- \>& or &\> (Merge redirect, descriptor 1 and 2 are merged. Special case)
+  https://www.gnu.org/software/bash/manual/bash.html#Redirections
 
 Piping
 - |
+
+About merge redirection https://www.geeksforgeeks.org/input-output-redirection-in-linux/
