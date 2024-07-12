@@ -2,7 +2,7 @@ File descriptors for I/O streams:\
 https://en.wikipedia.org/wiki/File_descriptor
 
 - 0 is stdin
-- 1 is stdout
+- 1 is stdout (default, so ```ls > ls.out``` equals ```ls 1> ls.out```
 - 2 is stderr
 
 https://medium.com/@emilycoco/what-are-stdout-stdin-and-stderr-2d6d27892c38#:~:text=Stdout%20and%20stderr%20point%20to,displayed%20in%20your%20terminal%20screen.
