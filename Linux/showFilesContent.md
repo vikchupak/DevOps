@@ -5,8 +5,8 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
 
 cat file.txt (utility, to view only)\
 tac file.txt (utility, to view only, reverse cat print order)\
-less file.txt (utility, to view only)\
-more file.txt (utility, to view only)\
+less file.txt (utility, to view only, bi-direction, line by line or page by page)\
+more file.txt (utility, to view only, forward direction only, page by page)\
 gedit file.txt (default text editor)\
 nano file.txt (text editor)\
 vim file.txt (text editor)\
