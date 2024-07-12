@@ -14,7 +14,7 @@ https://www.geeksforgeeks.org/input-output-redirection-in-linux/
 Redirections:
 
 - \> (Output redirection)
-- \>> (Append stdout redirection)
+- \>> (Append stdout redirection) ```ls 1>> ls.out```
 - < (Input redirection)
 - << (Append stdin redirection)
 - << (Here document, input redirection)\
