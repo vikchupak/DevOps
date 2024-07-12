@@ -12,6 +12,6 @@ nano file.txt (text editor)\
 vim file.txt (text editor)\
 head file.txt (utility, to view only)\
 tail file.txt (utility, to view only) use -f flag to run in watch mode\
-nl file.txt (prints content with file line numbers)
+nl file.txt (like cat, but prints line numbers as well)
 
 For testing ```ps -A | less```
