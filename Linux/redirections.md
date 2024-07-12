@@ -29,4 +29,4 @@ Redirections:
   https://www.gnu.org/software/bash/manual/bash.html#Redirections
 
 Piping
-- |
+- | (redirects stdout of an app to stdin of another app)
