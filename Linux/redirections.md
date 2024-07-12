@@ -1,4 +1,4 @@
-File descriptors:\
+File descriptors for I/O streams:\
 https://en.wikipedia.org/wiki/File_descriptor
 
 - 0 is stdin
