@@ -6,5 +6,5 @@ https://www.baeldung.com/linux/eof
 - '>'
 - 1>
 - 2>
-- &>
+- &> or >&
 - |
