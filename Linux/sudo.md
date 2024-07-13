@@ -1,8 +1,8 @@
+![Screenshot from 2024-07-13 13-43-54](https://github.com/user-attachments/assets/ea06d845-d7c0-4527-b91f-db9ddc40e2f2)
+
 Sudo password is only asked first time and valid for some time frame(default 15 minutes)
 - https://unix.stackexchange.com/questions/442552/how-does-sudo-decide-whether-to-ask-for-a-password-when-given-a-command-which-d
 - https://askubuntu.com/questions/814758/user-in-admin-group-still-being-prompted-for-password-to-sudo
-
-![Screenshot from 2024-07-13 13-43-54](https://github.com/user-attachments/assets/ea06d845-d7c0-4527-b91f-db9ddc40e2f2)
 
 How a user can run docker commands without sudo:
 - https://medium.com/devops-technical-notes-and-manuals/how-to-run-docker-commands-without-sudo-28019814198f
