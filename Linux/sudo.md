@@ -1,3 +1,4 @@
 - https://unix.stackexchange.com/questions/442552/how-does-sudo-decide-whether-to-ask-for-a-password-when-given-a-command-which-d
 - https://alexhost.com/faq/how-to-disable-the-password-for-the-sudo-command-in-linux/
 - https://askubuntu.com/questions/147241/execute-sudo-without-password
+- https://ostechnix.com/run-particular-commands-without-sudo-password-linux/
