@@ -1,5 +1,7 @@
 ![Screenshot from 2024-07-13 13-43-54](https://github.com/user-attachments/assets/ea06d845-d7c0-4527-b91f-db9ddc40e2f2)
 
+To switch to root: ```sudo -i```
+
 Sudo password is only asked first time and valid for some time frame(default 15 minutes)
 - https://unix.stackexchange.com/questions/442552/how-does-sudo-decide-whether-to-ask-for-a-password-when-given-a-command-which-d
 - https://askubuntu.com/questions/814758/user-in-admin-group-still-being-prompted-for-password-to-sudo
