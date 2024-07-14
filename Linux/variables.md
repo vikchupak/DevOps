@@ -19,12 +19,13 @@ Options which set attributes:
 - ```-x``` to make NAMEs export
 
 ```bash
-declare -A associative_array=(
-  ["key1"]="value1",
-  ["key2"]="value2",
-  ["key3"]="value3")
+declare -A person=(
+    [name]='John'
+    [city]='New York'
+    [job]='Software Engineer'
+)
 ```
-
+- ```echo $person``` __echo will not print arrays correctly__
 - ```declare -p``` виведе змінні такі як скалярні(string or integer), масиви, асоціативні масиви
 - ```declare -F``` виведе список функцій
 
