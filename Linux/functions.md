@@ -1,5 +1,6 @@
-Shell functions do not return\
-https://stackoverflow.com/questions/8742783/returning-value-from-called-function-in-a-shell-script
+Shell functions do not return values\
+https://stackoverflow.com/questions/8742783/returning-value-from-called-function-in-a-shell-script \
+But set exit codes with return satatemant
 
 Function arguments\
 https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function
