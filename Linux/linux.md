@@ -1,4 +1,5 @@
-man [options] [command]
+```man [options] [command]```\
+```command --help```
 
 https://www.freecodecamp.org/news/linux-command-line-bash-tutorial/
 
