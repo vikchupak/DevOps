@@ -16,7 +16,7 @@ https://tecadmin.net/create-bash-functions-with-arguments/
 someFunc arg1 arg2
 ```
 
-Run sh script run with arguments\
+Run sh script with arguments\
 https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script
 ``` bash
 sh someScript.sh john 25 'John Smith'
