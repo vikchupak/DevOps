@@ -1,5 +1,5 @@
-```man [options] [command]```\
-```command --help```
+```man [options] [command]``` stands for manual, provides complex info\
+```command --help``` provdes short usage info
 
 https://www.freecodecamp.org/news/linux-command-line-bash-tutorial/
 
