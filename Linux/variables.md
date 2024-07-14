@@ -27,3 +27,11 @@ declare -A associative_array=(
 
 - ```declare -p``` виведе змінні такі як скалярні(string or integer), масиви, асоціативні масиви
 - ```declare -F``` виведе список функцій
+
+```bash
+myvar="Hello, World!"
+declare -p myvar
+# output
+declare -- myvar="Hello, World!"
+# Here the output 'declare --' means that myvar is a string
+```
