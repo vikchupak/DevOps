@@ -13,5 +13,7 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
 - ```head file.txt``` (utility, to view only)
 - ```tail file.txt``` (utility, to view only) use -f flag to run in watch mode
 - ```nl file.txt``` (like cat, but prints line numbers as well)
+- ```sed file.txt``` (utility, stands for Stream [text] EDitor. By default original file is not mutated)
+  https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
 
 For testing ```ps -A | less```
