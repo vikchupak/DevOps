@@ -23,7 +23,7 @@ Redirections:
   https://phoenixnap.com/kb/bash-heredoc
 - ```<<<``` (Here string, input redirection)\
   https://linuxhandbook.com/here-input-redirections/
-- ```descriptor>&descriptor``` (Redirect to file descriptor)\
+- ```>&descriptor``` (Redirect to file descriptor)\
   https://stackoverflow.com/questions/818255/what-does-21-mean
 - ```>& or &>``` (Merge redirect, descriptor 1 and 2 are merged. Special case) ```&>/dev/null```
   https://www.gnu.org/software/bash/manual/bash.html#Redirections
