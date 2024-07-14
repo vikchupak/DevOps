@@ -13,20 +13,20 @@ https://www.geeksforgeeks.org/input-output-redirection-in-linux/
 
 Redirections:
 
-- \> (Output redirection)
-- \>> (Append stdout redirection) ```ls 1>> ls.out```
-- < (Input redirection)
-- << (Append stdin redirection)
-- << (Here document, input redirection)\
+- ```>``` (Output redirection)
+- ```>>``` (Append stdout redirection) ```ls 1>> ls.out```
+- ```<``` (Input redirection)
+- ```<<``` (Append stdin redirection)
+- ```<<``` (Here document, input redirection)\
   https://linuxhandbook.com/here-input-redirections/ \
-  <<- (Here Document with tab suppression, input redirection) \
+  ```<<-``` (Here Document with tab suppression, input redirection) \
   https://phoenixnap.com/kb/bash-heredoc
-- <<< (Here string, input redirection)\
+- ```<<<``` (Here string, input redirection)\
   https://linuxhandbook.com/here-input-redirections/
-- \>&__descriptor__ (Redirect to file descriptor)\
+- ```>&descriptor``` (Redirect to file descriptor)\
   https://stackoverflow.com/questions/818255/what-does-21-mean
-- \>& or &\> (Merge redirect, descriptor 1 and 2 are merged. Special case) ```&>/dev/null```
+- ```>& or &>``` (Merge redirect, descriptor 1 and 2 are merged. Special case) ```&>/dev/null```
   https://www.gnu.org/software/bash/manual/bash.html#Redirections
 
 Piping
-- | (redirects stdout of an app to stdin of another app)
+- ```|``` (redirects stdout of an app to stdin of another app)
