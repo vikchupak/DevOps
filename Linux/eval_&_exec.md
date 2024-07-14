@@ -13,7 +13,7 @@ Sun Mar 27 01:01:06 PM EDT 2022
 # exec
 https://developnsolve.com/understanding-the-linux-exec-command-with-practical-examples
 
-Sure! The `exec` command is a built-in shell command that replaces the current shell process with a new process. When you run a command in a shell (like Bash), the shell normally creates a new process (a child process) to execute that command. However, when you use `exec`, the shell does not create a new process. Instead, it replaces the current shell process with the process of the command you want to execute.
+The `exec` command is a built-in shell command that replaces the current shell process with a new process. When you run a command in a shell (like Bash), the shell normally creates a new process (a child process) to execute that command. However, when you use `exec`, the shell does not create a new process. Instead, it replaces the current shell process with the process of the command you want to execute.
 
 Here’s a more detailed explanation:
 
