@@ -1,3 +1,7 @@
+```bash
+declare [-aAfFgiIlnrtux] [-p] [name[=value] ...]
+```
+
 Declare variables and give them attributes. If no NAMEs are given, display the attributes and values of all variables.
 
 Options:
@@ -32,7 +36,7 @@ declare -A person=(
 ```bash
 myvar="Hello, World!"
 declare -p myvar
-# output
-declare -- myvar="Hello, World!"
-# Here the output 'declare --' means that myvar is a string
+# Output
+# declare -- myvar="Hello, World!"
+# Here the output '--' means that myvar is a string
 ```
