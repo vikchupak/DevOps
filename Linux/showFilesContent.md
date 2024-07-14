@@ -13,7 +13,9 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
 - ```head file.txt``` (utility, to view only)
 - ```tail file.txt``` (utility, to view only) use -f flag to run in watch mode
 - ```nl file.txt``` (like cat, but prints line numbers as well)
-- ```sed file.txt``` (utility, stands for Stream [text] EDitor. By default original file is not mutated)
+- ```sed file.txt``` (utility, stands for Stream [text] EDitor. By default original file is not mutated)\
   https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
+- ```awk``` (utility, comes from the initials of its designers: Aho, Weinberger, and Kernighan. A programming language that is designed for processing text-based data, either in files or data streams, or using shell pipes)\
+  https://www.cyberciti.biz/faq/bash-scripting-using-awk/
 
 For testing ```ps -A | less```
