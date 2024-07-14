@@ -8,12 +8,15 @@ https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-functio
 Variable scopes\
 ![image](https://github.com/user-attachments/assets/cc846aff-073c-406a-8f97-23af2d29c78f)
 
-Call function with arguments
+Arguments are positional, but there are "tricks" with flags to make arguments named
+
+Call function with arguments\
+https://tecadmin.net/create-bash-functions-with-arguments/
 ```bash
 someFunc arg1 arg2
 ```
 
-Run sh script run with arguments
+Run sh script run with arguments\
 https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script
 ``` bash
 sh someScript.sh john 25 'John Smith'
