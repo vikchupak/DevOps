@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/cdcf2e56-4b30-4b6d-b3d8-42a0433c6f1e)
+
 ![Screenshot from 2024-07-13 13-43-54](https://github.com/user-attachments/assets/ea06d845-d7c0-4527-b91f-db9ddc40e2f2)
 
 To switch to root: ```sudo -i```
