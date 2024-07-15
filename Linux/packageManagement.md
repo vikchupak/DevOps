@@ -12,6 +12,8 @@
 - ```apt purge <package_name>``` - remove package with all its config files
 - ```apt remove <package_name>``` - remove package keeping the package’s configuration files
 - ```apt clean && apt autoremove``` - post uninstall clean up https://www.geeksforgeeks.org/how-to-uninstall-packages-with-apt-package-manager-in-linux/
+- ```apt search <search_term>``` - search package
+- ```apt show <package_name>``` - show info about package
 
 # Difference between apt, apt-get, apt-cache, apt-config
 
