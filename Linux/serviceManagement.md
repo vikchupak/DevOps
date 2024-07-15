@@ -118,4 +118,4 @@ To determine whether you have the `service` or `systemctl` tool on your system, 
 - Use `service --version` to check for the presence of the `service` command.
 - Use `systemctl --version` to check for the presence of the `systemctl` command.
 
-If both commands are available, it is likely that your system uses `systemd`, but it also includes the `service` command for compatibility with older SysV init scripts. Modern distributions typically use `systemctl` as the primary tool for service management.
+__*If both commands are available, it is likely that your system uses `systemd`, but it also includes the `service` command for compatibility with older SysV init scripts. Modern distributions typically use `systemctl` as the primary tool for service management.*__
