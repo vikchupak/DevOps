@@ -15,7 +15,7 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
   -F file1=@photo.jpeg
 ```
 
-POST application/json\
+POST application/json
 ```bash
 curl -X POST https://jsonplaceholder.typicode.com/posts \
   -H "Content-Type: application/json" \
