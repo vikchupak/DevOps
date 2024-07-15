@@ -12,9 +12,10 @@ How a user can run docker commands without sudo:
 - https://medium.com/devops-technical-notes-and-manuals/how-to-run-docker-commands-without-sudo-28019814198f
 - https://www.baeldung.com/linux/docker-run-without-sudo
 
-So, there are 2 "issues":
-1. We have to use sudo prefix https://unix.stackexchange.com/questions/276474/how-can-i-execute-any-command-as-a-normal-user-without-sudo
-2. We have to type sudo password
+So, there are 3 "issues":
+1. We have to belong to sudo group
+2. We have to use sudo prefix https://unix.stackexchange.com/questions/276474/how-can-i-execute-any-command-as-a-normal-user-without-sudo
+3. We have to type sudo password
 
 That a user is in sudo group doesn't mean you won't be asked password when running commands with sudo.
 
