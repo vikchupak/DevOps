@@ -29,6 +29,16 @@ GPT says:\
 
 Therefore, `apt-config` remains a necessary and distinct tool for managing APT configuration, particularly for advanced users and developers who need to customize APT's behavior at a detailed level.
 
+https://aws.amazon.com/compare/the-difference-between-apt-and-apt-get/
+
+![image](https://github.com/user-attachments/assets/dad547f7-890f-434b-b9b0-cb8b555ac803)
+
+__Ubuntu is a Linux distribution derived from Debian__
+
+![image](https://github.com/user-attachments/assets/b7bf02b3-6ef7-44b2-9d00-dcb64f9acd3f)
+
+# Difference in commands
+
 ```bash
 # apt
 apt update
