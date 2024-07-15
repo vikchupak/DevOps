@@ -30,6 +30,34 @@ __Ubuntu is a Linux distribution derived from Debian__
 
 ![image](https://github.com/user-attachments/assets/b7bf02b3-6ef7-44b2-9d00-dcb64f9acd3f)
 
+# Find out system apt or apt-get
+
+To determine whether you have `apt` or `apt-get` (or both) installed on your system, you can use the command line to check their availability. Here's how you can do it:
+
+1. **Check for `apt`**:
+   Open a terminal and type the following command:
+   ```sh
+   apt --version
+   ```
+   If `apt` is installed, this command will display the version information. If not, it will return an error indicating that the command was not found.
+
+2. **Check for `apt-get`**:
+   Open a terminal and type the following command:
+   ```sh
+   apt-get --version
+   ```
+   If `apt-get` is installed, this command will display the version information. If not, it will return an error indicating that the command was not found.
+
+### Notes
+- It's common for modern Debian-based systems (including Ubuntu) to have both `apt` and `apt-get` installed.
+- You can also check the availability of `apt-cache` and `apt-config` using the same method:
+  ```sh
+  apt-cache --version
+  apt-config --version
+  ```
+
+These commands will help you verify whether the respective tools are installed on your system.
+
 # Difference in commands
 
 ```bash
