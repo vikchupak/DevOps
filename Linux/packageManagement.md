@@ -20,14 +20,7 @@ https://www.geeksforgeeks.org/difference-between-apt-apt-get-apt-cache-and-apt-c
 - ```apt``` is replacement fot ```apt-get``` and ```apt-cache```
 - ```apt``` is NOT replacement for ```apt-config```
 
-GPT says:\
-`apt` is not a replacement for `apt-config`. While `apt` provides a unified interface for many of the common functionalities of `apt-get` and `apt-cache`, it does not encompass the specific configuration querying and setting functionalities of `apt-config`.
-
-**`apt`** is designed to simplify package management commands, combining the more frequently used options of `apt-get` and `apt-cache` into a single command for ease of use.
-
-**`apt-config`**, on the other hand, is a specialized tool for handling APT configuration settings. It allows you to query and manipulate the APT configuration, which is not something `apt` is designed to do.
-
-Therefore, `apt-config` remains a necessary and distinct tool for managing APT configuration, particularly for advanced users and developers who need to customize APT's behavior at a detailed level.
+![image](https://github.com/user-attachments/assets/6174ac30-3938-459a-9fc5-f84153898e0d)
 
 https://aws.amazon.com/compare/the-difference-between-apt-and-apt-get/
 
