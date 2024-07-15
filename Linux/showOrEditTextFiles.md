@@ -19,3 +19,6 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
   https://www.cyberciti.biz/faq/bash-scripting-using-awk/
 
 For testing ```ps -A | less```
+
+How to change default cli text editor\
+https://askubuntu.com/questions/615178/getting-the-default-text-editor-used-in-system
