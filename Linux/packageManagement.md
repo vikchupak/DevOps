@@ -64,7 +64,7 @@ These commands will help you verify whether the respective tools are installed o
 # apt
 apt update
 # apt-get
-apt get update
+apt-get update
 ```
 ```bash
 # apt
