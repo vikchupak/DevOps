@@ -17,6 +17,8 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
   https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
 - ```awk``` (utility, comes from the initials of its designers: Aho, Weinberger, and Kernighan. A programming language that is designed for processing text-based data, either in files or data streams, or using shell pipes)\
   https://www.cyberciti.biz/faq/bash-scripting-using-awk/
+- ```cut```
+- ```wc```
 
 For testing ```ps -A | less```
 
