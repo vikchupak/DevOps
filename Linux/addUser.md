@@ -2,7 +2,7 @@
 
 https://www.geeksforgeeks.org/useradd-command-in-linux-with-examples/
 
-If we did not create user with setting the user's password,
+If we create user without setting the user's password,
 then  the user account won't be activated until we set the password
 
 - https://unix.stackexchange.com/questions/103288/passwords-for-newly-created-users
