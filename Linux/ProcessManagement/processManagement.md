@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=vsEJz9aKGKU
 
 Priority range [-20, 19]. The less this number, the higher priority
 
-There is priority and niceness
+There are priority and niceness
 
 ### 3. About proc
 https://www.youtube.com/watch?v=0XdjODvsRN8
