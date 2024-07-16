@@ -26,3 +26,8 @@ Disable sudo password for a spesific user:
 - https://alexhost.com/faq/how-to-disable-the-password-for-the-sudo-command-in-linux/
 - https://askubuntu.com/questions/147241/execute-sudo-without-password
 - https://ostechnix.com/run-particular-commands-without-sudo-password-linux/
+
+Some commands we have to run as sudo to "see" the whole information.
+![image](https://github.com/user-attachments/assets/71e1c785-6372-434d-af15-5cba9f1b5e1d)
+![image](https://github.com/user-attachments/assets/0c219a13-ad87-4fb1-95f1-377db95da53e)
+
