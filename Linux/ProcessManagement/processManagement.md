@@ -23,3 +23,13 @@ There are priority and niceness
 https://www.youtube.com/watch?v=0XdjODvsRN8
 
 - `proc` intersection between procesess and file system. State of processes in virtual file system(mounted in /proc). The place where the kernel places the information about processes.
+
+### 4. Background vs foreground processes
+https://www.youtube.com/watch?v=ghh-8trIFYk&list=PLI-knp71HL3WcQocBNgTc9Cnj9Wg-2Xki&index=3
+
+- A foreground process is a process that interacts directly with the user through the terminal or command line interface. It receives input from the user and displays output to the terminal.
+- A background process is a process that runs without user interaction. It does not have control over the terminal, allowing the user to continue using the terminal for other tasks.
+
+Example
+- `sleep 30` foreground process
+- `sleep 30 &` background process
