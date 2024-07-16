@@ -1,3 +1,7 @@
+### Tutorials
+- https://www.youtube.com/watch?v=ls5cGi12kGw&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=15
+- https://www.youtube.com/watch?v=EbWDTvHh2pQ&list=PLI-knp71HL3WcQocBNgTc9Cnj9Wg-2Xki
+
 ### 1. About signals
 https://www.youtube.com/watch?v=lP7xoqkqDZQ
 
