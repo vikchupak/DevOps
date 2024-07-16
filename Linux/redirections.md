@@ -5,6 +5,8 @@ https://en.wikipedia.org/wiki/File_descriptor
 - 1 is stdout (default, so ```ls > ls.out``` equals ```ls 1> ls.out```
 - 2 is stderr
 
+``ls -l /proc/$$/fd`` list file descriptors
+
 https://medium.com/@emilycoco/what-are-stdout-stdin-and-stderr-2d6d27892c38#:~:text=Stdout%20and%20stderr%20point%20to,displayed%20in%20your%20terminal%20screen.
 ![Screenshot from 2024-07-12 17-05-56](https://github.com/user-attachments/assets/8748eece-d960-423d-8a3e-2d4a78c4d986)
 
