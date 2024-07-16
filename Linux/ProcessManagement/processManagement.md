@@ -1,7 +1,7 @@
-Processed communicate with each other through signals.
-
 ### 1. About signals
 https://www.youtube.com/watch?v=lP7xoqkqDZQ
+
+Processes communicate with each other through signals.
 
 Windows Task Manager alternatives in Linux\
 https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equivalent_for_linux/
