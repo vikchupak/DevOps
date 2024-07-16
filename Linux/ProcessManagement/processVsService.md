@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/ec2c7076-d435-4649-a091-b4cfc2c08c4d)
+
 There is a difference between a process and a service in Linux, although they are closely related. Here’s a detailed explanation of each term and their differences:
 
 ### Process
