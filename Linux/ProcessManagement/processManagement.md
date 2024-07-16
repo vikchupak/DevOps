@@ -5,7 +5,12 @@
 ### 1. About signals
 https://www.youtube.com/watch?v=lP7xoqkqDZQ
 
-Processes communicate with each other through signals.
+__Processes communicate with each other through signals.__
+
+`kill -l` list all the signals supported by your system\
+https://www.javatpoint.com/linux-signals
+
+![image](https://github.com/user-attachments/assets/72917cc7-0a6c-4433-90bf-9e797f6e5052)
 
 Windows Task Manager alternatives in Linux\
 https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equivalent_for_linux/
