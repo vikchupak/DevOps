@@ -10,7 +10,7 @@ Processes communicate with each other through signals.
 Windows Task Manager alternatives in Linux\
 https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equivalent_for_linux/
 
-- `ps`
+- `ps aux` show running processes
 - `pstree` to find the parent process of a process
 - `top`
 - `htop`
