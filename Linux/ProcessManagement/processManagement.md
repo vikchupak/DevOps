@@ -7,6 +7,7 @@ Windows Task Manager alternatives in Linux\
 https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equivalent_for_linux/
 
 - `ps`
+- `pstree`
 - `top`
 - `htop`
 - `system monitor` out-the-box
