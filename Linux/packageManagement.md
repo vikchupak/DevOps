@@ -51,7 +51,7 @@ To determine whether you have `apt` or `apt-get` (or both) installed on your sys
    If `apt-get` is installed, this command will display the version information. If not, it will return an error indicating that the command was not found.
 
 ### Notes
-- It's common for modern Debian-based systems (including Ubuntu) to have both `apt` and `apt-get` installed.
+- __It's common for modern Debian-based systems (including Ubuntu) to have both `apt` and `apt-get` installed.__
 - You can also check the availability of `apt-cache` and `apt-config` using the same method:
   ```sh
   apt-cache --version
