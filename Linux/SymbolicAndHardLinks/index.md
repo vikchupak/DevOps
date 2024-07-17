@@ -72,3 +72,7 @@ Soft link, напротив, создает новый файл с собств�
 
 - `ln <targetFile> <newHardLink>` - create a had link
 - `ln -s <targetFile> <newSoftLink>` - create a soft link
+
+# Real usage case
+
+![photo_2024-05-19_14-02-36](https://github.com/user-attachments/assets/f23f707f-1a38-45be-9e5f-9c352a3beb5e)
