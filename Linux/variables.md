@@ -40,3 +40,7 @@ declare -p myvar
 # declare -- myvar="Hello, World!"
 # Here the output '--' means that myvar is a string
 ```
+
+### Null vs unset
+![NULL(just_empty_string)_and_unset](https://github.com/user-attachments/assets/be19b45b-a4cf-4049-834a-639bf9839585)
+
