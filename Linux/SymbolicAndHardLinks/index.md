@@ -1,6 +1,9 @@
 # Tutorials
 - https://medium.com/@hemant.heer/what-is-the-difference-between-a-symbolic-link-and-a-hard-link-7c1820f35623
 - https://www.youtube.com/watch?v=rQpT0bRpV3Y
+- https://www.youtube.com/watch?v=lW_V8oFxQgA
+- https://www.linkedin.com/pulse/what-difference-between-hard-link-symbolic-besmira-a-/
+- https://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link
 
 # Inodes
 
