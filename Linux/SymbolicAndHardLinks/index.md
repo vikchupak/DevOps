@@ -38,7 +38,7 @@ An inode contains several pieces of metadata about a file, including:
 # Hard links
   - Hard link is a link/pointer to inode, which points to original file data blocks.
   - All hard links for the same file points to the same inode.
-  - Hard links cannot refer to deirectories (in general, but there are exceptions ) and cannot refer to different partitions and file systems.
+  - Hard links cannot refer to directories (in general, but there are exceptions) and cannot refer to different partitions and file systems.
   - The original file, is always a hard link that points to inode.\
     There are no way to figure out which hard link is the original hard link created when a file is first created.
 
