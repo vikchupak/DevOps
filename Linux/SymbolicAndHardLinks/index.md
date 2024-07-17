@@ -68,7 +68,7 @@ Soft link, напротив, создает новый файл с собств�
 
 - `stat` - display file or file system status
 - `ln` - make links between files
-- `ls -li` -  `-i` flag to displays the inode number of each file
+- `ls -li` - list directory contents. `-i` flag to displays the inode number of each file
 
-- `ln <targerFile> <newHardLink>`
-- `ln -s <targetFile> <newSoftLinl>`
+- `ln <targetFile> <newHardLink>`
+- `ln -s <targetFile> <newSoftLink>`
