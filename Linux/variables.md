@@ -44,3 +44,6 @@ declare -p myvar
 ### Null vs unset
 ![NULL(just_empty_string)_and_unset](https://github.com/user-attachments/assets/be19b45b-a4cf-4049-834a-639bf9839585)
 
+**Null string - string the length of zero. If value is not given, the variable is assigned the null string.**
+- https://unix.stackexchange.com/questions/280430/are-the-null-string-and-the-same-string
+- https://stackoverflow.com/questions/10733317/whats-a-null-string-in-bash
