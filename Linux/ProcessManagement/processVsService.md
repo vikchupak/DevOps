@@ -24,7 +24,7 @@ There is a difference between a process and a service in Linux, although they ar
 ### Service
 
 1. **Definition**:
-   - A service is a type of process that runs in the background and performs specific tasks, typically without user interaction. Services are also referred to as daemons.
+   - A service is a type of process that runs in the background and performs specific tasks, typically without user interaction. ___Services are also referred to as daemons___.
 
 2. **Characteristics**:
    - **Background Execution**: Services run in the background and are designed to start at boot time and run continuously.
