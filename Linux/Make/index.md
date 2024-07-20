@@ -10,3 +10,10 @@ GNU is different from Unix in several ways. One key difference is that GNU uses 
 The make command invokes the execution of the makefile. It is a special file that contains the shell commands that we create to maintain the project. The makefile contains targets and commands for execution. It is not allowed to create more than one makefile. It is recommended to create a separate directory for it.
 
 https://www.javatpoint.com/linux-make-command
+
+### make explained
+- https://www.youtube.com/watch?v=_r7i5X0rXJk
+- https://www.youtube.com/watch?v=6Gw1rNyTJWA
+
+### Using make for docker
+https://www.youtube.com/watch?v=44EqIY7v5xM
