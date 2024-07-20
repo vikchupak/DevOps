@@ -13,7 +13,7 @@ https://www.javatpoint.com/linux-make-command
 
 ### make explained
 - https://www.youtube.com/watch?v=_r7i5X0rXJk
-- https://www.youtube.com/watch?v=6Gw1rNyTJWA
+- https://www.youtube.com/watch?v=yWLkyN_Satk&t=573s
 
 ### Using make for docker
 https://www.youtube.com/watch?v=44EqIY7v5xM
