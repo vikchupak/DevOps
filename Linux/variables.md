@@ -47,3 +47,7 @@ declare -p myvar
 **Null string - string the length of zero. If value is not given, the variable is assigned the null string.**
 - https://unix.stackexchange.com/questions/280430/are-the-null-string-and-the-same-string
 - https://stackoverflow.com/questions/10733317/whats-a-null-string-in-bash
+
+### set command
+- A built-in shell command used to set or unset values of ___shell options___ and positional parameters.
+- `set -u; echo $var` > bash: var: unbound variable
