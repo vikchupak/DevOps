@@ -5,3 +5,8 @@
 
 ### How is GNU different from Unix?
 GNU is different from Unix in several ways. One key difference is that GNU uses the GNU General Public License (GPL), while Unix is licensed under the GNU Lesser General Public License (LGPL). The GPL allows users to copy, modify, and redistribute GNU, while the LGPL allows users to copy and modify Unix, but does not allow them to redistribute it.
+
+### What is Makefile?
+The make command invokes the execution of the makefile. It is a special file that contains the shell commands that we create to maintain the project. The makefile contains targets and commands for execution. It is not allowed to create more than one makefile. It is recommended to create a separate directory for it.
+
+https://www.javatpoint.com/linux-make-command
