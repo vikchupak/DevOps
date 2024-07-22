@@ -1,4 +1,4 @@
-### MySQL Workbench (it is a process, not a service)
+# MySQL Workbench (it is a process, not a service)
 
 ![Screenshot from 2024-07-22 23-33-34](https://github.com/user-attachments/assets/3234b6d6-a980-4de6-ba1d-57b620862508)
 
@@ -8,7 +8,7 @@
 
 ![kill_m](https://github.com/user-attachments/assets/46fc7534-4e84-4a95-a088-883ad9c4a064)
 
-### Docker (service)
+# Docker (service)
 
 - `systemctl list-units --type=service` list active services
 - `systemctl list-units --type=service --all` list all active and inactive services
@@ -21,6 +21,6 @@
 
 ![Screenshot from 2024-07-22 23-29-16](https://github.com/user-attachments/assets/aae7421a-e21e-4246-b5d9-b9a6fa4bfc38)
 
-### Why some services(processes) are not visible
+# Why some services(processes) are not visible
 
 ![Screenshot from 2024-07-22 23-43-31](https://github.com/user-attachments/assets/50f1e566-814c-42e8-98fe-d6e3e5c1882c)
