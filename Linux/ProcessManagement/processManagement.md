@@ -24,7 +24,7 @@ https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equ
 - `pstree` to find the parent process of a process
 - `top`
 - `htop`
-- System Monitor `gnome-system-monitor` out-the-box\
+- System Monitor `gnome-system-monitor` out-of-the-box\
   __Stop vs End vs Kill a process__\
   https://askubuntu.com/questions/124927/in-system-monitor-what-is-the-difference-between-kill-process-and-end-process \
   https://help.gnome.org/users/gnome-system-monitor/stable/process-kill.html.en
