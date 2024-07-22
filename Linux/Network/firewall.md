@@ -3,7 +3,11 @@
 ### Основні можливості `ufw`:
 
 1. **Простота використання**:
-   - `ufw` має простий синтаксис команд, що полегшує управління брандмауером.
+   - `ufw` (program, stabds for Uncomplicated Firewall) program for managing a ___netfilter firewall___. має простий синтаксис команд, що полегшує управління брандмауером.
+   - `gufw` gui for`ufw`
+   
+   About Netfilter framework\
+   https://en.wikipedia.org/wiki/Netfilter
 
 2. **Основні функції**:
    - Вмикання та вимикання брандмауера.
