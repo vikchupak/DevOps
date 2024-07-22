@@ -31,7 +31,9 @@ https://www.reddit.com/r/linux4noobs/comments/p2takc/is_there_a_task_manager_equ
 - `pstree` to find the parent process of a process
 - `top`
 - `htop`
-- `system monitor` out-the-box
+- `system monitor` out-the-box\
+  __Stop vs End vs Kill a process__\
+  https://askubuntu.com/questions/124927/in-system-monitor-what-is-the-difference-between-kill-process-and-end-process
 
 ### 2. About htop and how to __monitor__, kill processes like in Windows Task Manager. Set task priority
 https://www.youtube.com/watch?v=vsEJz9aKGKU
