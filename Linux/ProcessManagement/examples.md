@@ -1,4 +1,4 @@
-### MySQL Workbench
+### MySQL Workbench (it is a process, not a service)
 
 ![Screenshot from 2024-07-22 18-03-45](https://github.com/user-attachments/assets/38902fa1-dc5e-4080-8a6f-6d05aa211846)
 
