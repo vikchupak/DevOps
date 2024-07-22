@@ -6,7 +6,7 @@
 
 https://www.cyberciti.biz/faq/how-force-kill-process-linux/
 
-List services (a service is a process, so can be killed with like a normal process)\
+List services (a service is a process, so can be killed like a normal process)\
 https://www.tecmint.com/list-all-running-services-under-systemd-in-linux/
 
 ### 1. About signals
