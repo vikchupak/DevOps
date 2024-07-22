@@ -2,13 +2,6 @@
 - https://www.youtube.com/watch?v=ls5cGi12kGw&list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK&index=15
 - https://www.youtube.com/watch?v=EbWDTvHh2pQ&list=PLI-knp71HL3WcQocBNgTc9Cnj9Wg-2Xki
 
-### Kill process
-
-https://www.cyberciti.biz/faq/how-force-kill-process-linux/
-
-List services (a service is a process, so can be killed like a normal process)\
-https://www.tecmint.com/list-all-running-services-under-systemd-in-linux/
-
 ### 1. About signals
 https://www.youtube.com/watch?v=lP7xoqkqDZQ
 
@@ -41,6 +34,13 @@ https://www.youtube.com/watch?v=vsEJz9aKGKU
 Priority range [-20, 19]. The less this number, the higher priority
 
 There are priority and niceness
+
+### 2.1 Kill process
+
+https://www.cyberciti.biz/faq/how-force-kill-process-linux/
+
+List services (a service is a process, so can be killed like a normal process)\
+https://www.tecmint.com/list-all-running-services-under-systemd-in-linux/
 
 ### 3. About proc
 https://www.youtube.com/watch?v=0XdjODvsRN8
