@@ -1,3 +1,5 @@
+https://www.tecmint.com/list-all-running-services-under-systemd-in-linux/
+
 `ufw` (Uncomplicated Firewall) — це зручний інструмент для управління брандмауером на базі iptables в системах на базі Linux. Його основна мета — зробити конфігурацію брандмауера простою і доступною для користувачів, які не знайомі з низькорівневими командами iptables.
 
 ### Основні можливості `ufw`:
@@ -39,6 +41,11 @@
 
    About Firewalld\
    https://en.wikipedia.org/wiki/Firewalld
+
+   **Graphical front-ends (GUIs)**\
+   `firewall-config` is a graphical front-end that is optionally included with firewalld, with support for most of its features.
+
+   `firewall-applet` is a small status indicator utility that is optionally included with firewalld. It can provide firewall event log notifications as well as a quick way to open firewall-config. firewall-applet was ported from the GTK+ to the Qt framework in the summer of 2015 following the GNOME Desktop’s deprecation of system tray icons.[11]
 
 3. **Основні функції `firewalld`**:
    - Управління зонами (включення правил для різних зон безпеки).
