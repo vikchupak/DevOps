@@ -9,6 +9,8 @@
 - `Ctrl + U` - erase everything before the cursor
 - `Ctrl + K` - erase everything after the cursor
 
+- `Ctrl + D` `Delete` - delete character under the cursor
+
 - `Ctrl + W` - delete the word before the cursor
 
 - `Ctrl + Y` - redo, reversing a previous Undo. Used for pasting the erased text that we removed using `Ctrl+K`, `Ctrl+U`, and `Ctrl+W` shortcuts. It is efficient in case we erased text or when we have to use that erased text again.
