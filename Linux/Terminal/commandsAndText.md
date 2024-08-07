@@ -17,3 +17,6 @@
 - `Enter` `Ctrl + O` - run found command
 - `Ctrl + C` `Ctrl + G`- leave the search without the last search outputbut and executing
 - `Esc` - leave the search with the last search outputbut without executing
+
+- `history [n]` `history | grep match` - show command history. n - history length to show
+- `!history-num` - run history command
