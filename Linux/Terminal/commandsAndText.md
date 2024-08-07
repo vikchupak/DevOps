@@ -23,3 +23,8 @@
 
 _There is no `undo` in linux terminal https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
 _There is no text selecting without a mouse._
+
+### BOX select printed text
+
+- `Ctrl + Alt + mouse left button` - box | area select \
+  https://www.youtube.com/watch?v=iChlT2W3b8g
