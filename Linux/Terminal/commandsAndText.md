@@ -2,8 +2,8 @@
 - `Ctrl + E` `End` - set the cursor to a line end
 
 
-- `Ctrl + >` `Alt + >` `Alt + B` - move the cursor one word back|left
-- `Ctrl + <` `Alt + <` `Alt + F` - move the cursor one word forward|right
+- `Ctrl + >` `Alt + >` `Alt + B` - move the cursor one word back | left
+- `Ctrl + <` `Alt + <` `Alt + F` - move the cursor one word forward | right
 
 
 - `Ctrl + U` - erase everything before the cursor
