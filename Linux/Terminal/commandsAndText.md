@@ -21,4 +21,5 @@
 - `history [n]` `history | grep match` - show command history. n - history length to show
 - `!history-num` - run history command
 
-There is no `undo` in linux terminal https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux
+_There is no `undo` in linux terminal https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
+_There is no text selecting without a mouse._
