@@ -11,7 +11,7 @@
 
 - `Ctrl + W` - delete the word before the cursor
 
-- `Ctrl + Y` - redo, reversing a previous Undo. Used for pasting the erased text that we removed using `Ctrl+K`, `Ctrl+U`, and `Ctrl+W` shortcuts keys. It is efficient in case we erased text or when we have to use that erased text again.
+- `Ctrl + Y` - redo, reversing a previous Undo. Used for pasting the erased text that we removed using `Ctrl+K`, `Ctrl+U`, and `Ctrl+W` shortcuts. It is efficient in case we erased text or when we have to use that erased text again.
 
 - `Ctrl + R` - search command history by a match (backward search). Repeat to switch to preceding matching command.
 - `Enter` `Ctrl + O` - run found command
