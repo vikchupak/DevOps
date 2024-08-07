@@ -9,7 +9,7 @@
 - `Ctrl + U` - erase everything before the cursor
 - `Ctrl + K` - erase everything after the cursor
 
-- `Ctrl + W` - delete the word before the cursor
+- `Ctrl + W` `Alt + backspace` - delete the word before the cursor
 - `Alt + D` - delete the word after the cursor
 
 - `Ctrl + _` where `_` is `Shift + -` - undo last key press
