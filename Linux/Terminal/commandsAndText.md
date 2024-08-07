@@ -9,12 +9,14 @@
 - `Ctrl + U` - erase everything before the cursor
 - `Ctrl + K` - erase everything after the cursor
 
-- `Ctrl + D` `Delete` - delete character UNDER the cursor
-
 - `Ctrl + W` - delete the word before the cursor
 - `Alt + D` - delete the word after the cursor
 
-- `Ctrl + Y` - redo, reversing a previous Undo. Used for pasting the erased text that we removed using `Ctrl+K`, `Ctrl+U`, and `Ctrl+W` shortcuts. It is efficient in case we erased text or when we have to use that erased text again.
+- `Ctrl + _` where `_` is `Shift + -` - undo last key press
+
+- `Ctrl + Y` - used for pasting the erased text that we removed using `Ctrl+K`, `Ctrl+U`, `Ctrl+W`, and `Alt + D` shortcuts. It is efficient in case we erased text or when we have to use that erased text again.
+
+- `Ctrl + D` `Delete` - delete character UNDER the cursor
 
 - `Ctrl + R` - search command history by a match (backward search). Repeat to switch to preceding matching command.
 - `Enter` `Ctrl + O` - run found command
@@ -24,10 +26,8 @@
 - `history [n]` `history | grep match` - show command history. n - history length to show
 - `!history-num` - run history command
 
-- `Ctrl + _` where `_` is `Shift + -` - undo last key press
-
-_There is no `undo` in linux terminal https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
-_There is no text selecting without a mouse._
+_There is no `undo` in linux https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
+_There is no text selecting without a mouse in linux terminal._
 
 ### BOX select printed text
 
