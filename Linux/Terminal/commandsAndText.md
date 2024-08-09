@@ -27,7 +27,7 @@
 - `!history-num` - run history command
 
 _There is no `undo` in linux https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
-_There is no text selecting without a mouse in linux terminal._
+_There is no text selecting without a mouse in linux terminal. And so `Ctrl + Shift + C` not possible without a mouse._
 
 ### BOX select printed text
 
