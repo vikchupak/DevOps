@@ -14,7 +14,7 @@
 
 - `Ctrl + _` where `_` is `Shift + -` - undo last key press
 
-- `Ctrl + Y` - IT IS NOT REDO. Used for pasting the erased text removed using `Ctrl+K`, `Ctrl+U`, `Ctrl+W`, and `Alt + D` shortcuts. It is efficient in case we erased text or when we have to use that erased text again. The Y here stands for "yank".
+- `Ctrl + Y` - IT IS NOT REDO. Used for pasting the erased text removed using `Ctrl+K`, `Ctrl+U`, `Ctrl+W`, and `Alt + D` shortcuts. It is efficient in case we erased text or when we have to use that erased text again. The Y here stands for "yank". Does't work with`Ctrl + Shift + C`
 
 - `Ctrl + D` `Delete` - delete character UNDER the cursor
 
