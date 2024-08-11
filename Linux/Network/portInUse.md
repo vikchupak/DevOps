@@ -5,3 +5,8 @@
 `sudo lsof -i :$PORT_IN_USE`
 
 https://www.baeldung.com/linux/docker-address-already-in-use
+
+
+https://stackoverflow.com/questions/37971961/docker-error-bind-address-already-in-use
+
+![Screenshot from 2024-08-11 23-51-00](https://github.com/user-attachments/assets/bb807361-19b0-4394-b69c-1528758b3d08)
