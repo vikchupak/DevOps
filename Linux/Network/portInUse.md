@@ -17,3 +17,8 @@ https://www.tecmint.com/find-parent-process-ppid \
 `sudo kill -15 $PID`
 
 ![Screenshot from 2024-08-11 23-58-18](https://github.com/user-attachments/assets/5d8c850f-d8fc-4b14-b7b9-51da2c564037)
+
+Another way \
+`ps aux | grep $PROCESS_NAME`
+
+![Screenshot from 2024-08-12 11-03-37](https://github.com/user-attachments/assets/a7c13d5a-0277-4bdb-a50e-23f2d2efd634)
