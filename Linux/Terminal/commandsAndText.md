@@ -8,6 +8,7 @@
 
 - `Ctrl + U` - erase everything before the cursor
 - `Ctrl + K` - erase everything after the cursor
+- `Alt + R` - erase whole line, but `Ctrl + Y` won't work
 
 - `Alt + Backspace` `Ctrl + W` - delete the word before the cursor. `Ctrl + W` - 12_345_678 treats as one word, cuts by whitespaces. `Alt + Backspace` - as 3 words, cuts by special characters.
 - `Alt + D` `Ctrl + Delete` - delete the word after the cursor
