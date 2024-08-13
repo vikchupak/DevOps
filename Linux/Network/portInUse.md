@@ -22,3 +22,6 @@ Another way \
 `ps aux | grep $PROCESS_NAME`
 
 ![Screenshot from 2024-08-12 11-03-37](https://github.com/user-attachments/assets/a7c13d5a-0277-4bdb-a50e-23f2d2efd634)
+
+One line solution \
+`sudo kill $(sudo lsof -ti :80)`
