@@ -40,8 +40,20 @@ There are priority and niceness
 
 https://www.cyberciti.biz/faq/how-force-kill-process-linux/
 
-List services (a service is a process, so can be killed like a normal process)\
+List services (__a service is a process, so can be killed like a normal process__)\
 https://www.tecmint.com/list-all-running-services-under-systemd-in-linux/
+
+**Kill a service vs stop a service**
+
+- stop\
+  ![Screenshot from 2024-08-16 15-10-19](https://github.com/user-attachments/assets/dba776eb-e21d-4eb8-8528-6e346cee7df6)
+  ![Screenshot from 2024-08-16 15-10-56](https://github.com/user-attachments/assets/71343698-0a44-486a-9d9a-e17a1d7e1071)
+  ![Screenshot from 2024-08-16 15-11-22](https://github.com/user-attachments/assets/aae4e998-a8aa-4a6d-b979-9e3609d2f84d)
+- kill\
+  `ps aux | grep apache2`\
+  `sudo kill PID`
+
+The both above have the same result.
 
 ### 3. About proc
 https://www.youtube.com/watch?v=0XdjODvsRN8
