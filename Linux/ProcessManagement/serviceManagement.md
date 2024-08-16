@@ -60,6 +60,9 @@ Both `service` and `systemctl` are used to manage system services in Linux, but 
   - `is-active`: Checks if a service is currently active (running).
   - `daemon-reload`: Reloads the systemd manager configuration.
 
+- **Example**:
+  ![Screenshot from 2024-08-16 14-58-02](https://github.com/user-attachments/assets/5710c5ea-b0bd-4388-9372-ca8beea6b2bb)
+
 ### Summary
 
 - **`service`**:
