@@ -71,6 +71,71 @@ Soft link, напротив, создает новый файл с собств�
                     --> [soft link] --> [inode 5678] --> [Путь к оригинальному файлу (Оригинальный файл)]
 ```
 
+# Directories
+
+### What is a Directory?
+
+A **directory** in Unix-like systems is a special type of file that acts as a container or organizer for other files and directories. It helps structure the file system into a hierarchy, making it easier to manage and navigate through the various files on a system.
+
+### Key Characteristics of a Directory:
+
+1. **Special File Type**:
+   - A directory is treated as a special kind of file that contains a list of other files and directories. It doesn’t hold data like regular files but instead contains mappings between file names and their corresponding inodes.
+
+2. **Contents of a Directory**:
+   - The contents of a directory are essentially a list of entries. Each entry in this list maps a file name to an inode number.
+   - For example, in a directory, you might have entries like:
+     ```
+     file1 -> inode 12345
+     file2 -> inode 67890
+     dir1  -> inode 11223
+     ```
+     Here, `file1`, `file2`, and `dir1` are the names of the files or subdirectories, and the numbers represent their respective inodes.
+
+3. **Hierarchical Structure**:
+   - Directories allow the file system to be organized in a tree-like structure. At the top of this structure is the root directory, usually represented by `/`, which contains all other directories and files.
+   - For example:
+     ```
+     /
+     ├── home/
+     │   ├── user/
+     │   │   ├── documents/
+     │   │   └── pictures/
+     └── var/
+         ├── log/
+         └── tmp/
+     ```
+   - Each directory can contain files as well as other directories (subdirectories), leading to a nested structure.
+
+4. **Permissions**:
+   - Directories have permissions, just like regular files. The permissions control who can read, write, or execute (enter) the directory.
+   - **Read (`r`)**: Allows the contents (file names) of the directory to be listed.
+   - **Write (`w`)**: Allows the creation, deletion, and renaming of files within the directory.
+   - **Execute (`x`)**: Allows a user to enter the directory and access its contents.
+
+### How Directories Work with Inodes:
+
+When you list the contents of a directory using `ls -l`, you see the names of the files and directories, but in the background, the system is actually mapping these names to their respective inodes.
+
+For example, the command:
+
+```bash
+ls -li /path/to/directory
+```
+
+would show something like:
+
+```
+12345 drwxr-xr-x 2 user group 4096 Sep  6 10:00 dir1
+67890 -rw-r--r-- 1 user group  512 Sep  6 09:00 file1.txt
+```
+
+Here, `12345` and `67890` are inode numbers. The directory `dir1` and the file `file1.txt` are linked to these inodes, which contain the metadata and pointers to their actual data on the disk.
+
+### Summary
+
+A directory is a fundamental concept in Unix-like systems, serving as a container that holds references to files and other directories. It provides the structure that organizes files in a hierarchical manner, allowing for efficient storage, access, and management of data within the file system.
+
 # Commands
 
 - `stat` - display file or file system status
