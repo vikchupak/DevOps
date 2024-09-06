@@ -7,6 +7,10 @@
 - https://www.linkedin.com/pulse/what-difference-between-hard-link-symbolic-besmira-a-/
 - https://stackoverflow.com/questions/185899/what-is-the-difference-between-a-symbolic-link-and-a-hard-link
 
+# File
+
+- A file is the file's name (that is stored in a __directory__ and points/maps to its corresponding inode) and the inode (that contains metadata about the file and points to the actual data)
+
 # Inodes
 
 - `inode(index node)` is a data structure on a file system that stores all the information about a file __*except its name and its actual data*__. Each file and directory is associated with an inode.
