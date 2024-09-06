@@ -1,5 +1,6 @@
 # Tutorials
 - https://medium.com/@hemant.heer/what-is-the-difference-between-a-symbolic-link-and-a-hard-link-7c1820f35623
+- https://en.wikipedia.org/wiki/Hard_link
 - https://www.youtube.com/watch?v=rQpT0bRpV3Y
 - Links below are less important
 - https://www.youtube.com/watch?v=lW_V8oFxQgA
