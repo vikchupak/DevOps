@@ -71,7 +71,7 @@ Soft link, напротив, создает новый файл с собств�
 - `ls -li` - list directory contents. `-i` flag to displays the inode number of each file
 
 - `ln <targetFile> <newHardLink>` - create a had link
-- `ln -s <targetFile> <newSoftLink>` - create a soft link
+- `ln -s <targetFile> <newSoftLinkName or absolutePathWithName>` - create a soft link
 
 # Real use case
 
