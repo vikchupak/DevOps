@@ -59,6 +59,8 @@ Hard link создает дополнительную ссылку на тот �
 ```
  
 # Symbolic links
+A soft link is a file that contains a reference to another file or directory. ___Instead of pointing directly to the inode of a file like a hard link does, a soft link points to the file name (or path) of the target file.___
+
 - Symbolic link is __*a separate file*__ that points to the original file(hard link). __So it has own inode__.
 - Symbolic links can refer to directories and different partitions and file systems.
 
