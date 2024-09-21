@@ -6,6 +6,9 @@
 
 - ```apt update``` - updates packages list (info about available updates)
 - ```apt upgrade``` - downloads and installes the updates for each outdated package and dependency on your system
+
+![image](https://github.com/user-attachments/assets/d76bfd36-40c8-434f-b705-7deeae8c2e39)
+
 - ```apt install <package_name>``` - install package
 
 - ```apt list --installed``` - show instlled packages
