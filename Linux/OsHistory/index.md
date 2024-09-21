@@ -6,4 +6,4 @@
 
 - **Linux(GNU/Linux)** was created by Linus Torvalds in **1991** as a free and open-source alternative to the Unix operating system. While Linus developed the kernel, the rest of the operating system was built using components from the GNU Project, initiated by Richard Stallman to create free software. This included essential utilities, libraries, and development tools. By the early 1990s, Linux combined with GNU software created a fully functional operating system, often referred to as GNU/Linux.
 
-Linux has aimed for compliance with POSIX since its early development to ensure compatibility with Unix-like systems, but it has never been fully POSIX-compliant in all aspects.
+  Linux has aimed for compliance with POSIX since its early development to ensure compatibility with Unix-like systems, but it has never been fully POSIX-compliant in all aspects.
