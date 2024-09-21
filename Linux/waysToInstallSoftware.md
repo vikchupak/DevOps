@@ -70,3 +70,65 @@
   - Outdated or unmaintained PPAs can cause issues if the software becomes incompatible with newer versions of the system.
   
   PPAs are an excellent way to access cutting-edge software while maintaining the flexibility of a traditional package manager system.
+
+# Install using .deb
+https://docs.docker.com/desktop/install/linux/ubuntu/
+
+![image](https://github.com/user-attachments/assets/fa85eaad-7da3-44a2-b217-b8f0e938e647)
+
+The difference between installing a `.deb` file using `sudo apt-get install ./package.deb` and installing a package directly via `sudo apt install package-name` comes down to how the package is managed and where it comes from:
+
+### 1. **Installing a Local `.deb` File**
+When you download a `.deb` file manually (e.g., `docker-desktop-<arch>.deb`) and run:
+
+```bash
+sudo apt-get install ./docker-desktop-<arch>.deb
+```
+
+- **Local File**: You're instructing `apt-get` to install the specific file you've already downloaded.
+- **No Repositories**: It doesn't use online repositories to find and install the package; instead, it works with the `.deb` file located on your local machine.
+- **Dependencies**: If this `.deb` package has dependencies, `apt` will try to resolve and install them from the repository. However, for this to work properly, you must have run `sudo apt update` earlier.
+
+### 2. **Installing from Repositories**
+When you run:
+
+```bash
+sudo apt install docker-desktop-<arch>
+```
+
+- **Repository Search**: This command searches for `docker-desktop-<arch>` in the repositories that are defined in your system's package source list (usually in `/etc/apt/sources.list` and `/etc/apt/sources.list.d/`).
+- **No `.deb` Needed**: You don't need to manually download the package, as `apt` will handle the download and installation automatically if the package exists in one of the repositories.
+- **Official/Third-Party Repos**: If `docker-desktop-<arch>` isn't available in the default repositories, you'd need to add a custom repository (like Docker's official repository) for it to be found.
+
+### Why Download a `.deb` File?
+
+You need to manually download a `.deb` file in cases like:
+
+- The package isn't available in your system's repositories.
+- You don't want to (or can't) add an external repository (e.g., Docker's repository).
+- You're installing a specific version of the package that's not in the repository.
+  
+In the case of `docker-desktop`, Docker provides `.deb` packages for direct download, but you can also install it via their repository by adding it to your `sources.list`, after which `sudo apt install docker-desktop` would work without manually downloading the `.deb`.
+
+### Example of Adding Docker’s Repository
+
+```bash
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# Set up the stable repository
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update package list
+sudo apt update
+
+# Install Docker Desktop
+sudo apt install docker-desktop
+```
+
+This way, `apt install docker-desktop` would work without needing to download the `.deb` file manually.
+
+![image](https://github.com/user-attachments/assets/7a27d642-c6bc-4a7a-9e26-4402517ba6ad)
+
