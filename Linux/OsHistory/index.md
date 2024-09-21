@@ -12,5 +12,5 @@
 
 - **Classic Mac OS** (1984–1999) **NOT Unix-like** based on not a traditional kernel, but a monolithic system with key OS functions.
 - **XNU kernel released 1996**. XNU kernel is Unix-like, but it is not a traditional Unix kernel. Instead, XNU is a hybrid kernel that combines features of both the Mach microkernel and BSD Unix, with additional Apple-developed components.
-- **Darwin OS released 2000.** A fully functional, open-source, **Unix-based OS** that is based on the XNU kernel and includes key elements like device drivers, and essential system utilities.
+- **Darwin OS released 2000.** A fully functional, open-source, **Unix-based OS** that is based on the XNU kernel and includes key elements like device drivers, and essential system utilities. Darwin is mostly POSIX-compatible, but has never, by itself, been certified as compatible with any version of POSIX.
 - **Mac OS X** released 2001 based on unix-like kernel (XNU Kernel). Darwin OS was first introduced as the foundation for Mac OS X.
