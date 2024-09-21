@@ -7,3 +7,10 @@
 - **Linux(GNU/Linux)** was created by Linus Torvalds in **1991** as a free and open-source alternative to the Unix operating system. While Linus developed the kernel, the rest of the operating system was built using components from the GNU Project, initiated by Richard Stallman to create free software. This included essential utilities, libraries, and development tools. By the early 1990s, Linux combined with GNU software created a fully functional operating system, often referred to as GNU/Linux.
 
   Linux has aimed for compliance with POSIX since its early development to ensure compatibility with Unix-like systems, but it has never been fully POSIX-compliant in all aspects.
+
+# MacOS
+
+- **Classic Mac OS** (1984–1999) **NOT Unix-like** based on not a traditional kernel, but a monolithic system with key OS functions.
+- **XNU kernel released 1996**. XNU kernel is Unix-like, but it is not a traditional Unix kernel. Instead, XNU is a hybrid kernel that combines features of both the Mach microkernel and BSD Unix, with additional Apple-developed components.
+- **Darwin OS released 2000.** A fully functional, open-source, **Unix-based OS** that is based on the XNU kernel and includes key elements like device drivers, and essential system utilities.
+- **Mac OS X** released 2001 based on unix-like kernel (XNU Kernel). Darwin OS was first introduced as the foundation for Mac OS X.
