@@ -1,3 +1,5 @@
+# Linux
+
 - **Unix OS** was developed in the late 1960s and early 1970s at AT&T's Bell Labs. The first version was released in **1969** by Ken Thompson, Dennis Ritchie, and others. **Key Features**: Unix introduced many fundamental concepts in operating system design, including multitasking, multiuser capabilities, a hierarchical file system, and a powerful command-line interface.
   
 - **GNU** project was started by Richard Stallman in **1983**. The goal was to create a complete free and open-source Unix-like operating system. **Development**: The project produced many tools and utilities that are now integral to the functioning of Unix-like systems, but it did not initially provide a complete operating system, as the GNU kernel (GNU Hurd) was not finished in the early years. The GNU Project developed a wide array of essential command-line utilities and tools needed for a functional operating system, such as bash (the Bourne Again SHell), coreutils (basic file and text manipulation tools), grep, awk, sed, and more. These tools provided the foundational functionalities required to interact with the system. https://www.gnu.org/gnu/linux-and-gnu.html
