@@ -4,3 +4,5 @@ Read here about pros and corns of Type 1 and Type 2 https://aws.amazon.com/what-
 - Type 2 hypervisor (hosted or embedded hypervisors). Examples: Oracle VirtualBox, VMware Workstation, and Parallels Desktop
 
 ![image](https://github.com/user-attachments/assets/1c576f4d-5ec8-4c6b-96f2-dd3c75077ccb)
+
+Virtual Machine Images - allows to backup the OS and all apps installed in case of hardware failure.
