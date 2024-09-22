@@ -36,7 +36,7 @@ Virtual Machine Images(Snapshots) - allows to backup the OS and all apps install
 ### Summary:
 - **Hyper-V** is technically a **bare-metal (Type 1) hypervisor**, even when it’s installed alongside Windows. Once enabled, **Hyper-V takes control of the hardware**, and Windows itself is moved into a special **parent partition**, acting as a management OS but no longer controlling the hardware directly. This architecture allows Hyper-V to remain **bare-metal**, even though it's integrated into a Windows environment.
 
-## Sometimes there is virtualization settings in bios to enable/disable, is it the same settings as hyper-V?
+# There are virtualization settings in BIOS, are they the same settings as hyper-V?
 
 ![image](https://github.com/user-attachments/assets/60ec90eb-ef2b-4959-a702-00f9bea3694d)
 
