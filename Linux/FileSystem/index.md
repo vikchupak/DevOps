@@ -37,6 +37,7 @@ On Linux, to install an application for a specific user (not system-wide), you c
 
 - /opt - stands for optional. Third-party app are installed here. But only not splitable apps (no splitting on /bin, /sbin, /lib, etc.)
 - /etc - config files. Historical name, nowadays doesn't reflect purpose. **editable and system wide**.
+- /home/{user}/.config/ - user specific configs.
 - /dev - stands for devices. all files that system needs to interact with devices
 - /var - all system logs stored here
 - /var/cache - applications chache
