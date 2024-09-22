@@ -68,3 +68,31 @@ While WSL2 uses **Hyper-V**, a Type 1 hypervisor, for virtualization, WSL2 itsel
 
 ### Summary:
 - **Hyper-V** is technically a **bare-metal (Type 1) hypervisor**, even when it’s installed alongside Windows. Once enabled, **Hyper-V takes control of the hardware**, and Windows itself is moved into a special **parent partition**, acting as a management OS but no longer controlling the hardware directly. This architecture allows Hyper-V to remain **bare-metal**, even though it's integrated into a Windows environment.
+
+## Sometimes there is virtualization settings in bios to enable/disable, is it the same settings as hyper-V?
+
+![image](https://github.com/user-attachments/assets/60ec90eb-ef2b-4959-a702-00f9bea3694d)
+
+The **virtualization settings** in the BIOS, such as **Intel VT-x** (for Intel processors) or **AMD-V** (for AMD processors), are not exactly the same as **Hyper-V**, but they are **closely related**. Let’s break it down:
+
+### Virtualization Settings in BIOS (VT-x / AMD-V):
+- **VT-x** (Intel Virtualization Technology) and **AMD-V** (AMD Virtualization) are **hardware virtualization extensions** provided by the processor.
+- These settings in the BIOS enable the **CPU hardware features** that allow efficient virtualization. Specifically, they allow a hypervisor (like **Hyper-V**, **VMware**, or **VirtualBox**) to run virtual machines (VMs) with better performance and access to system resources, such as CPU and memory.
+- **Hardware virtualization** helps by allowing virtual machines to run **directly on the CPU** without needing to emulate all CPU instructions in software, significantly improving performance for virtualized environments.
+
+### Hyper-V:
+- **Hyper-V** is a **software-based hypervisor** built into Windows that enables running virtual machines.
+- **Hyper-V** relies on the **virtualization technology** provided by the CPU (such as **VT-x** or **AMD-V**) to function effectively. If the virtualization setting is **disabled** in the BIOS, **Hyper-V** (or any other hypervisor) cannot fully utilize the CPU's virtualization features, and it may either fail to start or run with degraded performance.
+
+### Relationship Between BIOS Virtualization Settings and Hyper-V:
+- **Enabling virtualization in the BIOS** is a **prerequisite** for using **Hyper-V** or any other hypervisor (like VMware or VirtualBox) that takes advantage of hardware virtualization.
+- **Disabling virtualization in the BIOS** will prevent **Hyper-V** and other hypervisors from functioning correctly or efficiently. Even though **Hyper-V** is software, it depends on these **hardware extensions** to operate properly.
+
+### Summary:
+- The **virtualization settings** in the BIOS (such as **VT-x** or **AMD-V**) are **hardware-based** features that support virtualization.
+- **Hyper-V** is a **software hypervisor** that uses these hardware virtualization extensions to manage virtual machines.
+- The BIOS setting and Hyper-V are **different**, but **BIOS virtualization must be enabled** for Hyper-V to take full advantage of the hardware’s virtualization capabilities.
+
+![image](https://github.com/user-attachments/assets/8b84a29b-0c75-4ae1-b8e2-a9c2f49fb577)
+
+SVM stands for Secure Virtual Machine. It is AMD's hardware virtualization technology, equivalent to Intel's VT-x.
