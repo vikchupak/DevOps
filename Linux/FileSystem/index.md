@@ -4,6 +4,7 @@
 
 ![photo_2024-07-20_23-01-39](https://github.com/user-attachments/assets/db3679a0-a70a-4da1-a3ba-1b352fbbb93b)
 
+- /home/{user}/ - users home directory. Only that user specific files/configs/apps. NOT system wide.
 - /bin - command that any user can run
 - /sbin - sudo commands
 - /lib - libraries that /bin and /sbin use
