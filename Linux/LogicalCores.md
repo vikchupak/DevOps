@@ -36,3 +36,27 @@ With **Hyper-Threading** (HT), **logical cores** (also called **threads**) work 
 - **Logical cores** with Hyper-Threading operate **concurrently**, sharing the resources of a single physical core.
 - They do not run completely **simultaneously**, as they must share certain parts of the CPU core, like the execution units, so their execution is interleaved.
 - While they give the appearance of doubling the number of cores, the actual performance improvement depends on how well the system can utilize the physical core's shared resources.
+
+![image](https://github.com/user-attachments/assets/2c7b1581-ffd4-4016-bd69-9886b3b39d76)
+
+A **Hyper-Threaded physical core** does **not** have its own dedicated thread. Instead, it can execute **two threads (logical cores)** concurrently by sharing the core's resources between them. Here's a breakdown of how it works:
+
+### Key Points:
+
+1. **No Dedicated Thread for Physical Core**:
+   - In a **Hyper-Threaded core**, there are no "physical core-only" threads. Instead, the core has two **logical cores (threads)** that are treated equally by the CPU's hardware. Both threads share the physical core's resources, such as the execution units, caches, and memory access. 
+
+2. **Sharing Resources**:
+   - A single physical core with Hyper-Threading can process instructions from **two separate threads** concurrently. These threads **share** the core's execution resources. If one thread stalls or doesn't fully use the core’s resources, the other thread can utilize the idle capacity.
+
+3. **Logical Cores (Threads)**:
+   - **Logical cores** represent the two threads that the operating system sees when Hyper-Threading is enabled. The operating system schedules processes on these logical cores as if they were independent cores, even though they are actually sharing the same physical core's resources.
+
+### How Hyper-Threading Works:
+- A **physical core** in a Hyper-Threaded CPU is designed to execute **two independent threads** (logical cores) that share the core's physical resources.
+- These logical cores allow the operating system to schedule tasks as if there are more cores available (doubling the number of threads per core).
+- The core switches between these threads when resources are available, increasing efficiency by filling in idle cycles.
+
+### Summary:
+A Hyper-Threaded physical core doesn't have its own dedicated thread. Instead, it manages **two logical threads** that share its resources, improving CPU utilization but not providing true parallelism like having additional physical cores would.
+
