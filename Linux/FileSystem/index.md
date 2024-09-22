@@ -9,7 +9,7 @@
 - /lib - libraries that /bin and /sbin use
 - /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /bin and /usr/bin directories. Terminal commands usually are executed from /usr/bin directory.
 - /usr/local/ - third-party apps are installed here (apps that installed by a user). **Those apps are system wide available**.
-- /home/{user}/.local/ - third-party apps are installed here (apps that installed by a user). **User wide apps are installed here**.
+- /home/{user}/.local/ - third-party apps are installed here (apps that installed by a user). **User specific apps are installed here**.
 
 On Linux, to install an application for a specific user (not system-wide), you can install the application in your user's home directory. There are a few approaches:
 
