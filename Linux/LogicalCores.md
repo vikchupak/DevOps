@@ -8,7 +8,7 @@ If run to many software threads https://stackoverflow.com/questions/44169993/wha
 # Hyper-threading
 https://en.wikipedia.org/wiki/Hyper-threading
 
-One physical core (has own hardware **physical** thread) is treated as 2 logical cores (each has its own hardware **logical** thread).
+One physical core is treated as 2 logical cores (each has its own hardware **p(logical?)** thread).
 
 ![image](https://github.com/user-attachments/assets/9a84b45c-9328-4acc-9002-4ff508246e4d)
 
