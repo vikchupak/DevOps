@@ -10,6 +10,8 @@ https://en.wikipedia.org/wiki/Hyper-threading
 
 One physical core is treated as 2 logical cores (each has its own hardware **(logical?)** thread).
 
+## With Hyper-threading, do logical cores work simultaneously or concurrently? 
+
 ![image](https://github.com/user-attachments/assets/9a84b45c-9328-4acc-9002-4ff508246e4d)
 
 With **Hyper-Threading** (HT), **logical cores** (also called **threads**) work **concurrently**, not simultaneously. Here's the distinction:
@@ -36,6 +38,8 @@ With **Hyper-Threading** (HT), **logical cores** (also called **threads**) work 
 - **Logical cores** with Hyper-Threading operate **concurrently**, sharing the resources of a single physical core.
 - They do not run completely **simultaneously**, as they must share certain parts of the CPU core, like the execution units, so their execution is interleaved.
 - While they give the appearance of doubling the number of cores, the actual performance improvement depends on how well the system can utilize the physical core's shared resources.
+
+## Does a Hyper-Threaded physical core have an own thread?
 
 ![image](https://github.com/user-attachments/assets/2c7b1581-ffd4-4016-bd69-9886b3b39d76)
 
