@@ -33,4 +33,5 @@ On Linux, to install an application for a specific user (not system-wide), you c
   make
   make install
   ```
-  
+
+  - /opt - third-party app are installed here. But only not splitable apps (no splitting on /bin, /sbin, /lib, etc.)
