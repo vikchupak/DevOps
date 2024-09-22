@@ -103,3 +103,8 @@ https://learn.microsoft.com/en-us/windows/wsl/faq#will-i-be-able-to-run-wsl-2-an
 
 ![image](https://github.com/user-attachments/assets/9fad984a-bc2b-4cd1-9dc2-1ccc583f8903)
 
+# WSL 2 in a virtual machine
+
+https://learn.microsoft.com/en-us/windows/wsl/faq#can-i-run-wsl-2-in-a-virtual-machine-
+
+![image](https://github.com/user-attachments/assets/302c9b20-2bdb-48fa-91df-29079e4a916f)
