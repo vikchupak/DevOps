@@ -10,9 +10,7 @@ https://en.wikipedia.org/wiki/Hyper-threading
 
 One physical core is treated as 2 logical cores (each has its own hardware **(logical?)** thread).
 
-## With Hyper-threading, do logical cores work simultaneously or concurrently? 
-
-![image](https://github.com/user-attachments/assets/9a84b45c-9328-4acc-9002-4ff508246e4d)
+# With Hyper-threading, do logical cores work simultaneously or concurrently? 
 
 With **Hyper-Threading** (HT), **logical cores** (also called **threads**) work **concurrently**, not simultaneously. Here's the distinction:
 
@@ -39,9 +37,7 @@ With **Hyper-Threading** (HT), **logical cores** (also called **threads**) work 
 - They do not run completely **simultaneously**, as they must share certain parts of the CPU core, like the execution units, so their execution is interleaved.
 - While they give the appearance of doubling the number of cores, the actual performance improvement depends on how well the system can utilize the physical core's shared resources.
 
-## Does a Hyper-Threaded physical core have an own thread?
-
-![image](https://github.com/user-attachments/assets/2c7b1581-ffd4-4016-bd69-9886b3b39d76)
+# Does a Hyper-Threaded physical core have an own thread?
 
 A **Hyper-Threaded physical core** does **not** have its own dedicated thread. Instead, it can execute **two threads (logical cores)** concurrently by sharing the core's resources between them. Here's a breakdown of how it works:
 
@@ -64,3 +60,27 @@ A **Hyper-Threaded physical core** does **not** have its own dedicated thread. I
 ### Summary:
 A Hyper-Threaded physical core doesn't have its own dedicated thread. Instead, it manages **two logical threads** that share its resources, improving CPU utilization but not providing true parallelism like having additional physical cores would.
 
+# Can I enable or disable Hyper-threading?
+
+Yes, you can enable or disable **Hyper-threading** in most systems, typically through the system's **BIOS** or **UEFI** settings. Here’s how you can do it:
+
+### Steps to enable/disable Hyper-threading:
+
+1. **Enter BIOS/UEFI**:
+   - Restart your computer.
+   - During startup, press the key to enter the BIOS/UEFI settings. The key is usually **F2**, **Delete**, or **Esc**, depending on your motherboard.
+   
+2. **Find the CPU settings**:
+   - Once in the BIOS/UEFI menu, navigate to the settings related to your CPU. These are typically found under headings like **Advanced**, **CPU Configuration**, or **Processor Settings**.
+
+3. **Locate Hyper-threading**:
+   - Look for a setting called **Intel Hyper-Threading Technology**, **Hyper-Threading**, or similar.
+
+4. **Enable/Disable**:
+   - If you want to **enable** Hyper-threading, set the option to **Enabled**.
+   - If you want to **disable** it, set the option to **Disabled**.
+
+5. **Save and Exit**:
+   - Save the changes and exit the BIOS/UEFI. Your system will reboot with the new settings.
+
+Hyper-threading is useful for tasks involving high multitasking or multi-threaded applications, but in some cases, users may want to disable it, for example, in specific workloads where it may not improve performance or due to concerns about side-channel vulnerabilities like **Spectre** or **Meltdown**.
