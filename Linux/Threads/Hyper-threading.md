@@ -1,7 +1,9 @@
-# Hyper-threading
+# (Intel) Hyper-threading
 https://en.wikipedia.org/wiki/Hyper-threading
 
 One physical core is treated as 2 logical cores (each has its own hardware **(logical?)** thread).
+
+The same AMD tecnology - Simultaneous Multithreading (SMT)
 
 # With Hyper-threading, do logical cores work simultaneously or concurrently? 
 
