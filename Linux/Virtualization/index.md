@@ -42,6 +42,32 @@ Here’s how WSL2 works in relation to hypervisors:
 ### In Summary:
 While WSL2 uses **Hyper-V**, a Type 1 hypervisor, for virtualization, WSL2 itself is not a hypervisor. It is more of an optimized environment that allows Windows users to run a full Linux kernel in a lightweight, virtualized space provided by Hyper-V.
 
+## Is wsl2 bare-metal or hosted?
+
+![image](https://github.com/user-attachments/assets/e0b2ff66-80d7-45d6-bcd0-c7e5ac029553)
+
+**WSL 2** (Windows Subsystem for Linux 2) is considered a **hosted hypervisor**, meaning it operates in a **Type 2** virtualization model. Here’s why:
+
+### WSL 2 Overview:
+- **WSL 2** allows you to run a full Linux kernel on Windows, but instead of using a simple compatibility layer like WSL 1, WSL 2 uses **virtualization** to run a real Linux kernel in a lightweight virtual machine (VM).
+  
+### Why WSL 2 is Hosted (Type 2 Hypervisor):
+1. **Runs on Top of Windows**:
+   - WSL 2 operates **within** the Windows operating system, not directly on the hardware. This makes it a **Type 2 hypervisor** because it requires the **Windows kernel** to be running underneath, and it does not directly manage the hardware itself.
+  
+2. **Uses Hyper-V for Virtualization**:
+   - WSL 2 runs the Linux kernel inside a lightweight virtual machine using **Hyper-V** technology, which is a **Type 1 hypervisor** (bare-metal). However, since WSL 2 itself runs within the Windows environment, it is not considered a bare-metal solution. It uses **Windows' hosted hypervisor capabilities** to manage the Linux VM.
+  
+3. **Shared Resources**:
+   - Since WSL 2 runs inside Windows, it shares the resources managed by Windows (e.g., CPU, memory, file systems) and interacts with the Windows OS rather than directly with the hardware, a typical characteristic of a **hosted** virtualization environment.
+
+### Difference Between WSL 2 and Bare-Metal Hypervisors:
+- In a **bare-metal hypervisor** (like Hyper-V or VMware ESXi), the hypervisor controls the hardware directly, and guest operating systems (like Linux or Windows VMs) run directly on top of it.
+- In the case of **WSL 2**, the Linux kernel runs in a virtualized environment inside the **Windows host**, so it doesn’t have direct control over hardware like a bare-metal hypervisor would.
+
+### Summary:
+**WSL 2** is a **hosted environment** (Type 2 hypervisor) because it relies on **Windows** as the host operating system and uses **Hyper-V** technology to run Linux in a virtualized environment. While it uses **Hyper-V**, which is a bare-metal hypervisor, WSL 2 itself is not bare-metal, as it operates **within** the Windows host.
+
 ![image](https://github.com/user-attachments/assets/a8de8698-a5d4-44a7-8ba3-05007aa72bb4)
 
 ### How Hyper-V Works in Windows
@@ -97,13 +123,13 @@ The **virtualization settings** in the BIOS, such as **Intel VT-x** (for Intel p
 
 SVM stands for Secure Virtual Machine. It is AMD's hardware virtualization technology, equivalent to Intel's VT-x.
 
-# WSL2 and other virtualization tools such as VirtualBox
+## WSL2 and other virtualization tools such as VirtualBox
 
 https://learn.microsoft.com/en-us/windows/wsl/faq#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware--or-virtualbox-
 
 ![image](https://github.com/user-attachments/assets/9fad984a-bc2b-4cd1-9dc2-1ccc583f8903)
 
-# WSL 2 in a virtual machine
+## WSL 2 in a virtual machine
 
 https://learn.microsoft.com/en-us/windows/wsl/faq#can-i-run-wsl-2-in-a-virtual-machine-
 
