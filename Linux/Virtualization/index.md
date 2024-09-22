@@ -38,8 +38,6 @@ Virtual Machine Images(Snapshots) - allows to backup the OS and all apps install
 
 # There are virtualization settings in BIOS, are they the same settings as hyper-V?
 
-![image](https://github.com/user-attachments/assets/60ec90eb-ef2b-4959-a702-00f9bea3694d)
-
 The **virtualization settings** in the BIOS, such as **Intel VT-x** (for Intel processors) or **AMD-V** (for AMD processors), are not exactly the same as **Hyper-V**, but they are **closely related**. Let’s break it down:
 
 ### Virtualization Settings in BIOS (VT-x / AMD-V):
