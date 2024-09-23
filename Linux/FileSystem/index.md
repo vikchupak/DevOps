@@ -9,6 +9,9 @@
 - /bin - command that any user can run
 - /sbin - system (sudo) commands
 - /lib - libraries that /bin and /sbin use
+
+  ![Screenshot from 2024-09-23 20-32-11](https://github.com/user-attachments/assets/c6dda356-50a8-45ba-8306-c500adc8ad9a)
+
 - /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /bin (system wide) and /usr/bin (user specific) directories. Terminal commands usually are executed from /usr/bin directory. Nowadays /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin.
   
   ![Screenshot from 2024-09-23 20-11-19](https://github.com/user-attachments/assets/24c2a092-2bbe-422b-8628-143223e99eca)
