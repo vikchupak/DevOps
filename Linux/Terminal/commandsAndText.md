@@ -25,6 +25,7 @@
 - `Esc` - leave the search with the last search outputbut without executing
 
 - `history [n]` `history | grep match` - show command history. n - history length to show
+- `cat .bash_history` - file where the history is stored. Located in home directory.
 - `!history-num` - run history command
 
 _There is no `undo` in linux https://unix.stackexchange.com/questions/996/do-we-have-an-undo-in-linux_ \
