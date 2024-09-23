@@ -1,4 +1,4 @@
-# Directory permissions vs file permissions
+# Directory vs file permissions
 
 ### Directory Permissions (`rwxr-xr-x` for `/home/username`):
 - **Read (r)**: The ability to list the files and subdirectories inside the directory (i.e., run `ls` to see filenames).
