@@ -9,8 +9,45 @@
 - /bin - command that any user can run
 - /sbin - system (sudo) commands
 - /lib - libraries that /bin and /sbin use
-- /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /usr/bin and /usr/bin directories. Terminal commands usually are executed from /usr/bin directory BECAUSE /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin.
+- /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /bin (system wide) and /usr/bin (user specific) directories. Terminal commands usually are executed from /usr/bin directory. Nowadays /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin.
+  
   ![Screenshot from 2024-09-23 20-11-19](https://github.com/user-attachments/assets/24c2a092-2bbe-422b-8628-143223e99eca)
+
+  ## There are /bin, /sbin and /usr/bin, /usr/sbin directories in Linux. What the difference?
+
+  In Linux, directories such as `/bin`, `/sbin`, `/usr/bin`, and `/usr/sbin` contain executable programs (binaries) and are part of the file system hierarchy. Here's the difference between them:
+
+  ### 1. **/bin (Binaries)**
+  - **Purpose**: Contains essential user command binaries (executables) required for the system to boot, repair, or operate in single-user mode.
+  - **Who can access**: Regular users and the root user.
+  - **Examples**: Common commands like `ls`, `cat`, `cp`, `mv`, `bash`, and `mkdir` are stored here.
+  - **Availability**: These commands must be available even if no other file systems (like `/usr`) are mounted, hence the need for basic functionality during system startup or repair.
+
+  ### 2. **/sbin (System Binaries)**
+  - **Purpose**: Contains essential system administration binaries used primarily by the root user for system maintenance.
+  - **Who can access**: Usually restricted to the root user, though non-root users can execute some commands with `sudo`.
+  - **Examples**: Commands like `ifconfig`, `fdisk`, `fsck`, and `reboot` are stored here.
+  - **Availability**: Like `/bin`, `/sbin` contains critical binaries that must be available during system startup or single-user mode.
+
+  ### 3. **/usr/bin (User Binaries)**
+  - **Purpose**: Contains non-essential user command binaries. This is the main location for user programs that are not required for booting or in single-user mode but are used during normal multi-user operation.
+  - **Who can access**: Regular users and the root user.
+  - **Examples**: Common applications like `gcc`, `vim`, `python`, `git`, and `ssh` are stored here.
+  - **Availability**: Programs in `/usr/bin` become available after the `/usr` partition is mounted.
+
+  ### 4. **/usr/sbin (System Binaries for Superuser)**
+  - **Purpose**: Contains non-essential system administration binaries that are used after the system is fully operational. These commands are generally meant for system administration by the root user.
+  - **Who can access**: Primarily the root user, but some binaries can be accessed with `sudo`.
+  - **Examples**: Commands like `apache2`, `dhcpd`, `named`, and `useradd` are stored here.
+  - **Availability**: Like `/usr/bin`, the binaries here are available after the `/usr` partition is mounted.
+
+  ### Key Differences:
+  - **Location**: `/bin` and `/sbin` contain essential binaries, while `/usr/bin` and `/usr/sbin` contain non-essential binaries.
+  - **Purpose**: `/bin` and `/usr/bin` are for general-purpose user commands, while `/sbin` and `/usr/sbin` are reserved for system administration.
+  - **Accessibility**: `/bin` and `/usr/bin` are accessible by all users, whereas `/sbin` and `/usr/sbin` are primarily intended for root or administrative tasks.
+
+  In modern Linux distributions, some differences between these directories are becoming less distinct due to changes like symlinking `/bin` to `/usr/bin`, which is part of the **"Merged /usr"** initiative. However, understanding their traditional separation is still useful.
+  
 - /usr/local/ - third-party apps are installed here (apps that installed by a user). **Those apps are system wide available**.
 - /home/{user}/.local/ - third-party apps are installed here (apps that installed by a user). **User specific apps are installed here**.
 
