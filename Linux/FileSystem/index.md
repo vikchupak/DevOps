@@ -10,6 +10,7 @@
 - /sbin - system (sudo) commands
 - /lib - libraries that /bin and /sbin use
 - /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /usr/bin and /usr/bin directories. Terminal commands usually are executed from /usr/bin directory BECAUSE /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin.
+  ![Screenshot from 2024-09-23 20-11-19](https://github.com/user-attachments/assets/24c2a092-2bbe-422b-8628-143223e99eca)
 - /usr/local/ - third-party apps are installed here (apps that installed by a user). **Those apps are system wide available**.
 - /home/{user}/.local/ - third-party apps are installed here (apps that installed by a user). **User specific apps are installed here**.
 
