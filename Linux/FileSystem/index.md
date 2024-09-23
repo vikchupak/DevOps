@@ -6,8 +6,8 @@
 
 - /home/{user}/ - users home directory. Only that user specific files/configs/apps. NOT system wide.
 - /root - root user home directory
-- /bin - command that any user can run
-- /sbin - system (sudo) commands
+- /bin - user binaries | command that any user can run
+- /sbin - system binarires | sudo commands
 - /lib - libraries that /bin and /sbin use
 
   ![Screenshot from 2024-09-23 20-32-11](https://github.com/user-attachments/assets/c6dda356-50a8-45ba-8306-c500adc8ad9a)
