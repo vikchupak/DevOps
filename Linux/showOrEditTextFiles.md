@@ -5,8 +5,8 @@ https://unix.stackexchange.com/questions/703873/are-they-commands-or-utilities
 
 - ```cat file.txt``` (utility, to view only)
 - ```tac file.txt``` (utility, to view only, reverse cat print order)
-- ```more file.txt``` (utility, to view only, forward direction only, page by page[space], line by line[enter], exit[q])
-- ```less file.txt``` (utility, to view only, bi-direction, page by page[space|(PgUp|PgDn], line by line[enter|(ArUp|ArDn)], exit[q])
+- ```more file.txt``` (utility, to view only, forward direction only[outdated info, bi-direction until you reach file end], page by page[space|(PgUp|PgDn)], line by line[enter|(ArUp|ArDn)], exit[q])
+- ```less file.txt``` (utility, to view only, bi-direction, page by page[space|(PgUp|PgDn)], line by line[enter|(ArUp|ArDn)], exit[q])
 - ```gedit file.txt``` (default text editor)
 - ```nano file.txt``` (text editor)
 - ```vim file.txt``` (text editor)
