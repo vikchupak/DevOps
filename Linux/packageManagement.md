@@ -16,6 +16,12 @@
 - ```apt remove <package_name>``` - remove package keeping the package’s configuration files
 - ```apt clean && apt autoremove``` - post uninstall clean up https://www.geeksforgeeks.org/how-to-uninstall-packages-with-apt-package-manager-in-linux/
 - ```apt search <search_term>``` - search package
+   ### Do I have to run `sudo apt update` before running `sudo apt search <package>`?
+  It is not strictly necessary to run `sudo apt update` before running `sudo apt search <package>`, but it is generally a good idea. Here’s why:
+   #### What Happens with `sudo apt search <package>`:
+   - The `apt search` command looks for the specified package in the local cache of available packages. It shows information from the **package metadata** stored on your system.
+   - If you haven't updated this cache in a while, the information may be **outdated**. It may not reflect the latest versions of packages or the availability of new packages that have been added to the repositories since your last update.
+  
 - ```apt show <package_name>``` - show info about package
 
 # Difference between apt, apt-get, apt-cache, apt-config
