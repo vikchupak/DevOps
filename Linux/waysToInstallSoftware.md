@@ -68,6 +68,10 @@
 
 - **Snap** (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
 
+  ### Is that correct to say `snap package manager`?
+
+  Yes, it's correct to refer to Snap as a package manager, though it's technically more than that. Snap is a package management system to distribute and manage applications in the form of snap packages across different Linux distributions.
+
   [Snap Store](https://snapcraft.io/store) an application repository hosted and managed by Canonical, and are free for anyone to download\
   Snapcraft - framework used to build and publish snaps
 
