@@ -1,4 +1,6 @@
-- **APT manager** (uses repositories to fetch packages (__.deb packages__); sometimes we have to add repositories to official list [/etc/apt/sources.list] to install aplications that are not yet in the official repositories)
+- ***APT manager***
+
+  (uses repositories to fetch packages (__.deb packages__); sometimes we have to add repositories to official list [/etc/apt/sources.list] to install aplications that are not yet in the official repositories)
 
   ### Does `apt` use `dpkg` under the hood?
 
@@ -30,7 +32,9 @@
    - **`apt`** provides a higher-level interface for users, handling dependencies and repository management.
    - **`dpkg`** performs the actual installation and configuration of `.deb` packages, which is invoked by `apt` for low-level tasks.
   
-- **Ubuntu Software** (Like an app store. A discontinued high-level graphical front end for the **APT and snap** package management system. Can also be used to add repositories)\
+- ***Ubuntu Software app***
+
+  (Like an app store. A discontinued high-level graphical front end for the **APT and snap** package management. Can also be used to add repositories)\
    https://en.wikipedia.org/wiki/Ubuntu_Software_Center \
    ![Screenshot from 2024-09-21 14-55-58](https://github.com/user-attachments/assets/1d2d1ffd-0a62-4527-87e9-e3e53890918e)
 
@@ -66,7 +70,9 @@
    ### Summary:
    **Ubuntu Software Center** (or **Ubuntu Software**) is the graphical user interface for managing software in Ubuntu, designed to make it easy for users to discover, install, update, and remove applications without using the terminal. It supports both traditional APT packages and newer Snap packages, giving users flexibility and ease of use when managing software.
 
-- **Snap** (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
+- ***Snap management system***
+
+  (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
 
   ### Is that correct to say `snap package manager`?
 
@@ -89,7 +95,7 @@
   sudo snap install <package-name>
   ```
 
-- **Personal Package Archive (PPA)**
+- ***Personal Package Archive (PPA)***
   
   A **Personal Package Archive (PPA)** is a specialized software repository for Ubuntu and its derivatives, like Linux Mint. PPAs allow individuals or organizations to distribute their own software packages or versions of existing software __independently of the official repositories__. PPAs are hosted on **Launchpad**, a platform maintained by Canonical, and they provide a way for developers to deliver the latest versions of applications or custom-built software that may not be available in the default Ubuntu repositories.
   ### Key Features of PPAs:
