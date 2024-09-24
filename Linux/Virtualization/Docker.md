@@ -1,4 +1,4 @@
-## If docker containers use the linux kernel, does that mean that only linux based apps can be run?
+# If docker containers use the linux kernel, does that mean that only linux based apps can be run?
 
 Not necessarily. While Docker containers share the **host system's kernel** (which is typically a Linux kernel), you can run both **Linux-based** and **non-Linux-based applications** using Docker containers through certain methods. Here's how:
 
@@ -29,7 +29,26 @@ Not necessarily. While Docker containers share the **host system's kernel** (whi
 
 So, while Docker containers use the **Linux kernel** by default, you can still run both Linux and Windows applications depending on your setup.
 
-## Images can be based on different Linux distros different from Host's distro. How then can they use the same Host kernel? Doesn't this mean that all Linux distros have the same kernel?
+# Docker Desktop uses hosted or bare-metal VMs?
+
+Docker Desktop uses **hosted VMs** (often referred to as lightweight VMs) to provide a Linux environment on non-Linux operating systems like **Windows** and **macOS**. Here’s how it works for both platforms:
+
+### 1. **Docker Desktop on Windows**
+- **Windows Home**: Uses **WSL 2 (Windows Subsystem for Linux)** to run a lightweight Linux kernel in a virtualized environment. This allows Docker containers to run on top of the WSL 2 kernel without requiring a separate hypervisor.
+- **Windows Pro/Enterprise**: Utilizes **Hyper-V** to create a lightweight virtual machine (VM) that runs a Linux kernel. Docker containers run within this VM.
+
+### 2. **Docker Desktop on macOS**
+- Docker Desktop for macOS uses a lightweight Linux VM managed by **HyperKit** (a hypervisor built on macOS). This VM hosts the Linux kernel, allowing Docker containers to run.
+
+### Key Characteristics of Hosted VMs:
+- **Lightweight**: The VMs used by Docker Desktop are optimized for running containers, so they are generally much smaller and more efficient than traditional VMs.
+- **Integration with Host OS**: The hosted VMs provide seamless integration with the host operating system, allowing for features like file sharing between the host and containers.
+- **Easy Setup**: Docker Desktop simplifies the installation and setup process by automatically configuring the necessary VM, making it easier for developers to get started with containerization.
+
+### Summary:
+Docker Desktop utilizes **hosted VMs** rather than bare-metal VMs. These lightweight VMs run on top of hypervisors (like WSL 2 on Windows or HyperKit on macOS) to provide the necessary Linux environment for running Docker containers on non-Linux systems. This setup allows for efficient container management while maintaining compatibility with the host operating system.
+
+# Images can be based on different Linux distros different from Host's distro. How then can they use the same Host kernel? Doesn't this mean that all Linux distros have the same kernel?
 
 ### 1. **Linux Kernel vs. Linux Distribution**
 - **Linux Kernel**: The kernel is the core part of the operating system that interacts directly with the hardware. It handles system resources like CPU, memory, I/O, etc.
