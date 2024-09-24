@@ -1,4 +1,35 @@
 - **APT manager** (uses repositories to fetch packages (__.deb packages__); sometimes we have to add repositories to official list [/etc/apt/sources.list] to install aplications that are not yet in the official repositories)
+
+  ### Does `apt` use `dpkg` under the hood?
+
+  Yes, **`apt` uses `dpkg` under the hood** for low-level package management tasks. While `apt` is a **higher-level package manager**, `dpkg` is the **core tool** responsible for actually installing, removing, and configuring `.deb` packages on Debian-based systems like Ubuntu.
+
+   ### Relationship Between `apt` and `dpkg`:
+   - **`dpkg`**: Handles the basic operations of installing, removing, and querying individual packages. However, it does **not manage dependencies** on its own. If a package requires additional software, `dpkg` will not automatically resolve or install those dependencies.
+  
+   - **`apt`**: Acts as a **higher-level package manager** that interacts with **online repositories**, handles **dependencies**, and provides an easier-to-use interface. It ensures that all required packages are installed or removed together. When `apt` installs a package, it ultimately uses `dpkg` to perform the actual package installation or removal.
+
+   ### How `apt` Uses `dpkg`:
+   1. **Dependency Management**:
+      - When you run a command like `sudo apt install <package>`, `apt` first determines which additional packages (dependencies) are needed. After resolving dependencies, it downloads all the necessary `.deb` files from repositories.
+   
+   2. **Calling `dpkg`**:
+      - Once `apt` has all the required packages, it **calls `dpkg`** in the background to handle the **installation** or **removal** of each `.deb` package.
+
+   3. **Low-Level Tasks**:
+      - Operations such as **configuring installed packages**, **querying package status**, or **handling post-install scripts** are also performed by `dpkg` during this process, but `apt` abstracts these details from the user.
+
+   ### Example Workflow:
+   When you run `sudo apt install <package>`, here’s what happens:
+   1. **`apt`** fetches the package and its dependencies from the repository.
+   2. It uses `dpkg` to **unpack** and **install** the `.deb` files.
+   3. `dpkg` installs the software and manages the configuration.
+   4. **`apt`** handles package cleanup and repository maintenance (e.g., updating the package cache, resolving any remaining dependencies).
+
+   ### Summary:
+   - **`apt`** provides a higher-level interface for users, handling dependencies and repository management.
+   - **`dpkg`** performs the actual installation and configuration of `.deb` packages, which is invoked by `apt` for low-level tasks.
+  
 - **Ubuntu Software** (Like an app store. A discontinued high-level graphical front end for the APT/dpkg package management system. Can also be used to add repositories)\
    https://en.wikipedia.org/wiki/Ubuntu_Software_Center \
    ![Screenshot from 2024-09-21 14-55-58](https://github.com/user-attachments/assets/1d2d1ffd-0a62-4527-87e9-e3e53890918e)
