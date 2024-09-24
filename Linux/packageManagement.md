@@ -7,7 +7,35 @@
 - ```apt update``` - updates packages list (info about available updates)
 - ```apt upgrade``` - downloads and installes the updates for each outdated package and dependency on your system
 
-![image](https://github.com/user-attachments/assets/d76bfd36-40c8-434f-b705-7deeae8c2e39)
+  ![image](https://github.com/user-attachments/assets/d76bfd36-40c8-434f-b705-7deeae8c2e39)
+  
+   ### Will `sudo apt upgrade` update all installed packages?
+
+  Yes, running `sudo apt upgrade` will attempt to **update all installed packages** on your system to their latest available versions, but with some key points to understand:
+
+   ### How `sudo apt upgrade` Works:
+   - **`apt upgrade`** updates all **installed packages** for which new versions are available in the repositories.
+   - It will only upgrade packages if the upgrade **does not require removing any currently installed packages** or installing new ones (dependencies). In other words, `apt upgrade` will perform "safe" upgrades where the new versions are compatible with the currently installed package set.
+
+   ### Key Behaviors:
+   1. **No Package Removal**:
+      - `apt upgrade` will **not remove** any packages. If an upgrade would require removing an existing package, the upgrade will be skipped for that package.
+   
+   2. **No New Package Installations**:
+      - `apt upgrade` will **not install new packages**. If an upgrade requires installing new dependencies or packages, that particular package will not be upgraded.
+
+   3. **Upgrades Only**:
+      - It only **upgrades the packages** that can be updated without altering the existing package dependencies or structure.
+
+   ### For More Comprehensive Upgrades:
+   - If you want to allow package upgrades that might require **removing** or **installing new packages**, you should use:
+     - **`sudo apt full-upgrade`** (previously `dist-upgrade`): This command performs a more comprehensive upgrade, allowing for package removals or new installations as necessary to complete the upgrade process.
+  
+     - **`sudo apt autoremove`**: After using `apt full-upgrade`, you might want to run `sudo apt autoremove` to clean up unused packages and dependencies that are no longer needed.
+
+   ### Summary:
+   - **`sudo apt upgrade`** will update all installed packages **as long as no new packages or removals are required**.
+   - For a more aggressive upgrade that may remove or install additional packages, use **`sudo apt full-upgrade`**.
 
 - ```apt install <package_name>``` - install package
 
