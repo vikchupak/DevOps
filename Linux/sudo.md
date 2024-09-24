@@ -31,3 +31,22 @@ Some commands we have to run as sudo to "see" the whole information.
 ![image](https://github.com/user-attachments/assets/71e1c785-6372-434d-af15-5cba9f1b5e1d)
 ![image](https://github.com/user-attachments/assets/0c219a13-ad87-4fb1-95f1-377db95da53e)
 
+# Is there necessity to add `sudo` to `apt search <package>`?
+
+No, there is **no necessity** to add `sudo` to the `apt search <package>` command. 
+
+Here’s why:
+
+- **`apt search`** only queries the local package cache and displays information about available packages. It does not modify your system in any way, so it does **not require elevated (root) permissions**.
+- You can run `apt search` as a regular user, and it will work just fine.
+
+### When to Use `sudo`:
+- **`sudo`** is needed for commands that modify your system, such as:
+  - **`sudo apt update`**: To update the package list (since it modifies the local package cache).
+  - **`sudo apt install <package>`**: To install software (since it makes changes to your system by installing packages).
+  - **`sudo apt upgrade`**: To upgrade installed packages.
+  
+### Summary:
+- **`sudo` is not needed** for `apt search`, as it’s a read-only operation that doesn’t change your system.
+- Use `sudo` only for commands that require administrative privileges, such as installing, updating, or upgrading packages.
+
