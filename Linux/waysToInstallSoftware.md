@@ -30,7 +30,7 @@
    - **`apt`** provides a higher-level interface for users, handling dependencies and repository management.
    - **`dpkg`** performs the actual installation and configuration of `.deb` packages, which is invoked by `apt` for low-level tasks.
   
-- **Ubuntu Software** (Like an app store. A discontinued high-level graphical front end for the APT/dpkg package management system. Can also be used to add repositories)\
+- **Ubuntu Software** (Like an app store. A discontinued high-level graphical front end for the **APT and snap** package management system. Can also be used to add repositories)\
    https://en.wikipedia.org/wiki/Ubuntu_Software_Center \
    ![Screenshot from 2024-09-21 14-55-58](https://github.com/user-attachments/assets/1d2d1ffd-0a62-4527-87e9-e3e53890918e)
 
