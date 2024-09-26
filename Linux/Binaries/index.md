@@ -228,7 +228,7 @@ In rare cases, executable binaries can be created **manually** using assembly la
 - **Interpreted languages** do not always generate binaries by default but can be packaged into them.
 - The final result is a binary file that the operating system can load and execute, enabling direct interaction with the system's kernel through system calls.
 
-# What is assembler?
+# What is an assembler?
 
 An **assembler** is a tool that converts **assembly language** into **machine code**, which is the binary instructions that a computer's processor can execute directly. Assembly language is a low-level, human-readable representation of machine instructions that are closely tied to the architecture of a specific CPU (e.g., x86, ARM, RISC-V).
 
@@ -315,7 +315,7 @@ While high-level programming languages are much more common today, assembly lang
 - Assembly language provides a close representation of the machine instructions, and the assembler converts that representation into binary form.
 - Assemblers play a critical role in systems programming, embedded development, and in situations where precise control over hardware is needed.
 
-# Can binary file be open in a text editor?
+# Can a binary file be open in a text editor?
 
 Yes, you can open a binary file in a text editor, but it may not display the content in a meaningful way. A binary file contains data in a format that is not plain text, which means that many of its bytes may represent non-printable characters. When viewed in a text editor, you'll often see a mix of gibberish characters and symbols, making it difficult to interpret the data.
 
