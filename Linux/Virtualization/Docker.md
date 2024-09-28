@@ -1,3 +1,41 @@
+# The difference between Docker and Virtual Machines
+
+Docker and virtual machines (VMs) both provide isolated environments to run applications, but they do so in fundamentally different ways. Here are the key differences:
+
+### 1. **Architecture**
+- **Virtual Machines**: VMs virtualize entire hardware systems, including the CPU, memory, storage, and network interfaces. Each VM runs its own **full operating system** (guest OS) on top of a hypervisor, which runs on the host system.
+- **Docker (Containers)**: Docker uses **containerization** to package applications and their dependencies in a lightweight container. Containers share the host OS's kernel and are much more lightweight than VMs. Containers isolate the application but run directly on the host machine’s operating system.
+
+### 2. **Size and Efficiency**
+- **Virtual Machines**: Because VMs run a full OS in addition to the host system, they consume more resources. Each VM requires its own OS instance, so they can be much larger (GBs in size) and take longer to start up.
+- **Docker**: Containers are lightweight, typically in MBs, because they only include the application and its dependencies, not an entire OS. They start almost instantly since they share the host OS's kernel.
+
+### 3. **Performance**
+- **Virtual Machines**: VMs are more resource-heavy because of the overhead of running a full guest OS, and performance can be slower due to the need for virtualization (the hypervisor layer).
+- **Docker**: Docker containers have less overhead because they share the host OS’s kernel and do not require an entire OS per instance. This leads to faster performance and startup times.
+
+### 4. **Isolation**
+- **Virtual Machines**: VMs provide **full isolation since each VM runs its own OS and acts like a separate physical machine**. This ensures strong security and isolation, but with higher overhead.
+- **Docker**: Containers offer **process-level isolation**. While containers are isolated from one another, they share the same kernel, meaning isolation is less strict than VMs. Docker uses kernel namespaces and control groups (cgroups) for isolation, which is sufficient for most use cases but not as robust as VMs.
+
+### 5. **Use Cases**
+- **Virtual Machines**: Ideal for running applications that require different operating systems or when stronger isolation is required. VMs are better suited for traditional infrastructure, where complete isolation between applications is crucial.
+- **Docker**: Ideal for microservices, DevOps, and environments where rapid development, testing, and deployment are essential. Docker is more popular for running multiple instances of an application, especially when all containers can share the same OS.
+
+### 6. **Boot Time**
+- **Virtual Machines**: Typically take minutes to boot because they load an entire OS.
+- **Docker**: Containers start in seconds or even milliseconds since they don’t load a full OS.
+
+### 7. **Management**
+- **Virtual Machines**: Managed using hypervisors (like VMware, Hyper-V, or KVM) and tools such as Vagrant, OpenStack, etc.
+- **Docker**: Managed using container orchestrators like Docker Swarm or Kubernetes.
+
+### Summary
+- **VMs**: Heavier, complete isolation, runs full OS.
+- **Docker**: Lighter, faster, process-level isolation, shares the OS kernel.
+
+In short, Docker is more lightweight and efficient than VMs, but VMs provide stronger isolation by running entire OS environments.
+
 # If docker containers use the linux kernel, does that mean that only linux based apps can be run?
 
 Not necessarily. While Docker containers share the **host system's kernel** (which is typically a Linux kernel), you can run both **Linux-based** and **non-Linux-based applications** using Docker containers through certain methods. Here's how:
@@ -47,6 +85,12 @@ Docker Desktop uses **hosted VMs** (often referred to as lightweight VMs) to pro
 
 ### Summary:
 Docker Desktop utilizes **hosted VMs** rather than bare-metal VMs. These lightweight VMs run on top of hypervisors (like WSL 2 on Windows or HyperKit on macOS) to provide the necessary Linux environment for running Docker containers on non-Linux systems. This setup allows for efficient container management while maintaining compatibility with the host operating system.
+
+# Docker Desktop on Linux
+
+![image](https://github.com/user-attachments/assets/c71eb7ee-ddca-4947-8f82-f8c5af1c0b2f)
+
+Original source https://docs.docker.com/desktop/install/linux/
 
 # Images can be based on different Linux distros different from Host's distro. How then can they use the same Host kernel? Doesn't this mean that all Linux distros have the same kernel?
 
