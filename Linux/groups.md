@@ -10,3 +10,6 @@ https://www.baeldung.com/linux/primary-vs-secondary-groups
 - `sudo usermod -g admin viktor` - change primary group for a user
 - `sudo usermod -G admin viktor` - override secondary group list for a user
 - `sudo usermod -aG admin viktor` - add secondary group to group list for a user
+
+- `groups` - list logged in user groups
+- `groups <userName>` - list user groups
