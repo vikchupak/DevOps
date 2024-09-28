@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/74dedac2-9db0-46d7-9d7f-ebc0841024e6)
+| ![photo_2024-09-28_20-53-41](https://github.com/user-attachments/assets/9d7477a6-396c-41b7-9a56-e5aa9d7014de) | ![photo_2024-09-28_20-54-13](https://github.com/user-attachments/assets/87fae8e1-5fc6-46aa-adba-dbc9d0b4c9ca) |
+|------------------------|------------------------|
+
 
 # Is an executable binary a binary file?
 
