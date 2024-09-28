@@ -31,6 +31,27 @@ Some commands we have to run as sudo to "see" the whole information.
 ![image](https://github.com/user-attachments/assets/71e1c785-6372-434d-af15-5cba9f1b5e1d)
 ![image](https://github.com/user-attachments/assets/0c219a13-ad87-4fb1-95f1-377db95da53e)
 
+# Are a root user and a sudo user the same?
+
+No, a **root user** and a **sudo user** are not the same, though they are closely related in terms of system privileges:
+
+### 1. **Root User:**
+   - The root user is the **superuser** on a Linux or Unix system, with **unrestricted access** to all commands, files, and system resources.
+   - The root user can perform any task on the system, including changing any system files, creating or deleting other users, and controlling permissions.
+   - It is the most powerful user account on a system, and operating directly as root can be dangerous if commands are misused.
+
+### 2. **Sudo User:**
+   - A sudo (short for "superuser do") user is a regular user who is **granted temporary root privileges** to run specific commands or access system resources that typically require root access.
+   - **`sudo`** allows a user to elevate their privileges for certain tasks without logging in as the root user.
+   - The sudo user's actions are usually logged, offering better accountability and security.
+
+### Key Differences:
+   - **Access:** The root user has full, always-on access, whereas a sudo user has temporary or limited access to root privileges.
+   - **Security:** Direct use of the root user account is riskier because there are no restrictions or logging of actions, while sudo adds an extra layer of security by limiting access and logging actions.
+   - **Convenience:** The sudo mechanism allows administrators to perform tasks without needing to fully switch to the root user, improving convenience and safety.
+
+In general, it's best practice to use `sudo` for administrative tasks and avoid logging in as the root user unless absolutely necessary.
+
 # Is there necessity to add `sudo` to `apt search <package>`?
 
 No, there is **no necessity** to add `sudo` to the `apt search <package>` command. 
