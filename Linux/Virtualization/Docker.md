@@ -237,7 +237,7 @@ Yes, you can create a Docker image from scratch without extending from any exist
 ### Summary
 Yes, you can create a Docker image from scratch without extending from any existing image. This approach requires that your application is statically compiled or self-contained, allowing it to run in a minimal environment without external dependencies. It’s a great way to create lightweight and secure Docker images, especially for simple applications.
 
-# With a image created from a scratch, it will not be possible to run Linux commands?
+# With an image created from a scratch, it will not be possible to run Linux commands?
 
 Correct, with a Docker image created from scratch, **you won't have access to typical Linux commands** (like `ls`, `bash`, `cp`, etc.) unless you explicitly add them to the image. This is because the `scratch` image is completely empty — it doesn’t include any user-space utilities, shell environments, or libraries that are typically found in a standard Linux distribution.
 
