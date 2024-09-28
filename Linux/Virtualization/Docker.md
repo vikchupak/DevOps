@@ -121,3 +121,152 @@ All modern Linux distributions are based on the **same Linux kernel project**, t
 - The **host kernel is shared**, but the containers bring their own user-space environment, so distro-specific libraries and applications can function independently.
 
 So, **Linux distributions don’t all use the same kernel version**, but they are close enough in terms of compatibility that containers from different distros can still share the same host kernel.
+
+# Does Docker use Linux utils and libs only, but not entire OS?
+
+Yes, Docker containers utilize **Linux user-space utilities and libraries** along with the Linux kernel, but they do not include the entire operating system. Here’s a breakdown of how this works:
+
+### 1. **Container Components**
+- **Base Image**: Docker containers are built from images, which often start from a base image that includes a minimal set of **Linux utilities** and libraries necessary for the application to run. Common base images include:
+  - **Alpine Linux**: A minimalistic image with essential packages.
+  - **Ubuntu**: A more fully-featured image with the Ubuntu user-space utilities.
+  - **Debian**: Another commonly used base with Debian utilities.
+  
+- **Application Dependencies**: In addition to the base image, you can include application-specific libraries and binaries needed for your application to function properly.
+
+### 2. **No Full OS**
+- Docker containers do not include a complete Linux operating system; instead, they contain just the required libraries and binaries for the applications. This is what makes containers lightweight.
+- **Shared Kernel**: Containers run on the host’s Linux kernel, leveraging it for resource management, process isolation, and system calls.
+
+### 3. **Filesystem Hierarchy**
+- The filesystem within a Docker container mimics a traditional Linux filesystem structure (like `/bin`, `/lib`, `/etc`, etc.), but it only contains the files needed for that specific application and its runtime environment.
+- Each container starts from a base image that provides the essential directories and files but does not require all of the components of a full Linux distribution.
+
+### 4. **User-Space Tools**
+- Containers can use various Linux utilities like:
+  - **Bash**: For scripting and command-line usage.
+  - **Core utilities**: Tools like `ls`, `cp`, `mv`, etc., depending on the base image.
+  - **Libraries**: Standard C libraries (like glibc or musl) that applications depend on.
+
+### Summary:
+- Docker containers utilize **Linux user-space utilities and libraries**, but they do not run a full Linux operating system.
+- Containers leverage the host's Linux kernel while only packaging the necessary user-space components to run applications, making them lightweight and efficient.
+- The design allows for easy deployment and scalability while maintaining a consistent environment across different systems. 
+
+This approach provides flexibility, as you can create containers tailored to the specific needs of your applications without the overhead of a complete OS.
+
+# A base image doesn't contain a kernel?
+
+Correct! A Docker base image does **not** contain a kernel. Here’s a detailed explanation:
+
+### Key Points:
+
+1. **Base Image Components**:
+   - A **Docker base image** consists of the essential files, libraries, and utilities needed for an application to run. This may include:
+     - System libraries (like `libc`)
+     - Command-line utilities (like `bash`, `ls`, etc.)
+     - Application-specific dependencies
+
+2. **No Kernel in Base Image**:
+   - The base image does not include a Linux kernel. Instead, it relies on the **host operating system's kernel** to provide the necessary kernel functionalities (process management, system calls, etc.).
+   - Each container shares the kernel of the host OS, meaning all containers running on a host use the same kernel instance.
+
+3. **Isolation via Namespaces**:
+   - Docker achieves process isolation and resource management through **kernel features** such as namespaces and control groups (cgroups), but these features are provided by the host's kernel, not by the base image.
+
+### Summary:
+- The base image in Docker is composed of user-space libraries and utilities required for applications, but it does **not** include the kernel.
+- All Docker containers on a given host share the host's kernel, making them lightweight and efficient while still providing isolation through the kernel's features. 
+
+This architecture is what allows Docker containers to be so portable and quick to start, as they don’t need to boot up an entire operating system or kernel when running.
+
+# Can I create a docker image from a scratch without extending from any Linux based image?
+
+Yes, you can create a Docker image from scratch without extending from any existing Linux-based image. This is typically done using the `FROM scratch` directive in your Dockerfile. Here’s how it works and what you need to know:
+
+### Creating a Scratch Image
+
+1. **Using `FROM scratch`**:
+   - In your Dockerfile, you can start with `FROM scratch`. This indicates that you’re starting with an empty image with no base image.
+
+   ```dockerfile
+   FROM scratch
+   ```
+
+2. **Building the Image**:
+   - When you create a Docker image from scratch, you must include all necessary binaries and libraries needed for your application. This means you will typically need to statically compile your application or ensure that it has no external dependencies that require shared libraries.
+
+3. **Static Binaries**:
+   - Applications that can run in a scratch image are usually written in languages that support static linking, such as:
+     - **Go**: Compiling a Go application with `CGO_ENABLED=0` allows you to create a static binary that doesn’t depend on external libraries.
+     - **Rust**: You can compile Rust applications to be statically linked.
+     - **C/C++**: You can compile C or C++ applications with static linking options.
+
+4. **Example Dockerfile**:
+   Here’s a simple example of a Dockerfile that creates an image from scratch using a statically compiled Go binary:
+
+   ```dockerfile
+   # Start from scratch
+   FROM scratch
+
+   # Copy the statically compiled binary into the image
+   COPY myapp /myapp
+
+   # Command to run the application
+   CMD ["/myapp"]
+   ```
+
+5. **Building the Image**:
+   - Build the image using Docker commands:
+
+   ```bash
+   docker build -t myapp-image .
+   ```
+
+### Use Cases
+- Creating an image from scratch can be beneficial for:
+  - **Reducing image size**: Since you include only the necessary files, images can be very small.
+  - **Increased security**: A minimal image reduces the attack surface since there are no extra components included.
+
+### Limitations
+- There are limitations to consider when creating images from scratch:
+  - You must ensure that all dependencies are included.
+  - It may not be suitable for applications that rely on system libraries or require a more complex runtime environment.
+  - Debugging can be more challenging since you won’t have the typical user-space utilities available.
+
+### Summary
+Yes, you can create a Docker image from scratch without extending from any existing image. This approach requires that your application is statically compiled or self-contained, allowing it to run in a minimal environment without external dependencies. It’s a great way to create lightweight and secure Docker images, especially for simple applications.
+
+# With a image created from a scratch, it will not be possible to run Linux commands?
+
+Correct, with a Docker image created from scratch, **you won't have access to typical Linux commands** (like `ls`, `bash`, `cp`, etc.) unless you explicitly add them to the image. This is because the `scratch` image is completely empty — it doesn’t include any user-space utilities, shell environments, or libraries that are typically found in a standard Linux distribution.
+
+### Why No Linux Commands in a Scratch Image?
+
+- The **`FROM scratch`** directive in Docker starts with an empty image. It doesn’t contain any base operating system, no shell, no utilities — nothing except what you explicitly copy into the image.
+- This means if you only copy a statically compiled binary into the image (for example, a Go application), then **that binary is the only thing in the image**.
+
+### Can You Add Linux Commands?
+
+Yes, you can manually add Linux commands to your image, but you would have to install those utilities or include the binaries yourself. There are two primary ways to do this:
+
+1. **Manually Add Utilities**:
+   - You can copy specific utilities or binaries that you need directly into the image. However, this can be cumbersome and requires you to know exactly which files you need.
+   
+   Example:
+   ```dockerfile
+   FROM scratch
+   COPY /bin/ls /bin/ls  # Add 'ls' command manually
+   COPY /lib/x86_64-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6  # Include necessary libraries
+   ```
+
+2. **Use a Minimal Base Image Instead**:
+   - If you need basic Linux utilities, you can start with a minimal base image, like **Alpine Linux** (which is around 5MB). It provides a lightweight set of utilities, including a shell, and is a good middle ground between scratch and full-featured base images like Ubuntu.
+   
+   Example using Alpine:
+   ```dockerfile
+   FROM alpine
+   RUN apk add --no-cache bash  # Install additional utilities if needed
+   ```
+
+   By doing this, you get a minimal set of Linux utilities and libraries, while still keeping the image size small.
