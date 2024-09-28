@@ -36,7 +36,7 @@ Docker and virtual machines (VMs) both provide isolated environments to run appl
 
 In short, Docker is more lightweight and efficient than VMs, but VMs provide stronger isolation by running entire OS environments.
 
-# If docker containers use the linux kernel, does that mean that only linux based apps can be run?
+# If docker containers use the Linux kernel, does that mean that only Linux-based apps can be run?
 
 Not necessarily. While Docker containers share the **host system's kernel** (which is typically a Linux kernel), you can run both **Linux-based** and **non-Linux-based applications** using Docker containers through certain methods. Here's how:
 
@@ -86,13 +86,13 @@ Docker Desktop uses **hosted VMs** (often referred to as lightweight VMs) to pro
 ### Summary:
 Docker Desktop utilizes **hosted VMs** rather than bare-metal VMs. These lightweight VMs run on top of hypervisors (like WSL 2 on Windows or HyperKit on macOS) to provide the necessary Linux environment for running Docker containers on non-Linux systems. This setup allows for efficient container management while maintaining compatibility with the host operating system.
 
-# Docker Desktop on Linux
+# Docker Desktop on Linux (also uses VM)
 
 ![image](https://github.com/user-attachments/assets/c71eb7ee-ddca-4947-8f82-f8c5af1c0b2f)
 
 Original source https://docs.docker.com/desktop/install/linux/
 
-# Images can be based on different Linux distros different from Host's distro. How then can they use the same Host kernel? Doesn't this mean that all Linux distros have the same kernel?
+# Images can be based on different Linux distros different from Host's distro. How can they then use the same Host kernel? Doesn't this mean that all Linux distros have the same kernel?
 
 ### 1. **Linux Kernel vs. Linux Distribution**
 - **Linux Kernel**: The kernel is the core part of the operating system that interacts directly with the hardware. It handles system resources like CPU, memory, I/O, etc.
