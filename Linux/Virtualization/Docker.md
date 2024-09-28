@@ -180,7 +180,7 @@ Correct! A Docker base image does **not** contain a kernel. Here’s a detailed 
 
 This architecture is what allows Docker containers to be so portable and quick to start, as they don’t need to boot up an entire operating system or kernel when running.
 
-# Can I create a docker image from a scratch without extending from any Linux based image?
+# Can I create a docker image from a scratch without extending from any Linux-based image?
 
 Yes, you can create a Docker image from scratch without extending from any existing Linux-based image. This is typically done using the `FROM scratch` directive in your Dockerfile. Here’s how it works and what you need to know:
 
