@@ -17,6 +17,20 @@ For example:
 
 In short, an executable binary is a **subset of binary files**, specifically designed to contain machine-level instructions for direct execution by the CPU.
 
+# Is binary code excecuted on hardware?
+
+Yes, binary code is executed directly by hardware, specifically by the central processing unit (CPU) of a computer. Here's how it works:
+
+1. **Compilation/Interpretation**: High-level programming languages (like C++, Python, etc.) are translated into binary code (machine code) through a compiler or interpreter. This binary code consists of sequences of 0s and 1s.
+
+2. **Loading into Memory**: The binary code is loaded into the computer's memory (RAM) for execution.
+
+3. **Execution by the CPU**: The CPU fetches the binary instructions from memory and executes them. Each instruction corresponds to specific operations, such as arithmetic calculations, memory access, or input/output processing.
+
+4. **Control Signals**: The CPU generates control signals to direct other hardware components (like memory and I/O devices) based on the executed instructions.
+
+In summary, binary code serves as the low-level language that the CPU can directly understand and execute, enabling the performance of various tasks on a computer.
+
 # So executable binaries talk to the kernel through system calls and directly to CPU?
 
 Yes, an **executable binary** communicates both:
