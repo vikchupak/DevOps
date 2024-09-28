@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/74dedac2-9db0-46d7-9d7f-ebc0841024e6)
+
 # Is an executable binary a binary file?
 
 Yes, an **executable binary** is a type of **binary file**. 
