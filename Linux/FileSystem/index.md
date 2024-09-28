@@ -1,8 +1,9 @@
 `man hier`
 
-![photo_2024-07-20_22-59-52](https://github.com/user-attachments/assets/28873705-ae55-44af-aee5-f3e495422d18)
+| ![photo_2024-07-20_22-59-52](https://github.com/user-attachments/assets/28873705-ae55-44af-aee5-f3e495422d18) | ![photo_2024-09-28_21-02-56](https://github.com/user-attachments/assets/b4e06cba-e33b-4940-b087-bb70c4b12d63) |
+|------------------------|------------------------|
 
-![photo_2024-07-20_23-01-39](https://github.com/user-attachments/assets/db3679a0-a70a-4da1-a3ba-1b352fbbb93b)
+![photo_2024-09-28_21-01-09](https://github.com/user-attachments/assets/b4dbfee7-5ce5-4dfb-af75-7fe942821b2c)
 
 - /home/{user}/ - users home directory. Only that user specific files/configs/apps. NOT system wide.
 - /root - root user home directory
