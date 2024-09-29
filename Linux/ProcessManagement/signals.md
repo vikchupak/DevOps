@@ -1,3 +1,18 @@
+### 1. About signals
+https://www.youtube.com/watch?v=lP7xoqkqDZQ
+
+__Processes communicate with each other through signals.__
+
+`kill -l` list all the signals supported by your system\
+https://www.javatpoint.com/linux-signals
+
+![image](https://github.com/user-attachments/assets/72917cc7-0a6c-4433-90bf-9e797f6e5052)
+
+__trap__\
+Normally, we use trap to process signals.
+- Trapping Signals https://www.tutorialspoint.com/unix/unix-signals-traps.htm
+- trap with exit  https://www.baeldung.com/linux/return-vs-exit#using-the-trap-command-with-exit
+
 # What are signals in Linux?
 
 In Linux, **signals** are a mechanism used by the operating system to notify or interrupt processes when certain events occur.\
