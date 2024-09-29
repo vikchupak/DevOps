@@ -1,4 +1,4 @@
-### 1. About signals
+# About signals in general
 https://www.youtube.com/watch?v=lP7xoqkqDZQ
 
 __Processes communicate with each other through signals.__
@@ -193,3 +193,173 @@ done
 - You can use `trap` to **ignore** signals, **reset** signal handlers, or manage multiple signals with a single handler.
 
 By using `trap` effectively, you can make your scripts more robust and handle unexpected events gracefully.
+
+# EXIT
+
+In Linux, the `EXIT` signal is a special signal used with the `trap` command in shell scripting. It is not a traditional signal like `SIGINT` or `SIGTERM`, which are sent by the operating system or users to interrupt or terminate processes. Instead, `EXIT` is triggered automatically **when a shell script or function terminates**, regardless of whether it exits normally or due to an error.
+
+### Key Characteristics of `EXIT`:
+1. **Triggered at Script Termination**:
+   - `EXIT` is triggered when a script finishes executing. This can happen when the script reaches the end, the `exit` command is called, or an error causes it to terminate.
+   
+2. **Used for Cleanup**:
+   - The `trap ... EXIT` construct is often used to perform **cleanup actions** such as removing temporary files, resetting terminal settings, or other final tasks before a script exits.
+
+3. **Executed on Both Normal and Abnormal Exits**:
+   - Regardless of how the script terminates (either normally by finishing its commands or abnormally due to errors or signals like `SIGINT`), the `EXIT` handler will run.
+
+4. **Always Executed**:
+   - The `EXIT` trap is always triggered unless the shell itself crashes or is forcefully terminated using signals like `SIGKILL` (signal 9) which cannot be caught or handled.
+
+### Example of Using `EXIT` with `trap`:
+
+#### Simple Cleanup Example:
+Here’s a script that uses `trap` with `EXIT` to clean up a temporary file:
+
+```bash
+#!/bin/bash
+
+# Set trap to execute cleanup on exit
+trap 'rm -f /tmp/tempfile; echo "Cleanup complete!"' EXIT
+
+# Create a temporary file
+echo "Creating temporary file..."
+touch /tmp/tempfile
+
+# Simulate some work
+echo "Doing some work..."
+sleep 5
+
+# Exiting the script
+echo "Exiting script now."
+exit 0
+```
+
+- When the script finishes, either because it reaches the end or because `exit 0` is called, the `trap` statement will:
+  1. Remove the temporary file `/tmp/tempfile`.
+  2. Print "Cleanup complete!".
+
+#### Example Handling Normal and Error Exits:
+You can also use `EXIT` to handle both normal and abnormal exits, ensuring cleanup always occurs.
+
+```bash
+#!/bin/bash
+
+trap 'echo "Script exited with code $?"; rm -f /tmp/tempfile' EXIT
+
+touch /tmp/tempfile
+
+# Simulate some commands
+echo "Working..."
+sleep 2
+
+# Simulate an error
+echo "An error occurred."
+exit 1  # Exit with a non-zero status code
+```
+
+- The `trap` command uses `$?` to capture the **exit status** of the script.
+- Regardless of whether the script exits normally (`exit 0`) or with an error (`exit 1`), the `EXIT` trap will:
+  1. Print the exit code of the script (`$?` holds the exit code).
+  2. Remove `/tmp/tempfile`.
+
+#### Example Using Functions:
+If you want to ensure that cleanup happens after a function exits, you can use `trap` with `EXIT` at the function level as well.
+
+```bash
+#!/bin/bash
+
+cleanup() {
+    echo "Cleaning up resources..."
+    rm -f /tmp/tempfile
+}
+
+# Set trap to clean up on script exit
+trap cleanup EXIT
+
+echo "Creating temporary file..."
+touch /tmp/tempfile
+
+# Simulate some work
+echo "Doing some work..."
+sleep 5
+
+echo "Done."
+```
+
+### How `EXIT` Works with Errors and Signals:
+- The `EXIT` trap **always runs** when the script finishes, regardless of whether the script terminates normally or due to an error.
+- If the script is terminated by signals such as `SIGINT` (via `Ctrl+C`) or `SIGTERM` (using `kill`), the `EXIT` trap will still execute.
+  - However, if the script is killed with `SIGKILL` (`kill -9`), the `EXIT` trap won’t be triggered because `SIGKILL` cannot be caught or handled.
+
+### How `trap ... EXIT` Works with `exit` Command:
+- The `EXIT` trap is executed when the script ends naturally, but also if you explicitly use the `exit` command in the script.
+  
+Example:
+```bash
+#!/bin/bash
+
+trap 'echo "Exiting. Cleanup..."; rm -f /tmp/tempfile' EXIT
+
+echo "Creating temporary file..."
+touch /tmp/tempfile
+
+echo "Exiting early with exit 0..."
+exit 0  # EXIT trap will still run here
+
+# This line will never be reached
+echo "This won't print."
+```
+
+Even though the script exits early using `exit 0`, the `EXIT` trap runs, ensuring that cleanup happens.
+
+### Using `EXIT` with Error Handling:
+If you want to ensure that specific cleanup actions are taken even when an error occurs, `trap '...' EXIT` is useful. Here’s how you can use it with error checking:
+
+```bash
+#!/bin/bash
+
+trap 'echo "Exiting. Last command exit status: $?"; rm -f /tmp/tempfile' EXIT
+
+echo "Creating temporary file..."
+touch /tmp/tempfile
+
+# Simulate a command that fails
+cp /nonexistent/file /tmp/tempfile
+
+echo "This line will not be executed if the above command fails."
+```
+
+- The `trap` command will still execute the cleanup on exit, even if the `cp` command fails (due to a missing file).
+- The special variable `$?` holds the **exit status** of the last command.
+
+### Nested `trap` Commands:
+You can also nest `trap` commands for handling different signals, including `EXIT`.
+
+```bash
+#!/bin/bash
+
+trap 'echo "Caught SIGINT, exiting..."; exit' SIGINT
+trap 'echo "Script exited, cleaning up"; rm -f /tmp/tempfile' EXIT
+
+echo "Creating temporary file..."
+touch /tmp/tempfile
+
+echo "Running script, press Ctrl+C to interrupt..."
+sleep 20
+
+echo "Script finished."
+```
+
+- If you press `Ctrl+C`, the `SIGINT` trap is executed first, followed by the `EXIT` trap.
+- The script will:
+  1. Print "Caught SIGINT, exiting..." when `Ctrl+C` is pressed.
+  2. Then, print "Script exited, cleaning up" and remove `/tmp/tempfile` before exiting.
+
+### Summary of `trap ... EXIT`:
+- **`EXIT`** is triggered when the script ends, either successfully or due to an error or signal (except for `SIGKILL`).
+- It is often used to ensure **cleanup tasks** (like removing temporary files) are performed regardless of how the script exits.
+- **`trap ... EXIT`** can be used in combination with other signals (`SIGINT`, `SIGTERM`) to provide robust handling for scripts.
+- `$?` can be used within the `EXIT` trap to access the exit status of the script or the last executed command.
+
+This makes `trap ... EXIT` a powerful and flexible tool for writing reliable and clean shell scripts.
