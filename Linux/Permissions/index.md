@@ -20,7 +20,7 @@ drwxr-xr-x 2 root root        4096 Sep 29 09:30 directory
      - `p`: Named pipe
 
 2. **Number of Hard Links** (`1` / `2`):
-   - This column shows the **number of hard links** to the file or directory. 
+   - This column shows the **number of hard links** for regular files. 
    - **For directories, this number represents the count of SUBDIRECTORIES(EXCLUDING REGULAR FILES AND INCLUDING HIDDEN DIRECTORIES AND `.`, `..` DIRECTORIES)**.
 
 3. **Owner (User)** (`john` / `root`):
