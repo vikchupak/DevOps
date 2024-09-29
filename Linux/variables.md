@@ -51,3 +51,36 @@ declare -p myvar
 ### set command
 - A built-in shell command used to set or unset values of ___shell options___ and positional parameters.
 - `set -u; echo $var` > bash: var: unbound variable
+
+# Boolean
+
+Shell scripting (like `bash`, `sh`, or `zsh`) doesn’t have explicit **boolean** values like `true` or `false` found in many programming languages. Instead, it relies on **exit statuses** of commands to represent **truth** and **falsehood**.
+
+### How Booleans Work in Shell:
+
+In shell scripting, the concept of **truth** and **falsehood** is represented by:
+- **Success (True)**: A command exits with status **`0`**.
+- **Failure (False)**: A command exits with a **non-zero** exit status.
+
+### `true` and `false` Commands in Shell:
+The `true` and `false` commands in most shells always return specific exit statuses:
+- `true` returns an exit status of `0` (success).
+- `false` returns an exit status of `1` (failure).
+
+These commands can be used to explicitly return "true" or "false" in a script.
+
+Example:
+```bash
+if true; then
+    echo "This is always true"
+fi
+
+if false; then
+    echo "This will never run"
+fi
+```
+
+### Summary:
+- In shell scripts, boolean values are represented by **exit statuses**: `0` for success (true), and non-zero for failure (false).
+- You can simulate boolean variables with the built-in `true` and `false` commands.
+- Conditionals and loops often rely on these exit statuses to determine "truth" or "falsehood."
