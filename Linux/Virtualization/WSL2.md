@@ -1,3 +1,6 @@
+| ![image](https://github.com/user-attachments/assets/7a42ccfc-42bd-4b7c-bf59-4ac368583c22) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ![image](https://github.com/user-attachments/assets/3e22823b-55b6-4b0d-a8dc-f2dd372d9283) |
+| - | - |
+
 # Is WSL2 a hypervisor?
 
 **WSL2 (Windows Subsystem for Linux 2)** uses a **Type 1 (bare-metal) hypervisor** to run a full Linux kernel on Windows, **but** WSL2 itself is not a hypervisor. Instead, it leverages the **Hyper-V** hypervisor, which is built into Windows, to create a lightweight virtual machine where the Linux kernel can run.
