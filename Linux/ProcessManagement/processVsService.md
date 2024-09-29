@@ -2,7 +2,7 @@
 
 There is a difference between a process and a service in Linux, although they are closely related. Here’s a detailed explanation of each term and their differences:
 
-### Process
+# Process
 
 1. **Definition**:
    - A process is an instance of a program that is being executed. It contains the program code and its current activity. Each process has a unique Process ID (PID).
@@ -21,7 +21,7 @@ There is a difference between a process and a service in Linux, although they ar
    $ kill -9 1234    # Kill process with PID 1234
    ```
 
-### Service
+# Service
 
 1. **Definition**:
    - A service is a type of process that runs in the background and performs specific tasks, typically without user interaction. ___Services are also referred to as daemons___.
@@ -41,7 +41,7 @@ There is a difference between a process and a service in Linux, although they ar
    $ systemctl disable apache2    # Disable apache2 from starting at boot
    ```
 
-### Key Differences
+# Key Differences
 
 - **Interaction**:
   - **Processes**: Can be interactive or non-interactive. They may require user input and provide output directly to the user.
@@ -55,7 +55,7 @@ There is a difference between a process and a service in Linux, although they ar
   - **Processes**: Can be any running program, such as a text editor, a compiler, a web browser, etc.
   - **Services**: Specifically designed to provide background functionality and system-wide services like web servers, database servers, system logging, etc.
 
-### Example Scenario
+# Example Scenario
 
 1. **Process**:
    - You open a text editor like `nano` to edit a file. This creates a process for `nano` which is interactive and waits for user input.
@@ -69,7 +69,7 @@ There is a difference between a process and a service in Linux, although they ar
      $ sudo systemctl start apache2
      ```
 
-### Conclusion
+# Conclusion
 
 - **Processes** are instances of programs in execution and can be either interactive or non-interactive. They are managed by commands like `ps`, `kill`, and `top`.
 - **Services** are special types of background processes designed to provide ongoing system functionalities without user interaction. They are managed by init systems and commands like `systemctl` or `service`.
