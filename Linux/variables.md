@@ -78,6 +78,11 @@ fi
 if false; then
     echo "This will never run"
 fi
+
+while true
+    do
+        echo "Infinite loop"
+    done
 ```
 
 ### Summary:
