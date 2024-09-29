@@ -1,3 +1,45 @@
+# `ls -al`
+
+### Example Output:
+```
+-rw-r--r-- 1 john developers  4096 Sep 29 10:15 file.txt
+drwxr-xr-x 2 root root        4096 Sep 29 09:30 directory
+```
+
+### Columns Explanation:
+
+1. **File Type and Permissions** (`-rw-r--r--` / `drwxr-xr-x`):
+   - The first column shows **file type** and **permissions**.
+   - The first character indicates the type of file:
+     - `-`: Regular file
+     - `d`: Directory
+     - `l`: Symbolic link
+     - `b`: Block device
+     - `c`: Character device
+     - `s`: Socket
+     - `p`: Named pipe
+
+2. **Number of Hard Links** (`1` / `2`):
+   - This column shows the **number of hard links** to the file or directory. 
+   - **For directories, this number represents the count of SUBDIRECTORIES(EXCLUDING REGULAR FILES AND INCLUDING HIDDEN DIRECTORIES AND `.`, `..`)**.
+
+3. **Owner (User)** (`john` / `root`):
+   - This column indicates the **owner** (user) of the file or directory, which is typically the person who created it.
+
+4. **Group** (`developers` / `root`):
+   - This column shows the **group** associated with the file or directory. Users in this group may have specific permissions to access the file.
+
+5. **File Size** (`4096`):
+   - This column shows the **size of the file** in bytes.
+   - For directories, it shows the size used by the directory itself, not the contents.
+
+6. **Modification Timestamp** (`Sep 29 10:15` / `Sep 29 09:30`):
+   - This column shows the **last modification date and time** of the file or directory.
+   - Format: `Month Day HH:MM`. If the file was modified in a previous year, the year is shown instead of the time.
+
+7. **File/Directory Name** (`file.txt` / `directory`):
+   - This is the **name of the file** or directory.
+
 # Directory vs file permissions
 
 ### Directory Permissions (`rwxr-xr-x` for `/home/username`):
