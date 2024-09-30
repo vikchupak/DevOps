@@ -29,7 +29,7 @@
 
 ### Returning Values from Functions:
 In shell scripting, functions don't return values like in many programming languages. Instead:
-- The `return` command is used to return an **exit status** (0 for success, non-zero for failure). **IT HAS TO BE NUMERIC**
+- The `return` command is used to return an **exit status** (0 for success, non-zero for failure). **IT MUST BE NUMERIC**
 - To return a computed value, you can use **`echo`** to print the result, which can then be captured by the caller.
 
 Example:
