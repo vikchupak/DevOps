@@ -32,7 +32,7 @@ Here are a few reasons why this happens:
 - To set **env variable** for current shell and all processes started from current shell **(inherited by child processes)**:\
   `export VARNAME="my value"`
 
-- To set **env variable** permanently for all future bash sessions (for a specific user):\
+- To set **env variable** permanently for all future bash sessions (user specific):\
   Add `export VARNAME="my value"` to `~/.bashrc` file
 
 - To set **env variable** permanently, and system wide (all users, all processes):\
