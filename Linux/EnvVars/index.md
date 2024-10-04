@@ -24,10 +24,10 @@ Here are a few reasons why this happens:
 3. **Child Process Inheritance:** Environment variables are inherited by child processes of the shell, but they do not propagate to other shell processes running separately.
 
 ## How to set with scopes
-- To set **simple variable** only for current shell:\
+- To set **simple variable** only for current shell **(NOT inherited by child processes)**:\
   `VARNAME="my value"`
 
-- To set **env variable** for current shell and all processes started from current shell:\
+- To set **env variable** for current shell and all processes started from current shell **(inherited by child processes)**:\
   `export VARNAME="my value"`
 
 - To set **env variable** permanently for all future bash sessions (for a specific user):\
