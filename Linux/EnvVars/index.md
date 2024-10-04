@@ -1,12 +1,14 @@
 Windows syntax (CMD):
-- `set VARIABLE=1`
-- `echo %VARIABLE%`
-- `set VARIABLE=`
+- `set VARIABLE=1` - set env var
+- `echo %VARIABLE%` - print env var value
+- `set VARIABLE=` - delete env var
+- `set` - print all env vars key-value pairs
 
 Linux syntax:
-- `export VARIABLE=1`
-- `echo $VARIABLE`
-- `unset VARIABLE`
+- `export VARIABLE=1` - set env var
+- `echo $VARIABLE` - print env var value
+- `unset VARIABLE` - delete env var
+- `printenv` - print all env vars key-value pairs
 
 Env vars types:\
 https://stackoverflow.com/questions/4477660/what-is-the-difference-between-user-variables-and-system-variables \
