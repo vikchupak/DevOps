@@ -2,6 +2,12 @@
 
 `$PATH` env variable contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name **(commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly, like `./script.sh`)**.
 
+# `which` command
+
+Finds path to binary to be executed based on `$PATH`
+
+Example `which nano` => outputs `/usr/bin/nano`
+
 # Can bash script file be excecuted without extension?
 
 Yes, a Bash script file can be executed without an extension. In Linux and other Unix-based systems, the file extension is not required for the system to recognize a file as executable. The execution of a script is determined by the **shebang** (`#!`) at the top of the file and the executable permission set on the file, not by its extension.
