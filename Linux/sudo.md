@@ -1,3 +1,5 @@
+# sudo group
+
 ![image](https://github.com/user-attachments/assets/cdcf2e56-4b30-4b6d-b3d8-42a0433c6f1e)
 
 ![image](https://github.com/user-attachments/assets/9c6cf488-fe9b-4565-acc4-2ca23831769f)
@@ -5,6 +7,8 @@
 ![Screenshot from 2024-07-13 13-43-54](https://github.com/user-attachments/assets/ea06d845-d7c0-4527-b91f-db9ddc40e2f2)
 
 To switch to root: ```sudo -i```
+
+# sudo password
 
 Sudo password is only asked first time and cached for some time frame(default 15 minutes)
 - https://unix.stackexchange.com/questions/442552/how-does-sudo-decide-whether-to-ask-for-a-password-when-given-a-command-which-d
@@ -21,13 +25,18 @@ So, there are 3 "issues":
 
 That a user is in sudo group doesn't mean you won't be asked password when running commands with sudo.
 
-Disable sudo password for a spesific user:
+# Disable sudo password for a spesific user
+
+**It is done by editing `/etc/sudoers` file with command `sudo visudo`.**
+
 - https://www.youtube.com/watch?v=07LXPEHAyyg
 - https://alexhost.com/faq/how-to-disable-the-password-for-the-sudo-command-in-linux/
 - https://askubuntu.com/questions/147241/execute-sudo-without-password
 - https://ostechnix.com/run-particular-commands-without-sudo-password-linux/
 
-Some commands we have to run as sudo to "see" the whole information.
+The `/etc/sudoers` file is a critical configuration file on Unix-like systems that controls which users or groups can run commands with superuser (root) privileges using the sudo command. It provides fine-grained control over who can execute commands as root or other users, and it also allows specifying which commands can be executed with elevated privileges.
+
+# Some commands have to be run with sudo to "see" the whole information
 ![image](https://github.com/user-attachments/assets/71e1c785-6372-434d-af15-5cba9f1b5e1d)
 ![image](https://github.com/user-attachments/assets/0c219a13-ad87-4fb1-95f1-377db95da53e)
 
