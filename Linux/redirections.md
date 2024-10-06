@@ -48,3 +48,6 @@ Piping
 2. `2>&1`: Redirects **stderr (stream 2)** to **stdout (stream 1)**, so now stderr is merged with stdout.
 3. `> /dev/null`: Redirects **stdout (stream 1)** to `/dev/null`, discarding it.
 4. Wnen **stdout (stream 1)** is redirected to `/dev/null`, only **stderr (stream 2)** (which has been redirected to stdout) remains available for the pipe.
+
+So, we can redirect many streams to a file descriptor, and the strems remain separate but their output printed in the file descriptor.\
+So it "looks" like streams are merged, but it is NOT so.
