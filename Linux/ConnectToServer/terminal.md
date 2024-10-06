@@ -65,3 +65,9 @@ In summary, host keys are critical to ensuring that SSH connections remain secur
 
 # Generate SSH keys
 ![image](https://github.com/user-attachments/assets/f39eb96f-403c-496f-9632-915c07ccf95d)
+
+# Connect to a removte server
+```bash
+ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname>
+```
+- port and path to a public key are optional unless they are not default ones
