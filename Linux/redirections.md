@@ -35,3 +35,16 @@ Redirections:
 
 Piping
 - ```|``` (redirects stdout of an app to stdin of another app)
+
+# Tricky case
+
+`java -version` - outputs the version information to the **stderr (stream 2)**. So `java -version | grep "openjdk version"` piping won't work.
+
+### Solution:
+`java -version 2>&1 > /dev/null  | grep "openjdk version"` - this will redirect **only stderr** to the pipe.
+
+### Explanation:
+1. When you run `java -version`, the version information is output to **stderr (stream 2)**, not stdout.
+2. `2>&1`: Redirects **stderr (stream 2)** to **stdout (stream 1)**, so now stderr is merged with stdout.
+3. `> /dev/null`: Redirects **stdout (stream 1)** to `/dev/null`, discarding it.
+4. Wnen **stdout (stream 1)** is redirected to `/dev/null`, only **stderr (stream 2)** (which has been redirected to stdout) remains available for the pipe.
