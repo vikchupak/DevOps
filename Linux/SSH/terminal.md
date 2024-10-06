@@ -75,3 +75,15 @@ In summary, host keys are critical to ensuring that SSH connections remain secur
 ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname>
 ```
 - port and path to a public key are optional unless they are not default ones
+
+# Copy to and from a remote server
+```bash
+# Copy to remote
+scp -P <port> <local_source_file> <username>@<hostname|server_ip>:<remote_target_dir> -i ~/.ssh/<public_keyname>
+```
+```bash
+# Copy from remote
+scp -P <port> <username>@<hostname|server_ip>:<remote_source_file> <local_target_dir> -i ~/.ssh/<public_keyname>
+```
+
+Note: in ssh, a port is specified with `-p(lower case)`, in scp with `-P(upper case)`  
