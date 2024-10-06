@@ -1,9 +1,11 @@
 # runuser command
 
 ```bash
+# When root or with sudo
 runuser -l username -c "export APP_ENV=dev && npm install && node server.js &"
 ```
 ```bash
+# When root or with sudo
 runuser -u username -c "/path/to/script.sh"
 ```
 The `runuser` command in Linux allows you to run commands as another user without requiring the root user to enter the target user’s password. It is similar to su, but typically used in scripts and systemd services because it does not prompt for a password.
