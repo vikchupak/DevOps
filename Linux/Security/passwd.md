@@ -1,11 +1,10 @@
 # passwd command
 
-If you have the necessary permissions (usually root or with sudo), you can change the password for another user.
-
 ```bash
 # When root or with sudo
 passwd username
 ```
+If you have the necessary permissions (usually root or with sudo), you can change the password for another user.
 
 # But it is not secure if I can change another user password?
 
