@@ -31,6 +31,7 @@ Redirections:
   https://stackoverflow.com/questions/818255/what-does-21-mean
 - ```>& or &>``` (Merge redirect, descriptor 1 and 2 are merged. Special case) ```&>/dev/null```
   https://www.gnu.org/software/bash/manual/bash.html#Redirections
+  ![image](https://github.com/user-attachments/assets/4163770a-6b01-4d00-a939-f0cf168a944a)
 
 Piping
 - ```|``` (redirects stdout of an app to stdin of another app)
