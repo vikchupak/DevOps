@@ -7,6 +7,8 @@ If you have the necessary permissions (usually root or with sudo), you can chang
 passwd username
 ```
 
+# But it is not secure if I can change another user password?
+
 Yes, allowing any user to change another user's password can pose significant security risks. However, there are built-in mechanisms in Linux to ensure that only authorized users (usually system administrators) can change passwords for other users. Here's how Linux handles this, along with ways to maintain security:
 
 ### Key Points on Password Security in Linux
@@ -23,24 +25,6 @@ Yes, allowing any user to change another user's password can pose significant se
      admin ALL=(ALL) /usr/bin/passwd johndoe
      ```
    - This grants `admin` permission to change `johndoe`'s password without giving them the ability to change other users' passwords.
-
-3. **Using Groups:**
-   - You can create specific groups for users who need to change passwords. Only members of those groups should be given the necessary permissions.
-   - For example, you might create an `admin` group that can manage user accounts and passwords.
-
-4. **Audit and Logging:**
-   - Regularly audit the `/etc/sudoers` file to ensure that only trusted users have access to `sudo`.
-   - Many Linux distributions log sudo commands, allowing you to review who changed which passwords and when. Check logs in `/var/log/auth.log` or `/var/log/secure`, depending on the distribution.
-
-5. **Force Password Complexity:**
-   - Enforcing strong password policies helps mitigate risks. Use tools like `pam_pwquality` to enforce password complexity rules.
-   - This prevents users from setting weak passwords even if they can change their own passwords.
-
-6. **Educate Users:**
-   - Educate users about the importance of strong passwords and secure password management practices.
-
-7. **Change User Permissions:**
-   - You can change user permissions and settings to further restrict who can change passwords by modifying the `/etc/login.defs` file and using tools like `chage` to set password expiration policies.
 
 ### Conclusion
 
