@@ -15,6 +15,10 @@ You can list the contents of your `~/.ssh` directory with the following command:
 ls -la ~/.ssh
 ```
 
+![02_ssh config](https://github.com/user-attachments/assets/d4102020-ed54-4a3c-acfa-f5c9ab316689)
+
+![image](https://github.com/user-attachments/assets/dc901e2e-c0bd-4b01-86f6-5b46451f82df)
+
 # Host SSH keys
 Host keys are cryptographic keys used by SSH (Secure Shell) servers to identify themselves to clients. They play a critical role in securing SSH connections by preventing man-in-the-middle attacks, ensuring that the client connects to the correct server. Here’s an overview of host keys and their purpose:
 
