@@ -6,6 +6,8 @@
 
 ![photo_2024-09-28_23-40-12](https://github.com/user-attachments/assets/336fc313-3863-4f0c-8c50-b44b348fc4c2)
 
+![image](https://github.com/user-attachments/assets/e819b0b8-9d96-4231-a5a0-22d05f94987c)
+
 # Docker vs VM
 
 ![photo_2024-09-28_23-40-08](https://github.com/user-attachments/assets/136e2317-7d4d-4c26-9d8b-6830061aeea3)
