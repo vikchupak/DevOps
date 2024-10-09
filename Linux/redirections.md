@@ -21,12 +21,12 @@ Redirections:
 - ```>>``` (Append stdout redirection) ```ls 1>> ls.out```
 - ```<``` (Input redirection)
 - ```<<``` (Append stdin redirection)
-- ```<<``` (Here document, input redirection)\
-  https://linuxhandbook.com/here-input-redirections/ \
-  ```<<-``` (Here Document with tab suppression, input redirection) \
-  https://phoenixnap.com/kb/bash-heredoc
-- ```<<<``` (Here string, input redirection)\
+- ```<<<``` (Here string, input redirection - passes as input only first line, the others will be ignored)\
   https://linuxhandbook.com/here-input-redirections/
+- ```<<DELIMITER``` (Here document, input redirection - passes as input all lines)\
+  https://linuxhandbook.com/here-input-redirections/ \
+  ```<<-DELIMITER``` (Here Document with tab suppression, input redirection - passes as input all lines and "replaces" leading tabs with a whitespace)\
+  https://phoenixnap.com/kb/bash-heredoc
 - ```>&descriptor``` (Redirect to file descriptor, example `2>&1` => redirect stderr to stdout)\
   https://stackoverflow.com/questions/818255/what-does-21-mean
 - ```>& or &>``` (Merge redirect, descriptor 1 and 2 are merged. Special case) ```&>/dev/null```
