@@ -25,7 +25,7 @@ Redirections:
   https://linuxhandbook.com/here-input-redirections/
 - ```<<DELIMITER``` (Here document, input redirection - passes as input all lines)\
   https://linuxhandbook.com/here-input-redirections/ \
-  ```<<-DELIMITER``` (Here Document with tab suppression, input redirection - passes as input all lines and "replaces" leading tabs with a whitespace)\
+  ```<<-DELIMITER``` (Here Document with tab suppression, input redirection - passes as input all lines and only leading tabs are suppressed; if you have spaces, they will be preserved)\
   https://phoenixnap.com/kb/bash-heredoc
 - ```>&descriptor``` (Redirect to file descriptor, example `2>&1` => redirect stderr to stdout)\
   https://stackoverflow.com/questions/818255/what-does-21-mean
