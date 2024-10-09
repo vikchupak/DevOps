@@ -85,3 +85,92 @@ Let’s take a closer look at the behavior of the redirection.
 - **fd1 (stdout)** and **fd2 (stderr)** remain separate, independent file descriptors.
 - Redirection only changes where each descriptor points (their **destination**), but it doesn’t merge them into a single descriptor.
 - Even after redirections, `fd1` and `fd2` still exist as separate entities. The redirection just changes where they point (i.e., where the output or errors go). When you use `2>&1`, it doesn’t combine or merge them into one; it just synchronizes their destinations **at that moment**, but they still exist independently.
+
+# Commands not reading from standard input. Command substitution vs `xargs` command
+
+`xargs` is a command-line utility in Unix/Linux systems that is used to build and execute command lines from standard input. It allows you to take output from one command and use it as arguments for another command. This is particularly useful when **dealing with commands that do not accept standard input directly but can take multiple arguments**.
+
+### Key Features of `xargs`:
+1. **Argument Handling**: `xargs` takes input from the standard input (stdin) and converts it into arguments for a specified command.
+2. **Handling Multiple Arguments**: It can process multiple lines of input and provide them as arguments to a command.
+3. **Efficiency**: Instead of running a command for each line of input separately, `xargs` can batch the arguments together, making it more efficient.
+4. **Customizable Behavior**: You can specify delimiters, control the number of arguments passed to each invocation of the command, and handle other options.
+
+### Basic Syntax
+```bash
+command | xargs [options] command_to_run
+```
+
+### Basic Usage
+```bash
+echo "file1.txt file2.txt file3.txt" | xargs rm
+```
+In this example:
+- `echo` produces a list of filenames.
+- `xargs` takes those filenames and passes them as arguments to the `rm` command, effectively running `rm file1.txt file2.txt file3.txt`.
+
+#### Using a Custom Delimiter
+By default, `xargs` treats whitespace as a delimiter. You can change the delimiter using the `-d` option. For example, if your input is comma-separated:
+```bash
+echo "file1.txt,file2.txt,file3.txt" | xargs -d ',' rm
+```
+In this case, `xargs` uses the comma as the delimiter and deletes the specified files.
+
+#### Limiting the Number of Arguments passed at once
+You can limit how many arguments are passed to the command at once using the `-n` option:
+```bash
+echo "a b c d e" | xargs -n 2 echo
+```
+This will output:
+```
+a b
+c d
+e
+```
+Here, `xargs` takes two arguments at a time and runs `echo` with them.
+
+#### With `find`
+You can use `xargs` with `find` to process files:
+```bash
+find . -name "*.log" | xargs rm
+```
+This command finds all `.log` files in the current directory and its subdirectories and deletes them using `rm`.
+
+### Summary:
+- **`xargs`** is a powerful tool for transforming input into arguments for other commands.
+- It enhances efficiency by allowing batch processing of arguments instead of executing commands individually for each line of input.
+- You can customize its behavior with various options to handle delimiters, limit argument counts, and work with special characters.
+
+
+The command below will not work as intended. Here's why:
+
+```bash
+echo "file1.txt file2.txt file3.txt" | rm
+```
+
+- `echo "file1.txt file2.txt file3.txt"` generates a string containing the filenames separated by spaces.
+- The output of the `echo` command is sent to the `rm` command via a **pipe (`|`)**.
+
+### Why It Doesn't Work:
+- The `rm` command does not read from standard input when it's used in this way. It expects filenames as command-line arguments directly, not from stdin.
+- As a result, `rm` won't see the filenames and will simply return an error or do nothing.
+
+### Correct Way to Use `rm` with Filenames from `echo`:
+To use the output of `echo` correctly with `rm`, you can use command substitution or use `xargs`:
+
+#### Option 1: Using Command Substitution
+You can execute the command like this:
+```bash
+rm $(echo "file1.txt file2.txt file3.txt")
+```
+- Here, the `$(...)` syntax executes the `echo` command and substitutes its output directly into the `rm` command as arguments.
+
+#### Option 2: Using `xargs`
+You can use `xargs` as previously discussed:
+```bash
+echo "file1.txt file2.txt file3.txt" | xargs rm
+```
+- In this case, `xargs` takes the output from `echo` and passes it as arguments to the `rm` command.
+
+### Conclusion:
+To summarize, while piping the output of `echo` directly to `rm` does not work because `rm` does not read from stdin in this context, using either command substitution or `xargs` will allow you to achieve the desired result of deleting the specified files.
