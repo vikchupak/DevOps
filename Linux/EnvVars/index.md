@@ -29,11 +29,11 @@ Here are a few reasons why this happens:
 - To set **simple variable** only for current shell **(NOT inherited by child processes)**:\
   `VARNAME="my value"`
 
-- To set **env variable** for current shell and all processes started from current shell **(inherited by child processes)**:\
+- To set **env variable** for current shell and all processes started from current shell **(inherited by child processes)** (**session-specific**):\
   `export VARNAME="my value"`
 
-- To set **env variable** permanently for all future bash sessions (user specific):\
+- To set **env variable** permanently for all future bash sessions (**user-specific**):\
   Add `export VARNAME="my value"` to `~/.bashrc` file
 
-- To set **env variable** permanently, and system wide (all users, all processes):\
+- To set **env variable** permanently, and system wide (all users, all processes, **system-wide**):\
   Add `VARNAME="my value"` to `/etc/environment`. IMPORTANT: Do not use `export` keyword
