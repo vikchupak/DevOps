@@ -191,3 +191,37 @@ The OS provides a variety of tools and utilities for managing file systems, incl
 ### **Conclusion**
 
 File system management is essential for efficiently organizing, storing, and accessing data on storage devices. The OS provides structured file systems that enable users to create, modify, and manage files while maintaining performance, security, and reliability. From basic operations like reading and writing files to more complex tasks like access control, journaling, and error handling, file systems are a fundamental part of every operating system.
+
+# Security Management
+
+**Security management** in an operating system (OS) refers to the methods, tools, and policies that control access to system resources, ensuring that only authorized users and processes can access sensitive data, perform certain operations, or use critical system resources. The OS must protect both the system and the user data from malicious attacks, unauthorized access, and unintentional damage. 
+
+Effective security management involves managing user authentication, setting permissions, securing communication, and ensuring data integrity.
+
+### **1. Authentication**
+**Authentication** is the process of verifying the identity of a user or system trying to access resources. The OS must ensure that users and processes are who they claim to be before granting access to resources.
+
+### **2. Authorization**
+**Authorization** is the process of determining what actions an authenticated user or process is allowed to perform. It involves setting and enforcing policies that define permissions for different users, groups, or processes.
+
+### **3. Accounting (Audit and Logging)**
+**Accounting** or **auditing** keeps track of system activities, logging every significant event in the OS. This helps detect unauthorized access, track system usage, and troubleshoot issues.
+
+### **4. Encryption**
+**Encryption** is a method of protecting data by transforming it into an unreadable format using algorithms and keys. Only authorized users with the correct decryption key can access the original data.
+
+### **5. Security Policies and Access Control**
+The OS enforces **security policies** that control how resources are accessed, who can access them, and under what conditions.
+
+### **6. Intrusion Detection and Prevention Systems (IDPS)**
+**Intrusion Detection Systems (IDS)** and **Intrusion Prevention Systems (IPS)** monitor system activity for signs of potential security threats. 
+
+### **7. Firewall and Network Security**
+A **firewall** is a security mechanism that monitors and controls incoming and outgoing network traffic based on predefined security rules. It acts as a barrier between trusted internal networks and potentially untrusted external networks (e.g., the internet).
+
+### **8. Virus Protection and Malware Defense**
+**Antivirus** and **antimalware** programs are essential for protecting the OS from malicious software that could harm the system or compromise data. These programs scan files, monitor system activities, and detect malicious behaviors.
+
+### **Conclusion**
+
+Security management is an essential function of any operating system, as it protects the system and its data from threats, ensures authorized access, and prevents unauthorized activities. Through mechanisms like authentication, authorization, encryption, logging, and network security, an OS implements policies and tools to secure both the system and its users. Maintaining strong security practices is critical in today’s environment, where cybersecurity threats are constantly evolving.
