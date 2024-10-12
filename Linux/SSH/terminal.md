@@ -71,7 +71,8 @@ In summary, host keys are critical to ensuring that SSH connections remain secur
 
 Copy `id_rsa.pub` content to `~/.ssh/authorized_keys` on a remote server.\
 If no folders/file exists create it.\
-Probably, for securety reasons, it will be needed to to change folder and file permissions.
+Probably, for securety reasons, it will be needed to to change folder and file permissions.\
+**This key will be used to authenticate a specific user(the user in which home directory the file `~/.ssh/authorized_keys` is located).**
 
 # Generate SSH keys
 ![image](https://github.com/user-attachments/assets/f39eb96f-403c-496f-9632-915c07ccf95d)
