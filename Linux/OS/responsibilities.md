@@ -137,7 +137,7 @@ In most operating systems, drivers run in **kernel mode** (though some may opera
 ### Types of Device Drivers
 1. **Kernel-Level Drivers**: In most operating systems, device drivers (including keyboard drivers) are part of the kernel space. ***The kernel manages hardware, and drivers interact with the hardware on the kernel's behalf***. These drivers run in kernel mode and have full access to the hardware and system resources. **They are installed and operate in the kernel space and NOT in the application layer**. This is because the kernel handles critical system-level tasks like input/output (I/O) management and hardware interaction.
 
-![photo_2024-10-12_16-46-26](https://github.com/user-attachments/assets/04605ce3-b9ac-4895-8cbe-93bfc5d784b3)
+ <img width="498" alt="01" src="https://github.com/user-attachments/assets/04605ce3-b9ac-4895-8cbe-93bfc5d784b3">
 
 Examples include:
    - **Graphics drivers** (e.g., NVIDIA, AMD)
