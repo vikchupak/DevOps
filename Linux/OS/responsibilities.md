@@ -135,16 +135,22 @@ In most operating systems, drivers run in **kernel mode** (though some may opera
 - **User Mode**: Some operating systems, like Windows, allow certain types of drivers to run in user mode. This enhances stability since a crash in a user-mode driver will not bring down the entire system, though it may reduce performance.
 
 ### Types of Device Drivers
-1. **Kernel-Level Drivers**: These are drivers that run in kernel mode and have full access to the hardware and system resources. Examples include:
+1. **Kernel-Level Drivers**: In most operating systems, device drivers (including keyboard drivers) are part of the kernel space. ***The kernel manages hardware, and drivers interact with the hardware on the kernel's behalf***. These drivers run in kernel mode and have full access to the hardware and system resources. **They are installed and operate in the kernel space and NOT in the application layer**. This is because the kernel handles critical system-level tasks like input/output (I/O) management and hardware interaction.
+
+![photo_2024-10-12_16-46-26](https://github.com/user-attachments/assets/04605ce3-b9ac-4895-8cbe-93bfc5d784b3)
+
+Examples include:
    - **Graphics drivers** (e.g., NVIDIA, AMD)
    - **Storage drivers** (e.g., SATA or NVMe drivers)
    - **Network interface drivers**
 
-2. **User-Level Drivers**: These drivers run in user mode, isolating them from the kernel for better security and stability. Examples include:
+2. **User-Level Drivers**: These drivers run in user mode, isolating them from the kernel for better security and stability.
+
+Examples include:
    - **Printer drivers**
    - **USB peripheral drivers**
 
-3. **Virtual Device Drivers**: These are drivers for devices that are not real physical hardware but virtual devices created by software (such as virtual network interfaces or virtual disk drives).
+4. **Virtual Device Drivers**: These are drivers for devices that are not real physical hardware but virtual devices created by software (such as virtual network interfaces or virtual disk drives).
 
 ### How the Kernel and Drivers Interact
 1. **The Kernel Provides an Interface**: The kernel exposes a standard interface or framework for drivers, so it can interact with them regardless of the underlying hardware.
