@@ -67,6 +67,12 @@ This could indicate either the server has been reinstalled or there is a potenti
 
 In summary, host keys are critical to ensuring that SSH connections remain secure and trusted between clients and servers.
 
+# Where to put `id_rsa.pub` on remote server
+
+Copy `id_rsa.pub` content to `~/.ssh/authorized_keys` on a remote server.\
+If no folders/file exists create it.\
+Probably, for securety reasons, it will be needed to to change folder and file permissions.
+
 # Generate SSH keys
 ![image](https://github.com/user-attachments/assets/f39eb96f-403c-496f-9632-915c07ccf95d)
 
