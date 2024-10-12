@@ -3,6 +3,10 @@
 - Input/Output Devices Management
 - File System Management
 - Security Management (user space/scopes, permissions, passwords, firewall)
+---
+- OS kernel manages hardware resources
+- Kernel manges I/O devices via drivers
+- OS = kernel + applications layer (set of utils, GUI, file system structure, etc.)
 
 # Processor vs Processes Management
 
