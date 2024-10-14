@@ -10,6 +10,9 @@
 
 # Docker vs VM
 
+Docker virtualizes OS Applications Layer only. A VM virtualizes both OS kernel and OS Applications Layer.\
+In image below, "Linux Host OS" is actually OS Applications Layer, and "OS applications" is actually User Applications Layer.
+
 ![photo_2024-09-28_23-40-08](https://github.com/user-attachments/assets/136e2317-7d4d-4c26-9d8b-6830061aeea3)
 
 # Docker Descktop
