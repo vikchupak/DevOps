@@ -19,7 +19,7 @@ ls -la ~/.ssh
 
 ![image](https://github.com/user-attachments/assets/dc901e2e-c0bd-4b01-86f6-5b46451f82df)
 
-# Host SSH keys (remote server keys)
+# Host SSH keys (remote server keys | known_hosts file on client)
 Host keys are cryptographic keys used by SSH (Secure Shell) servers to identify themselves to clients. They play a critical role in securing SSH connections by preventing man-in-the-middle attacks, ensuring that the client connects to the correct server. Here’s an overview of host keys and their purpose:
 
 ### 1. **Purpose of Host Keys:**
@@ -67,7 +67,7 @@ This could indicate either the server has been reinstalled or there is a potenti
 
 In summary, host keys are critical to ensuring that SSH connections remain secure and trusted between clients and servers.
 
-# Where to put `id_rsa.pub` on remote server
+# Where to put `id_rsa.pub` on remote server (authorized_keys file on remote server)
 
 Copy `id_rsa.pub` content to `~/.ssh/authorized_keys` on a remote server.\
 If no folders/file exists create it.\
