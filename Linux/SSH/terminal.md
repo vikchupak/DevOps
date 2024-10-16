@@ -67,6 +67,10 @@ This could indicate either the server has been reinstalled or there is a potenti
 
 In summary, host keys are critical to ensuring that SSH connections remain secure and trusted between clients and servers.
 
+### Example how gitlab keys are added to clients known_hosts
+
+![Screenshot from 2024-10-16 23-07-20](https://github.com/user-attachments/assets/9b0c9b6b-a9e5-4df4-bffa-00fef27a3f6a)
+
 # Where to put `id_rsa.pub` on remote server (authorized_keys file on remote server)
 
 Copy `id_rsa.pub` content to `~/.ssh/authorized_keys` on a remote server.\
