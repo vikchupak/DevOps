@@ -90,5 +90,6 @@ On Linux, to install an application for a specific user (not system-wide), you c
   ![Screenshot from 2024-10-22 00-01-41](https://github.com/user-attachments/assets/679e4790-c378-4f4d-99cd-05551d71a485)
   ![Screenshot from 2024-10-22 00-06-15](https://github.com/user-attachments/assets/68f59b25-2957-4ca0-9cea-2ded8524e405)
   ![Screenshot from 2024-10-22 00-15-20](https://github.com/user-attachments/assets/0016bdbb-62c9-4fae-8ed0-c5fce1a47694)
+  ![Screenshot from 2024-10-22 00-17-45](https://github.com/user-attachments/assets/63acc43f-27cf-4498-930e-2d0e858632ca)
 - /mnt - for manual mounting, like file system.
 - /proc - stands for procesess. Intersection between procesess and file system. State of processes in virtual file system(mounted in /proc). The place where the kernel places the information about processes. https://www.youtube.com/watch?v=0XdjODvsRN8
