@@ -85,6 +85,6 @@ On Linux, to install an application for a specific user (not system-wide), you c
 - /var - all system logs stored here
 - /var/cache - applications chache
 - /tmp - for temporary data
-- /media - automatically mounts removable media devices (like usb, cd card). So we can see content opening the corresponding folder.
+- /media - **automatically mounts removable media devices (like usb, cd card). So we can see content opening the corresponding folder.**
 - /mnt - for manual mounting, like file system.
 - /proc - stands for procesess. Intersection between procesess and file system. State of processes in virtual file system(mounted in /proc). The place where the kernel places the information about processes. https://www.youtube.com/watch?v=0XdjODvsRN8
