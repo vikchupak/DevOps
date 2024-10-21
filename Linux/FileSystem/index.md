@@ -87,5 +87,6 @@ On Linux, to install an application for a specific user (not system-wide), you c
 - /tmp - for temporary data
 - /media - **automatically mounts removable media devices (like usb, cd card). So we can see content opening the corresponding folder.**
   ![Screenshot from 2024-10-21 23-49-08](https://github.com/user-attachments/assets/ae757b1c-d592-4611-97ab-2ffe8206ebd8)
+  ![Screenshot from 2024-10-22 00-01-41](https://github.com/user-attachments/assets/679e4790-c378-4f4d-99cd-05551d71a485)
 - /mnt - for manual mounting, like file system.
 - /proc - stands for procesess. Intersection between procesess and file system. State of processes in virtual file system(mounted in /proc). The place where the kernel places the information about processes. https://www.youtube.com/watch?v=0XdjODvsRN8
