@@ -24,13 +24,13 @@ Yes, a Bash script file can be executed without an extension. In Linux and other
    ```
 # shebang
 
+The shebang tells the operating system which interpreter to use when executing the script.
+
 - `#!/bin/sh`
 - `#!/bin/bash`
 - `#!/bin/zsh`
 - `#!/usr/bin/node`
 - `#!/usr/bin/env node` - To execute the node interpreter by looking it up in the system’s PATH environment variable (more flexible way)
-
-The shebang tells the operating system which interpreter to use when executing the script.
 
 script.js file
 ```node
