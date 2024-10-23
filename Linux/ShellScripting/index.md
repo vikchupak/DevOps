@@ -22,3 +22,29 @@ Yes, a Bash script file can be executed without an extension. In Linux and other
    ```bash
    my_script
    ```
+# shebang
+
+- `#!/bin/sh`
+- `#!/bin/bash`
+- `#!/bin/zsh`
+- `#!/usr/bin/node`
+- `#!/usr/bin/env node` - To execute the node interpreter by looking it up in the system’s PATH environment variable (more flexible way)
+
+The shebang tells the operating system which interpreter to use when executing the script.
+
+script.js file
+```node
+#!/usr/bin/env node
+
+console.log('This script is executed by node.js');
+```
+
+run script.js
+```bash
+./script.js
+```
+
+# Execute a script in docker container
+
+- `docker exec [-it] <container_name> node /path/to/script.js`
+- `docker compose exec [-it] <container_name> node /path/to/script.js`
