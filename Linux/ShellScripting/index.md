@@ -30,7 +30,7 @@ The shebang tells the operating system which interpreter to use when executing t
 - `#!/bin/bash`
 - `#!/bin/zsh`
 - `#!/usr/bin/node`
-- `#!/usr/bin/env node` - To execute the node interpreter by looking it up in the system’s PATH environment variable (more flexible way
+- `#!/usr/bin/env node` - To execute the node interpreter by looking it up in the system’s PATH environment variable (more flexible way)
    https://stackoverflow.com/questions/10376206/what-is-the-preferred-bash-shebang
 
 script.js file
