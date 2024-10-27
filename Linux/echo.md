@@ -22,4 +22,8 @@ echo 'Special           symbols: " \'
 # Or inside double quotes, \ can be used to escape special characters
 echo "Special           symbols: \" \\"
 # Special           symbols: " \
+
+# No varible expansion works inside single quotes
+echo 'var="$var"'
+# var="$var"
 ```
