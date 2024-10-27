@@ -12,9 +12,11 @@ There are two main types:
 
 Linux
 - `ip addr` - list network interfaces
-- `ip route` - show routing table
-  - `echo -e "Destination\tGateway\tNetmask\tFlags\tMetric\tRef\tUse\tIface\n$(ip route | awk '{print $1, $3, $5, $6, $7, $8, $9, $10}')" | column -t` - show routing table with formatting
-
+- `ip route` - show routing table\
+  Show routing table with better formatting
+  ```
+  echo -e "Destination\tGateway\tNetmask\tFlags\tMetric\tRef\tUse\tIface\n$(ip route | awk '{print $1, $3, $5, $6, $7, $8, $9, $10}')" | column -t
+  ```
 
 Windows
 - `ipconfig /all` - list network interfaces
