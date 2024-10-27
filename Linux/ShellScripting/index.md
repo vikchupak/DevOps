@@ -23,6 +23,12 @@ Yes, a Bash script file can be executed without an extension. In Linux and other
    ```bash
    my_script
    ```
+
+   You can run the script as follows. This will ignore **shebang** and use the specified interpreter:
+   ```
+   sh my_script
+   ```
+   
 # shebang
 
 The shebang tells the operating system which interpreter to use when executing the script.
