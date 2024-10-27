@@ -16,7 +16,7 @@ Yes, a Bash script file can be executed without an extension. In Linux and other
 **Execute the Script**:
    You can now run the script by specifying its path. For example, if the script is in the current directory:
    ```bash
-   ./my_script
+   ./my_script.sh
    ```
 
    If the script is located in a directory that is part of your `$PATH` (like `/usr/local/bin/` or `~/bin/`), you can execute it just by typing the script's name:
@@ -26,7 +26,7 @@ Yes, a Bash script file can be executed without an extension. In Linux and other
 
    You can run the script as follows. This will ignore **shebang** and use the specified interpreter:
    ```
-   sh my_script
+   bash my_script.sh
    ```
    
 # shebang
