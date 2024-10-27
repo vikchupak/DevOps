@@ -1,6 +1,7 @@
 # About $PATH env variable
 
-`$PATH` env variable contains a colon-separated list of directories that the shell searches for commands that do not contain a slash in their name **(commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly, like `./script.sh`)**.
+- `$PATH` env variable contains a colon-separated list of directories that the shell searches **for commands that do not contain a slash in their name**.
+- **Commands with slashes are interpreted as file names to execute, and the shell attempts to execute the files directly, like `./script.sh`**.
 
 # `which` command
 
