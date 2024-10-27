@@ -7,3 +7,14 @@ There are two main types:
 - Remote access vpn (Client-to-Site vpn)
   - Full tunnel (all traffic from host/client passes through vpn)
   - Split tunnel (only traffic addressed to corporate network passes through vpn)
+    ![Screenshot from 2024-10-27 14-07-00](https://github.com/user-attachments/assets/75a5d737-3dc2-40ab-b661-49bc25df200b)
+
+Linux
+- `ip addr` - list network interfaces
+- `ip route` - show routing table
+  - `echo -e "Destination\tGateway\tNetmask\tFlags\tMetric\tRef\tUse\tIface\n$(ip route | awk '{print $1, $3, $5, $6, $7, $8, $9, $10}')" | column -t` - show routing table with formating
+
+
+Windows
+- `ipconfig /all` - list network interfaces
+- `route print` - show routing table
