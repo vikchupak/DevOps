@@ -17,6 +17,9 @@ Linux
   ```
   echo -e "Destination\tGateway\tNetmask\tFlags\tMetric\tRef\tUse\tIface\n$(ip route | awk '{print $1, $3, $5, $6, $7, $8, $9, $10}')" | column -t
   ```
+  ```
+  route -n
+  ```
 
 Windows
 - `ipconfig /all` - list network interfaces
