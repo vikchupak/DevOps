@@ -13,6 +13,10 @@ Socket files allow processes to communicate through **UNIX domain sockets**. Whe
 ### Common Uses
 1. **Communication with System Services**: Many system services, like Docker, MySQL, and Redis, create socket files for local communication with clients. For instance, `/var/run/docker.sock` is a socket file that lets local clients communicate directly with the Docker daemon.
 
+# Signals vs socket files
+
+
+
 2. **Fast, Secure Local IPC**: Socket files are used in applications where processes need to exchange data quickly and securely without going through network protocols.
 
 3. **Scripting and Automation**: Socket files allow scripts and automation tools to interact with services without network configuration. 
