@@ -19,7 +19,7 @@ Socket files allow processes to communicate through **UNIX domain sockets**. Whe
 
 In summary, socket files are an efficient way for processes to communicate on the same machine by providing a local, file-based interface.
 
-# What is Unix domain socket
+# What is a Unix domain socket
 
 The `unix:///var/run/docker.sock` is a **Unix domain socket** file used by Docker to communicate with the Docker Engine on the same host. Here’s a breakdown of its purpose and how it works:
 
