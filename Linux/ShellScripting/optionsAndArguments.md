@@ -62,4 +62,58 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
   -d '{"title":"foo","body":"bar","userId":1}'
 ```
 
-In general, options are parsed and the parsed option values are used as arguments.
+**In general, options are parsed and the parsed option values are used as arguments.**
+
+******
+
+**Parsing implementation in format --user=value**
+
+To handle arguments like `--user=example.user` in a shell script, where the argument is passed as a key-value pair (e.g., `--user=value`), you can read and process these arguments explicitly in a way similar to how options are passed in commands like `openconnect`.
+
+### Example: Reading Arguments Like `--user=example.user`
+
+```bash
+#!/bin/bash
+
+# Initialize variables
+user=""
+host=""
+
+# Parse the arguments
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --user=*)
+      user="${1#--user=}"  # Remove --user= from the argument to get the value
+      shift  # Move to the next argument
+      ;;
+    --host=*)
+      host="${1#--host=}"  # Remove --host= from the argument to get the value
+      shift
+      ;;
+    *)
+      echo "Unknown option: $1"
+      exit 1
+      ;;
+  esac
+done
+
+# Print the captured values (for demonstration purposes)
+echo "User: $user"
+echo "Host: $host"
+```
+
+### Usage:
+
+```bash
+./script.sh --user=example.user --host=192.168.1.1
+```
+
+Output:
+```
+User: example.user
+Host: 192.168.1.1
+```
+
+### Notes:
+- The script can easily be extended to handle more options by adding more `case` conditions.
+- This method allows you to accept non-positional arguments in a flexible and structured way, similar to how commands like `openconnect` use named options (`--user=example.user`).
