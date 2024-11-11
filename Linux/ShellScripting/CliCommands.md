@@ -1,4 +1,4 @@
-# How commands are executed
+# How cli commands are executed
 
 Example with docker CLI command `docker ps`
 
