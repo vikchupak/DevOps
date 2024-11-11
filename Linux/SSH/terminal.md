@@ -88,6 +88,8 @@ ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname>
 - port and path to a public key are optional unless they are not default ones
 
 # Run command on a remote server
+- https://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/
+
 ```bash
 ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname> <command>
 ```
