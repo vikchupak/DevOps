@@ -1,4 +1,16 @@
-## Double-Dash special delimiter, possible names:
+## What can accept options and arguments
+- commands
+- functions
+- scripts
+
+## General
+- **Options are NOT positional**
+- **Argument are positional**
+- **Options modify the behavior of a command/function/script**
+- **Best practice to place options before arguments** [though, in many cases, the order doesn't matter]
+
+## About options
+**Double-Dash special delimiter, possible names:**
 - end of command options
 - end of command flags
 
@@ -9,10 +21,7 @@ Useful links
 - https://www.cyberciti.biz/faq/what-does-double-dash-mean-in-ssh-command/
 - https://www.baeldung.com/linux/double-dash-in-shell-commands
 
-## Options with Single-Dash and Double-Dash
-
-- **Options modify the behavior of a command**
--  **Best practice to place options before arguments** [though, in many cases, the order doesn't matter]
+**Options with Single-Dash and Double-Dash**
 
 1. **Single Dash (`-`)**:
    - Used for **short options** (single-character options), typically followed by one or more letters/flags.
@@ -36,3 +45,11 @@ Useful links
 
 Useful links
 - https://serverfault.com/questions/387935/whats-the-difference-between-the-single-dash-and-double-dash-flags-on-shell-com
+
+## How to make arguments named
+
+There are ways to pass argumets as named using options/flags.\
+Example:
+```
+!
+```
