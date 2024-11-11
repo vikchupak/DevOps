@@ -56,6 +56,15 @@ There are ways to pass argumets as named using options/flags.
 sudo openconnect --user=example.user --server=vpn.example.com
 ```
 ```bash
+docker run -d \
+--name <container_name> \
+-p <host_port>:<container_port> \
+-e <container_env_var_name>=<container_env_var_value> \
+-v <host_volume_path>:<container_volume_path> \
+--net=<network_name> \
+<image_name:[tag]>
+```
+```bash
 curl -X POST https://jsonplaceholder.typicode.com/posts \
   -H "Content-Type: application/json" \
   -H "Connection: keep-alive" \
