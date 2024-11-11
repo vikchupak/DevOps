@@ -87,6 +87,13 @@ ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname>
 ```
 - port and path to a public key are optional unless they are not default ones
 
+# Run command on a remote server
+```bash
+ssh <username>@<hostname|server_ip> -p <port> -i ~/.ssh/<public_keyname> <command>
+```
+- port and path to a public key are optional unless they are not default ones
+- command to execute
+
 # Copy to and from a remote server
 ```bash
 # Copy to remote
