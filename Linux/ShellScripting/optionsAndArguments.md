@@ -62,4 +62,4 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
   -d '{"title":"foo","body":"bar","userId":1}'
 ```
 
-In general, options are parsed and the parsed values are used as arguments.
+In general, options are parsed and the option parsed values are used as arguments.
