@@ -53,3 +53,9 @@ Example:
 ```bash
 sudo openconnect --user=example.user --server=vpn.example.com
 ```
+```bash
+curl -X POST https://jsonplaceholder.typicode.com/posts \
+  -H "Content-Type: application/json" \
+  -H "Connection: keep-alive" \
+  -d '{"title":"foo","body":"bar","userId":1}'
+```
