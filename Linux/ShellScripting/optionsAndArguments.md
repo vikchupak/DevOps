@@ -48,8 +48,10 @@ Useful links
 
 ## How to make arguments named
 
-There are ways to pass argumets as named using options/flags.\
-Example:
+There are ways to pass argumets as named using options/flags.
+
+### Real examples
+
 ```bash
 sudo openconnect --user=example.user --server=vpn.example.com
 ```
@@ -59,3 +61,5 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
   -H "Connection: keep-alive" \
   -d '{"title":"foo","body":"bar","userId":1}'
 ```
+
+In general, options are parsed and the parsed values are used as arguments.
