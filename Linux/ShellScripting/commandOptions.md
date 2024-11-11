@@ -2,6 +2,8 @@
 - end of command options
 - end of command flags
 
+**A double-dash in a shell command signals the end of options and disables further option processing.**
+
 Useful links
 - https://unix.stackexchange.com/questions/11376/what-does-double-dash-double-hyphen-mean
 - https://www.cyberciti.biz/faq/what-does-double-dash-mean-in-ssh-command/
