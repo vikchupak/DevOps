@@ -12,7 +12,7 @@ Useful links
 ## Options with Single-Dash and Double-Dash
 
 - **Options modify the behavior of a command**
--  **Best practice to place options before arguments**
+-  **Best practice to place options before arguments** [though, in many cases, the order doesn't matter]
 
 1. **Single Dash (`-`)**:
    - Used for **short options** (single-character options), typically followed by one or more letters/flags.
