@@ -66,6 +66,18 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
 
 ******
 
+Call function with named arguments\
+https://tecadmin.net/create-bash-functions-with-arguments/
+```bash
+someFunc arg1 arg2
+```
+
+Run sh script with named arguments\
+https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script
+``` bash
+sh someScript.sh john 25 'John Smith'
+```
+
 **Parsing implementation in format --user=value**
 
 To handle arguments like `--user=example.user` in a shell script, where the argument is passed as a key-value pair (e.g., `--user=value`), you can read and process these arguments explicitly in a way similar to how options are passed in commands like `openconnect`.
