@@ -51,5 +51,5 @@ Useful links
 There are ways to pass argumets as named using options/flags.\
 Example:
 ```
-!
+sudo openconnect --user=example.user --server=vpn.example.com
 ```
