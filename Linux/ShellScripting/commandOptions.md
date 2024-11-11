@@ -1,4 +1,4 @@
-### Double-Dash special delimiter, possible names:
+## Double-Dash special delimiter, possible names:
 - end of command options
 - end of command flags
 
@@ -7,7 +7,10 @@ Useful links
 - https://www.cyberciti.biz/faq/what-does-double-dash-mean-in-ssh-command/
 - https://www.baeldung.com/linux/double-dash-in-shell-commands
 
-### Options with Single-Dash and Double-Dash
+## Options with Single-Dash and Double-Dash
+
+- **Options modify the behavior of a command**
+-  **Best practice to place options before arguments**
 
 1. **Single Dash (`-`)**:
    - Used for **short options** (single-character options), typically followed by one or more letters/flags.
