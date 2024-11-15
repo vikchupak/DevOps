@@ -1,3 +1,5 @@
+https://github.com/VIK2395/DevOps/blob/main/Linux/OS/Architecture/x86_64_and_32-bit_mode.md
+
 The **Program Files** and **Program Files (x86)** folders in Windows are standard directories where installed applications and their associated files are stored. These folders serve as the default location for most software installations, and the distinction between them is based on whether the application is **32-bit** or **64-bit**. Let’s explore both folders in detail:
 
 ### 1. **Program Files Folder**
