@@ -27,3 +27,7 @@ echo "Special           symbols: \" \\"
 echo 'var="$var"'
 # var="$var"
 ```
+
+![photo_2024-05-19_19-12-483](https://github.com/user-attachments/assets/c0b79644-3f02-4e98-b114-0eb1e8d71681)
+
+![photo_2024-05-19_12-22-52](https://github.com/user-attachments/assets/764fa1b1-adca-4f72-a850-c8f441e4fa42)
