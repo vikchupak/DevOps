@@ -1,4 +1,4 @@
-## How to change default cli text editor\
+## How to change default cli text editor
 - https://askubuntu.com/questions/615178/getting-the-default-text-editor-used-in-system
 - https://unix.stackexchange.com/questions/470561/open-default-text-editor-from-terminal
 
