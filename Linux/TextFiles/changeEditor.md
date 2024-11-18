@@ -1,11 +1,16 @@
 How to change default cli text editor\
 https://askubuntu.com/questions/615178/getting-the-default-text-editor-used-in-system
 
-List available editors
+List available **terminal-based** editors
 ```bash
 update-alternatives --list editor
 ```
-Set editor for current terminal session
+Set **terminal-based** editor for current terminal session.\
+To set the editor for a spesific user for all sessions, add to `~/.bashrc` file
 ```bash
 export EDITOR=nano
+```
+Set **terminal-based** editor system-wide
+```
+sudo update-alternatives --config editor
 ```
