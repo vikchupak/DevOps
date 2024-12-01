@@ -1,5 +1,10 @@
 - ***APT manager***
 
+```bash
+# List installed apt packages
+apt list --installed
+```
+
   (uses repositories to fetch packages (__.deb packages__); sometimes we have to add repositories to official list [/etc/apt/sources.list] to install aplications that are not yet in the official repositories)
 
   ### Does `apt` use `dpkg` under the hood?
@@ -72,6 +77,10 @@
 
 - ***Snap management system***
 
+```bash
+# List installed snaps
+snap listt
+```
   (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
 
   ### Is that correct to say `snap package manager`?
