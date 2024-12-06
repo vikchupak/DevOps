@@ -7,13 +7,13 @@
 
 - /home/{user}/ - users home directory. Only that user specific files/configs/apps. NOT system wide.
 - /root - root user home directory
-- /bin - user binaries | command that any user can run
+- **/bin** - user binaries | command that any user can run
 - /sbin - system binarires | sudo commands
 - /lib - libraries that /bin and /sbin use
 
   ![Screenshot from 2024-09-23 20-32-11](https://github.com/user-attachments/assets/c6dda356-50a8-45ba-8306-c500adc8ad9a)
 
-- /usr - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /bin (system wide) and /usr/bin (user specific) directories. Terminal commands usually are executed from /usr/bin directory. Nowadays /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin.
+- **/usr** - historically, old user home directory, but now the name doesn't reflect nowadays puprose (it is now used system wide, NOT specific to a user). Previously, due to memory limitations, files were split to /bin (system wide) and /usr/bin (user specific) directories. Terminal commands usually are executed from /usr/bin directory. **Nowadays /bin is a soft link to /usr/bin and /sbin is a soft link to /usr/sbin**.
   
   ![Screenshot from 2024-09-23 20-11-19](https://github.com/user-attachments/assets/24c2a092-2bbe-422b-8628-143223e99eca)
 
@@ -51,6 +51,10 @@
   - **Accessibility**: `/bin` and `/usr/bin` are accessible by all users, whereas `/sbin` and `/usr/sbin` are primarily intended for root or administrative tasks.
 
   In modern Linux distributions, some differences between these directories are becoming less distinct due to changes like symlinking `/bin` to `/usr/bin`, which is part of the **"Merged /usr"** initiative. However, understanding their traditional separation is still useful.
+
+- **`/usr/bin` vs `/usr/local/bin`**
+  - /usr/bin - system-wide, for binaries installed by the system package manager
+  - /usr/local/bin - system-wide, for binaries manually installed by the system administrator. To avoid overwriting by updates via system package manager
   
 - /usr/local/ - third-party apps are installed here (apps that installed by a user). **Those apps are system wide available**.
 - /home/{user}/.local/ - third-party apps are installed here (apps that installed by a user). **User specific apps are installed here**.
