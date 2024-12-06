@@ -81,6 +81,9 @@ apt list --installed
 # List installed snaps
 snap list
 ```
+```bash
+sudo snap remove <snap-name>
+```
   (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
 
   ### Is that correct to say `snap package manager`?
