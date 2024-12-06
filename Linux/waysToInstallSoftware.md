@@ -79,7 +79,7 @@ apt list --installed
 
 ```bash
 # List installed snaps
-snap listt
+snap list
 ```
   (Snap is a package management system developed by Canonical, the makers of Ubuntu, for operating systems that use the Linux kernel. A snap is an application containerised with all its dependencies. Snap packages have `.snap` extension. `snapd` - the snap daemon, which manages and executes snaps on your system)
 
