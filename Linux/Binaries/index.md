@@ -8,7 +8,7 @@ Yes, an **executable binary** is a type of **binary file**.
 
 ### Explanation:
 - A **binary file** refers to any file that contains data in a binary format (i.e., not human-readable text), which could be anything from images, videos, and data files to compiled machine code.
-- An **executable binary** specifically refers to a binary file that contains compiled machine code, which can be run directly by the operating system without needing interpretation or further compilation.
+- An **executable binary** specifically refers to a binary file that contains compiled **machine code**, which can be **run directly by the operating system** without needing interpretation or further compilation.
 
 For example:
 - On **Windows**, an executable binary is typically a `.exe` file.
