@@ -52,6 +52,7 @@
    - If you haven't updated this cache in a while, the information may be **outdated**. It may not reflect the latest versions of packages or the availability of new packages that have been added to the repositories since your last update.
   
 - ```apt show <package_name>``` - show info about package
+- ```apt policy python3``` - display information about the Python 3 package, **including the candidate version** (latest available version in the repository) and the installed version (if applicable) 
 
 # Difference between apt, apt-get, apt-cache, apt-config
 
