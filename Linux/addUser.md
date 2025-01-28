@@ -15,3 +15,12 @@ sudo cat /etc/shadow | grep test_user
 # test_user:!:19919:0:99999:7:::
 # ! - Поле пароля. Символ ! указывает на то, что учетная запись заблокирована. Если бы здесь был зашифрованный пароль, он выглядел бы как длинная строка символов.
 ```
+
+### User name creteria
+
+Print regexp the user name has to match
+```bash
+cat /etc/adduser.conf | grep NAME_REGEX
+
+# NAME_REGEX="^[a-z][-a-z0-9_]*\$"
+```
