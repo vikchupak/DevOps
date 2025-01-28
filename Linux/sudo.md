@@ -8,6 +8,14 @@
 
 To switch to root: ```sudo -i```
 
+# Add a user to sudo group
+
+```bash
+sudo usermod -aG sudo <username>
+```
+- `-G` - to add as secondary group
+- `-a` - append mode
+
 # sudo password
 
 Sudo password is only asked first time and cached for some time frame(default 15 minutes)
