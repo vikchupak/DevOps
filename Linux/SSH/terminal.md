@@ -19,6 +19,12 @@ ls -la ~/.ssh
 
 ![image](https://github.com/user-attachments/assets/dc901e2e-c0bd-4b01-86f6-5b46451f82df)
 
+# Generate SSH key pair
+
+```bash
+ssh-keygen -t rsa
+```
+
 # Host SSH keys (remote server keys | known_hosts file on client)
 Host keys are cryptographic keys used by SSH (Secure Shell) servers to identify themselves to clients. They play a critical role in securing SSH connections by preventing man-in-the-middle attacks, ensuring that the client connects to the correct server. Here’s an overview of host keys and their purpose:
 
