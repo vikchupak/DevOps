@@ -52,6 +52,7 @@
     - Removes packages that were automatically installed as dependencies but are no longer needed.
     - Helps clean up orphaned packages that were installed along with a program you later uninstalled.
 
+  **`apt clean` vs `apt autoremove`**
   | Command          | Removes Installed Packages? | Clears Cache? | Purpose |
   |-----------------|---------------------------|--------------|---------|
   | `apt clean`     | ❌ No                      | ✅ Yes       | Frees space by deleting cached `.deb` files. |
