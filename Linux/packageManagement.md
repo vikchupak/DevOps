@@ -59,6 +59,12 @@
   | `apt autoremove` | ✅ Yes                     | ❌ No       | Removes unused dependencies. |
 
 - ```alias purgepkg='f(){ sudo apt purge -y "$1" && sudo apt autoremove -y && sudo apt clean; }; f'``` - **useful alias**
+  - Usage `purgepkg "openjdk-8-*"`
+  - `"openjdk-8-*"` - asterisk to remove all the **pattern** matching packages like
+    - `openjdk-8-jdk`
+    - `openjdk-8-jdk-headless`
+    - `openjdk-8-jre`
+    - `openjdk-8-jre-headless`
 - ```apt search <search_term>``` - search package
    ### Do I have to run `sudo apt update` before running `sudo apt search <package>`?
   It is not strictly necessary to run `sudo apt update` before running `sudo apt search <package>`, but it is generally a good idea. Here’s why:
