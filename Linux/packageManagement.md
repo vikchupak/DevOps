@@ -6,7 +6,7 @@
 
 - ```apt update``` - updates packages list (info about available updates)
 - ```apt upgrade``` - downloads and installes the updates for each outdated package and dependency on your system
-- ```alias uup="sudo apt update && sudo apt upgrade"``` - useful alias
+- ```alias uup="sudo apt update && sudo apt upgrade"``` - **useful alias**
 
   ![image](https://github.com/user-attachments/assets/d76bfd36-40c8-434f-b705-7deeae8c2e39)
   
@@ -58,6 +58,7 @@
   | `apt clean`     | ❌ No                      | ✅ Yes       | Frees space by deleting cached `.deb` files. |
   | `apt autoremove` | ✅ Yes                     | ❌ No       | Removes unused dependencies. |
 
+- ```alias purgepkg='f(){ sudo apt purge -y "$1" && sudo apt clean && sudo apt autoremove -y; }; f'``` - **useful alias**
 - ```apt search <search_term>``` - search package
    ### Do I have to run `sudo apt update` before running `sudo apt search <package>`?
   It is not strictly necessary to run `sudo apt update` before running `sudo apt search <package>`, but it is generally a good idea. Here’s why:
