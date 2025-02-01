@@ -44,6 +44,19 @@
 - ```apt purge <package_name>``` - remove package with all its config files
 - ```apt remove <package_name>``` - remove package keeping the package’s configuration files
 - ```apt clean && apt autoremove``` - post uninstall clean up https://www.geeksforgeeks.org/how-to-uninstall-packages-with-apt-package-manager-in-linux/
+  - `apt clean`
+    - Clears the local cache of downloaded package files.
+    - Removes everything from `/var/cache/apt/archives/`, freeing up disk space.
+    - Does not remove installed packages, only cleans up cached .deb files.
+  - `apt autoremove`
+    - Removes packages that were automatically installed as dependencies but are no longer needed.
+    - Helps clean up orphaned packages that were installed along with a program you later uninstalled.
+
+  | Command          | Removes Installed Packages? | Clears Cache? | Purpose |
+  |-----------------|---------------------------|--------------|---------|
+  | `apt clean`     | ❌ No                      | ✅ Yes       | Frees space by deleting cached `.deb` files. |
+  | `apt autoremove` | ✅ Yes                     | ❌ No       | Removes unused dependencies. |
+
 - ```apt search <search_term>``` - search package
    ### Do I have to run `sudo apt update` before running `sudo apt search <package>`?
   It is not strictly necessary to run `sudo apt update` before running `sudo apt search <package>`, but it is generally a good idea. Here’s why:
