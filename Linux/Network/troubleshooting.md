@@ -33,10 +33,14 @@
   - Corrupt `/etc/resolv.conf`.
 
 **🛠 Fixes:**
-- Test resolving the domain manually
+- Test resolving the domain manually with current DNS
   ```bash
   nslookup <some.domain.com>
   # If it fails, your DNS server may not be working
+  ```
+- Test resolving the domain manually with another DNS (Google dns)
+    ```bash
+  nslookup <some.domain.com> 8.8.8.8
   ```
 - Check DNS settings:  
   ```sh
