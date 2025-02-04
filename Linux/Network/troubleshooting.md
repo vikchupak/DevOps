@@ -55,6 +55,55 @@
   sudo systemctl restart systemd-resolved
   ```
 
+### **Fallback DNS**
+
+The **fallback DNS** is typically used when the primary DNS server (such as the one assigned by the VPN) is unreachable or cannot resolve a domain. If you have configured a fallback DNS, here’s where you can check:
+
+---
+
+### **1️⃣ Check `/etc/resolv.conf`**
+
+On Linux, the `/etc/resolv.conf` file holds the list of DNS servers your system is using, including any fallback DNS.
+
+```sh
+cat /etc/resolv.conf
+```
+
+- **Primary DNS** will be the first `nameserver` listed.
+- **Fallback DNS** (if any) will appear as a second or subsequent `nameserver`.
+
+For example:
+```plaintext
+nameserver 10.10.10.1   # Primary (VPN DNS)
+nameserver 8.8.8.8      # Fallback (Google DNS)
+```
+
+- If the VPN DNS is down, the system will use `8.8.8.8` for DNS resolution.
+
+### **3️⃣ Check NetworkManager (If Using NetworkManager)**
+
+If you're using **NetworkManager** to manage your network connections, you can use `nmcli` to check the DNS settings:
+
+```sh
+nmcli device show | grep DNS
+```
+
+This will show the DNS servers for all network interfaces, including the VPN connection.
+
+Example output:
+```plaintext
+IP4.DNS[1]:                         10.10.10.1   # VPN DNS
+IP4.DNS[2]:                         8.8.8.8      # Fallback DNS (Google)
+```
+---
+
+### **5️⃣ Check for DNS Leak Test (Web or Command Line)**
+
+To see if fallback DNS is being used during a DNS resolution failure:
+
+#### **Web-based Test:**
+- Go to a DNS leak test site, such as [dnsleaktest.com](https://dnsleaktest.com), and run the test. If you see multiple DNS servers listed, one of them might be your fallback DNS.
+
 ---
 
 ## **3. Network Routing Issues**
