@@ -29,7 +29,7 @@ cat /etc/adduser.conf | grep NAME_REGEX
 # NAME_REGEX="^[a-z][-a-z0-9_]*\$"
 ```
 
-### Add user
+### Add user (interactive)
 
 ```bash
 sudo adduser <user_name>
