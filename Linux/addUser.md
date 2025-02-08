@@ -40,3 +40,11 @@ sudo adduser <user_name>
 ```bash
 cat /etc/passwd
 ```
+
+# Create a new user (non interactive)
+
+```bash
+useradd -m -s /bin/bash viktor
+echo viktor:viktor | chpasswd
+usermod -aG sudo viktor
+```
