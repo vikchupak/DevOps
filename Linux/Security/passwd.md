@@ -1,7 +1,7 @@
 # passwd command
 
 ```bash
-# When root or with sudo
+# When root or with sudo 
 passwd username
 ```
 If you have the necessary permissions (usually root or with sudo), you can change the password for another user.
