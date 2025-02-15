@@ -17,7 +17,20 @@ ls -la ~/.ssh
 
 ![02_ssh config](https://github.com/user-attachments/assets/d4102020-ed54-4a3c-acfa-f5c9ab316689)
 
+# Desired permissions
+
 ![image](https://github.com/user-attachments/assets/dc901e2e-c0bd-4b01-86f6-5b46451f82df)
+
+- https://superuser.com/questions/215504/permissions-on-private-key-in-ssh-folder
+
+| File/Directory | Recommended Permission | Meaning |
+|--------------|-----------------|----------|
+| `~/.ssh/` | `700 (drwx------)` | Owner full access, no one else |
+| `id_rsa` (Private Key) | `600 (-rw-------)` | Only owner can read/write |
+| `id_rsa.pub` (Public Key) | `644 (-rw-r--r--)` | Owner read/write, others read |
+| `authorized_keys` | `600 (-rw-------)` | Only owner can read/write |
+| `known_hosts` | `644 (-rw-r--r--)` | Owner read/write, others read |
+| `config` | `600 (-rw-------)` | Only owner can read/write |
 
 # Generate SSH key pair
 
