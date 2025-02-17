@@ -41,8 +41,8 @@
 - ```apt install <package_name>``` - install package
 
 - ```apt list --installed``` or ```dpkg --list``` - show instlled packages
-- ```apt purge <package_name>``` - remove package with all its config files
 - ```apt remove <package_name>``` - remove package keeping the package’s configuration files
+- ```apt purge <package_name>``` - remove package with all its config files
 - ```apt autoremove && apt clean``` - post uninstall clean up https://www.geeksforgeeks.org/how-to-uninstall-packages-with-apt-package-manager-in-linux/
   - `apt clean`
     - Clears the local cache of downloaded package files.
