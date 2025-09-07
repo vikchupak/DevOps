@@ -36,7 +36,9 @@ apt list --installed
    ### Summary:
    - **`apt`** provides a higher-level interface for users, handling dependencies and repository management.
    - **`dpkg`** performs the actual installation and configuration of `.deb` packages, which is invoked by `apt` for low-level tasks.
-  
+
+---
+
 - ***Ubuntu Software app***
 
   (Like an app store. A discontinued high-level graphical front end for the **APT and snap** package management. Can also be used to add repositories)\
@@ -75,6 +77,8 @@ apt list --installed
    ### Summary:
    **Ubuntu Software Center** (or **Ubuntu Software**) is the graphical user interface for managing software in Ubuntu, designed to make it easy for users to discover, install, update, and remove applications without using the terminal. It supports both traditional APT packages and newer Snap packages, giving users flexibility and ease of use when managing software.
 
+---
+
 - ***Snap management system***
 
 ```bash
@@ -106,6 +110,8 @@ sudo snap remove <snap-name>
   ```bash
   sudo snap install <package-name>
   ```
+
+---
 
 - ***Personal Package Archive (PPA)***
   
@@ -217,4 +223,3 @@ sudo apt install docker-desktop
 This way, `apt install docker-desktop` would work without needing to download the `.deb` file manually.
 
 ![image](https://github.com/user-attachments/assets/7a27d642-c6bc-4a7a-9e26-4402517ba6ad)
-
