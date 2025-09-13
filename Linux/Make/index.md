@@ -79,7 +79,7 @@ Make checks: any dependency newer than target?
 
 # Example for docker
 
-Rebuild image only if package.json has changes
+## Rebuild image only if package.json has changes
 
 ```makefile
 package-json-stamp: package.json
@@ -93,4 +93,26 @@ docker-build: package-json-stamp
 
 ```bash
 make docker-build
+```
+
+## Always rebuild image before publish
+
+```makefile
+IMAGE_NAME=vikchupak/my-nestjs-app:latest
+
+build:
+	docker build -t "${IMAGE_NAME}" .
+
+# Always build image before publish as build is not file
+publish: build
+	docker push "${IMAGE_NAME}"
+```
+
+```bash
+make build
+# Runs: docker build -t vikchupak/my-nestjs-app:latest .
+
+make publish
+# Runs: docker build -t vikchupak/my-nestjs-app:latest .
+# Then runs: docker push vikchupak/my-nestjs-app:latest
 ```
