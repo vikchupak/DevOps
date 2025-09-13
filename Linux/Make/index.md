@@ -17,3 +17,62 @@ https://www.javatpoint.com/linux-make-command
 
 ### Using make for docker
 https://www.youtube.com/watch?v=44EqIY7v5xM
+
+# Makefile stamp functionality
+
+- It was originally created for C/C++.
+- The key point is C/C++ produces NEW files during compilation.
+
+C++ project example
+
+```
+project/
+├─ main.cpp
+```
+
+### **Manual commands order**
+
+1. Create `main.o` from `main.cpp` with command `g++ -c main.cpp`
+2. Create executable `main` with command `g++ main.o -o main`
+
+### **Makefile**
+
+```make
+# Target: executable
+main: main.o
+	g++ main.o -o main
+
+# How to build main.o from main.cpp
+main.o: main.cpp
+	g++ -c main.cpp
+```
+
+### **Timeline Diagram**
+
+#### **Initial build (first run)**
+
+| Time  | File     | Status / Event                                                |
+| ----- | -------- | ------------------------------------------------------------- |
+| 10:00 | main.cpp | Last edited at timestamp = 10:00                              |
+| 10:05 | main.o   | **Does not exist** → Make creates `main.o`, timestamp = 10:05 |
+| 10:06 | main     | **Does not exist** → Make creates `main`, timestamp = 10:06   |
+
+### Next run without chages
+
+- `main.cpp`, timestamp = 10:00
+- `main.o`, timestamp = 10:05
+- `main`, timestamp = 10:06
+
+Make checks: any dependency newer than target?
+- 10:00 (main.cpp) < 10:05 (main.o) → main.cpp older than main.o → skip recreating main.o
+- 10:05 (main.o) < 10:06 (main) → main.o older than main → skip recreating main
+
+### Next run with main.cpp changes
+
+- `main.cpp`, timestamp = 10:30
+- `main.o`, timestamp = 10:05
+- `main`, timestamp = 10:06
+
+Make checks: any dependency newer than target?
+- 10:30 (main.cpp) < 10:05 (main.o) → main.cpp newer than main.o → recreating main.o, timestamp = 10:35
+- 10:35 (main.o) < 10:06 (main) → main.o newer than main → recreating main, timestamp = 10:40
