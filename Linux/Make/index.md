@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=44EqIY7v5xM
 # Makefile stamp functionality
 
 - It was originally created for C/C++.
-- The key point is C/C++ produces NEW files during compilation.
+- **The key point is C/C++ produces NEW files during compilation.**
 
 C++ project example
 
