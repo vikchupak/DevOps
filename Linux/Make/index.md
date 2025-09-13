@@ -35,6 +35,8 @@ target: dependencies
 - **The key point is C/C++ produces NEW files during compilation**
 - **Make compares target vs dependency timestamps**
 
+---
+
 C++ project example
 
 ```
