@@ -47,7 +47,7 @@ project/
 ### **Manual commands order**
 
 1. Create `main.o` from `main.cpp` with command `g++ -c main.cpp`
-2. Create executable `main` with command `g++ main.o -o main`
+2. Create executable `main` from `main.o` with command `g++ main.o -o main`
 
 ### **Makefile**
 
