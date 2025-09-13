@@ -22,6 +22,7 @@ https://www.youtube.com/watch?v=44EqIY7v5xM
 
 - It was originally created for C/C++.
 - **The key point is C/C++ produces NEW files during compilation.**
+- **Make compares target vs dependency timestamps**
 
 C++ project example
 
