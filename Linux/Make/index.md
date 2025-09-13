@@ -20,8 +20,19 @@ https://www.youtube.com/watch?v=44EqIY7v5xM
 
 # Makefile stamp functionality
 
-- It was originally created for C/C++.
-- **The key point is C/C++ produces NEW files during compilation.**
+```makefile
+target: dependencies
+    recipe
+```
+
+- **Target:** a file (or a marker/stamp) you want to “update”
+- **Dependencies:** files the target depends on
+- **Recipe:** commands to create or update the target
+
+---
+
+- It was originally created for C/C++
+- **The key point is C/C++ produces NEW files during compilation**
 - **Make compares target vs dependency timestamps**
 
 C++ project example
