@@ -76,3 +76,21 @@ Make checks: any dependency newer than target?
 Make checks: any dependency newer than target?
 - 10:30 (main.cpp) < 10:05 (main.o) → main.cpp newer than main.o → recreating main.o, timestamp = 10:35
 - 10:35 (main.o) < 10:06 (main) → main.o newer than main → recreating main, timestamp = 10:40
+
+# Example for docker
+
+Rebuild image only if package.json has changes
+
+```makefile
+package-json-stamp: package.json
+	@echo "Building image..."
+	docker build -t nest-backend-dev -f Dockerfile.dev .
+	touch package-json-stamp
+
+docker-build: package-json-stamp
+	@echo "Docker image is up-to-date"
+```
+
+```bash
+make docker-build
+```
