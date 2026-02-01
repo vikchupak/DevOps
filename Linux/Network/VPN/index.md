@@ -13,10 +13,11 @@ There are two main types:
     - Temporary. Connects individual devices to a network. This is the "Work from Home" special
     - An individual user installs VPN software (a "client") on their laptop or phone. They manually "dial in" to the corporate VPN gateway to gain access
     - User Experience is "on-demand". The user must authenticate (usually with MFA) to establish the connection. Once they disconnect, they no longer have access to the internal network
-  - Full tunnel (all traffic from host/client passes through vpn)
-    ![image](https://github.com/user-attachments/assets/c5848fae-ebdb-4e05-aaef-26f44a961de1)
-  - Split tunnel (only traffic addressed to corporate network passes through vpn)
-    ![Screenshot from 2024-10-27 14-07-00](https://github.com/user-attachments/assets/75a5d737-3dc2-40ab-b661-49bc25df200b)
+  - Configuration types
+    - Full tunnel (all traffic from host/client passes through vpn)
+      ![image](https://github.com/user-attachments/assets/c5848fae-ebdb-4e05-aaef-26f44a961de1)
+    - Split tunnel (only traffic addressed to corporate network passes through vpn)
+      ![Screenshot from 2024-10-27 14-07-00](https://github.com/user-attachments/assets/75a5d737-3dc2-40ab-b661-49bc25df200b)
 
 Linux
 - `ip addr` - list network interfaces
